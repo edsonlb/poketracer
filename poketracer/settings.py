@@ -39,9 +39,9 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 LANGUAGE_CODE = 'en-us'
 LANGUAGE = (
-    ('pt-br', u'Português').
-    ('en', u'Inglês').
-    ('es', u'Espanhol').
+    ('pt-br', u'Português'),
+    ('en', u'Inglês'),
+    ('es', u'Espanhol'),
 )
 
 
@@ -107,7 +107,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.middleware.locale.localeMiddleware',
+    #'django.middleware.locale.localeMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',

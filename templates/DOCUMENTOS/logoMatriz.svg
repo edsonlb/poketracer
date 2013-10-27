@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="180.95129"
+     inkscape:cy="796.61143"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="748"
+     inkscape:window-x="-4"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#428bca;stroke:none;fill-opacity:1"
+       d="M 375.78125 40.1875 C 265.87406 40.1875 174.37579 118.9037 154.53125 223.03125 L 264.21875 223.03125 C 280.56866 175.41943 325.7162 141.21875 378.875 141.21875 C 432.03443 141.21875 477.18183 175.41854 493.53125 223.03125 L 597.03125 223.03125 C 577.18671 118.9037 485.68844 40.1875 375.78125 40.1875 z "
+       id="path2985"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracer.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="M 155.34375 312.90625 C 176.75711 415.0239 267.33064 491.71875 375.8125 491.71875 C 484.29437 491.71875 574.86789 415.0239 596.28125 312.90625 L 487.125 312.90625 C 467.56074 353.56864 425.95543 381.625 377.8125 381.625 C 329.66967 381.625 288.09556 353.5685 268.53125 312.90625 L 155.34375 312.90625 z "
+       id="path2985-1"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracer.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:80px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0.03px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Saab;-inkscape-font-specification:Saab Bold"
+       x="96.492416"
+       y="292.62595"
+       id="text3866"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracer.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3868"
+         x="96.492416"
+         y="292.62595"
+         style="letter-spacing:6.15999985px">pokeTracer</tspan></text>
+  </g>
+</svg>
