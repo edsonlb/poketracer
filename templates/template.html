@@ -1,8 +1,9 @@
 {% load staticfiles %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-  	<title>{% block titulo %}{%endblock %} - Template.html</title>
+  	<title>{% block titulo %}{% trans "Poke Tracer" %}{%endblock %} - Template.html</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -31,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Poke Tracer</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
