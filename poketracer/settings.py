@@ -36,16 +36,14 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-<<<<<<< HEAD
-LANGUAGE_CODE = 'pt-br'
-=======
+
 LANGUAGE_CODE = 'en-us'
 LANGUAGE = (
     ('pt-br', u'Português').
     ('en', u'Inglês').
     ('es', u'Espanhol').
 )
->>>>>>> 34ef025c1e1b0704ebc95337372998be5c806f47
+
 
 SITE_ID = 1
 
