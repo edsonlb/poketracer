@@ -1,4 +1,5 @@
 # Django settings for poketracer project.
+# -*- coding: utf-8 -*-
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -35,7 +36,16 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
+<<<<<<< HEAD
 LANGUAGE_CODE = 'pt-br'
+=======
+LANGUAGE_CODE = 'en-us'
+LANGUAGE = (
+    ('pt-br', u'Português').
+    ('en', u'Inglês').
+    ('es', u'Espanhol').
+)
+>>>>>>> 34ef025c1e1b0704ebc95337372998be5c806f47
 
 SITE_ID = 1
 
@@ -99,6 +109,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.locale.localeMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
