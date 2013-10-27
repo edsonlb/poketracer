@@ -4,7 +4,8 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 # COLOCAR O CAMINHO ATE O SEU DIRETORIO DE TEMPLATE - CAMINHO COMPLETO
-MEDIA_ROOT_VAR = '/home/edson/Projetos/virtualPoketracer/poketracer/templates'
+# MEDIA_ROOT_VAR = '/home/edson/Projetos/virtualPoketracer/poketracer/templates'
+MEDIA_ROOT_VAR = '/home/gabriel/Projetos/virtualPoketracer/poketracer/templates'
 
 ADMINS = (
     # ('Celula', 'suporte@celuladigital.com.br'),
@@ -34,14 +35,20 @@ ALLOWED_HOSTS = []
 # In a Windows environment this must be set to your system time zone.
 TIME_ZONE = 'America/Sao_Paulo'
 
-# Language code for this installation. All choices can be found here:
+# Language code for this installation. All  choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 LANGUAGE = (
+<<<<<<< HEAD
     ('pt-br', u'Português'),
     ('en', u'Inglês'),
     ('es', u'Espanhol'),
+=======
+    ('pt-br', u'Portugues'),
+    ('en', u'Ingles'),
+    ('es', u'Espanhol')
+>>>>>>> test
 )
 
 
@@ -107,7 +114,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+<<<<<<< HEAD
     #'django.middleware.locale.localeMiddleware',
+=======
+>>>>>>> test
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
