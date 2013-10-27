@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('celula', 'suporte@celuladigital.com.br'),
+    # ('Celula', 'suporte@celuladigital.com.br'),
 )
 
 MANAGERS = ADMINS
