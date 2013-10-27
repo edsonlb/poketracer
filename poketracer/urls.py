@@ -1,17 +1,16 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
+from django.conf import settings
+#from django.contrib import admin
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+#admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'poketracer.views.home', name='home'),
-    # url(r'^poketracer/', include('poketracer.foo.urls')),
+	url(r'^media(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+	#url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+	#url(r'^admin/painel', include(admin.site.urls)),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+	url(r'^poketracer/$', TemplateView.as_view(template_name="index.html")),
+	
+	#url(r'^admin/funcionario/', include('sistema.urls_funcionario')),
 )
