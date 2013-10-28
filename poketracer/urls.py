@@ -13,5 +13,7 @@ urlpatterns = patterns('',
 	url(r'^poketracer/$', TemplateView.as_view(template_name="index.html")),
 	url(r'^poketracer/about/$', TemplateView.as_view(template_name="about.html")),
 	url(r'^poketracer/donate/$', TemplateView.as_view(template_name="donate.html")),
+	url(r'^poketracer/donatetrue/$', TemplateView.as_view(template_name="donatetrue.html")),
+	url(r'^poketracer/donatefalse/$', TemplateView.as_view(template_name="donatefalse.html")),
 	#url(r'^admin/funcionario/', include('sistema.urls_funcionario')),
 )
