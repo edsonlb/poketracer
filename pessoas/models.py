@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 from django.db import models
-<<<<<<< HEAD
+
 
 class Pessoa(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -55,5 +55,4 @@ class Amigo(models.Model):
 
 	def __unicode__ (self):
 		return self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')' 
-=======
->>>>>>> test
+
