@@ -19,6 +19,14 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mail@poketracer.com.br'
+EMAIL_HOST_PASSWORD = 'ADMIN1212'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'PokeTracer <mail@poketracer.com.br>'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.

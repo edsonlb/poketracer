@@ -7,13 +7,24 @@
     <div class="container">
 
     <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-4">
-      <img src="{{ MEDIA_URL }}img/logoEntradaSite.png">
+    <div class="col-lg-4">
+      <img src="{{ MEDIA_URL }}img/logoRegistroSite.png">
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-8"><h2>FIND THE POKÉMON YOU WANT & MAKE FRIENDS!</h2>
-        We make your life easier! If you're Pokémon Trainer, register on this website to speed up your search for Pokémons! This is the best way to find more Friend Codes and colleagues on Safari Zone!
-      
-        <div align="center"><a href="/poketracer/register/" class="btn btn-primary btn-lg">REGISTER - Its Free! &raquo;</a></div>
+    <div class="col-lg-4">
+      <form action="/poketracer/add/" method="POST" class="navbar-form navbar-right">
+        {% csrf_token %}
+        <input name="nome" type="text" placeholder="Full Real Name" class="form-control">
+        <input name="nickname" type="text" placeholder="In Game Name" class="form-control">
+        <input name="codigo" type="text" placeholder="Your Friend Code: XXXX-XXXX-XXXX" class="form-control">
+        <input name="email" type="text" placeholder="E-mail" class="form-control">
+        <input name="senha" type="password" placeholder="Password" class="form-control">
+
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+      </div>
+      <div class="col-lg-4">
+
+        </div>
     </div>
     </div>
         
