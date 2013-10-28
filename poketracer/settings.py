@@ -1,14 +1,17 @@
 # Django settings for poketracer project.
 # -*- coding: utf-8 -*-
 
+import os
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 # COLOCAR O CAMINHO ATE O SEU DIRETORIO DE TEMPLATE - CAMINHO COMPLETO
 
-# MEDIA_ROOT_VAR = '/home/edson/Projetos/virtualPoketracer/poketracer/templates'
-# MEDIA_ROOT_VAR = '/home/gabriel/Projetos/virtualPoketracer/poketracer/templates'
-
-MEDIA_ROOT_VAR = '/home/lucaslinux/projetos/poketracer/templates'
+#MEDIA_ROOT_VAR = '/home/edson/Projetos/virtualPoketracer/poketracer/templates'
+#MEDIA_ROOT_VAR = '/home/gabriel/Projetos/virtualPoketracer/poketracer/templates'
+#MEDIA_ROOT_VAR = '/home/lucaslinux/projetos/poketracer/templates'
+MEDIA_ROOT_VAR = os.path.dirname(os.path.realpath(__file__))+'/templates'
+MEDIA_ROOT_VAR = MEDIA_ROOT_VAR.replace('/poketracer/templates', '/templates')
 
 ADMINS = (
     # ('Celula', 'suporte@celuladigital.com.br'),
