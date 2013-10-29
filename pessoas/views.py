@@ -43,7 +43,7 @@ def pessoa_adicionar(request):
 	pessoa.save()
 	validaEmail(pessoa.email)
 		
-	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Adicionado com sucesso!'} )
+	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail '+pessoa.email+' for confirmation.'} )
 
 def pessoa_editar(request):
 	
