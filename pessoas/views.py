@@ -27,11 +27,42 @@ def validaEmail(email):
 #===PESSOA=======================================================
 #def pessoa_pesquisa(request, pagina=1):
 
+def pessoa_login(request):
+	#RECUPERAR OBJETO DA PESSOA NO VISUAL
+	#<div>{{ request.session.pessoa.email }}</div>
+
+	request.session['pessoa'] = ''
+
+	#pessoaSessao = request.GET.get('pessoa')
+
+	email = request.POST.get('email', '').upper().strip()
+	senha = request.POST.get('senha', '').upper().strip()
+
+	print '-->'+email
+	print '-->'+senha
+
+	if len(email) > 3 and len(senha) > 3:
+		pessoa = Pessoa.objects.filter(
+			Q(email=email) | 
+			Q(senha=senha) |
+			Q(ativo='SIM'))
+
+		if pessoa:
+			request.session['pessoa'] = pessoa
+			return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+		else:
+			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
+	else:
+		return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
+
 def pessoa_mostrar(request, id = 0):
 	pessoa = Pessoa.objects.get(codigo=id)
 	return render_response(request,'pessoas/formulario.html', {'pessoa': pessoa, 'acao': 'salvar'} )
 
 def pessoa_adicionar(request):
+
+	#VALIDAR DADOS QUE VEM DA TELA E VERIFICAR SE JA TEM PESSOA COM O MESMO EMAIL NO SISTEMA
+
 	pessoa = Pessoa(
 		nome = request.POST.get('nome', '').upper(),
 		nickname = request.POST.get('nickname', ''),
