@@ -38,9 +38,6 @@ def pessoa_login(request):
 	email = request.POST.get('email', '').upper().strip()
 	senha = request.POST.get('senha', '').upper().strip()
 
-	print '-->'+email
-	print '-->'+senha
-
 	if len(email) > 3 and len(senha) > 3:
 		pessoa = Pessoa.objects.filter(
 			Q(email=email) | 
@@ -48,7 +45,7 @@ def pessoa_login(request):
 			Q(ativo='SIM'))
 
 		if pessoa:
-			request.session['pessoa'] = pessoa
+			request.session['pessoa'] = pessoa.codigo
 			return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
 		else:
 			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
@@ -66,7 +63,7 @@ def pessoa_adicionar(request):
 	pessoa = Pessoa(
 		nome = request.POST.get('nome', '').upper(),
 		nickname = request.POST.get('nickname', ''),
-		codigo = request.POST.get('codigo', ''),
+		friendcode = request.POST.get('friendcode', ''),
 		email = request.POST.get('email', '').upper(),
 		senha = request.POST.get('senha', '').upper(),
 		)
@@ -74,23 +71,23 @@ def pessoa_adicionar(request):
 	pessoa.save()
 	validaEmail(pessoa.email)
 		
-	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail '+pessoa.email+' for confirmation.'} )
+	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail<br />'+pessoa.email+'<br />for confirmation!'} )
 
 def pessoa_editar(request):
 	
 	if request.POST['codigo'] >= 1:
 		pessoa = Pessoa.objects.get(codigo=request.POST['codigo'])
-		pessoa.nome = request.POST['sistema'].upper()
-		pessoa.nickname = request.POST['versao']
-		pessoa.descricao = request.POST['observacao'].upper()
-		pessoa.codigo = request.POST['descricao'].upper()
+		pessoa.nome = request.POST['nome'].upper()
+		pessoa.nickname = request.POST['nickname']
+		pessoa.descricao = request.POST['descricao'].upper()
+		pessoa.friendcode = request.POST['friendcode'].upper()
 		#pessoa.email = request.POST['gerente'].upper()
-		pessoa.senha = request.POST['link']
+		pessoa.senha = request.POST['senha']
 		#pessoa.badge = request.POST['download']
-		pessoa.facebook = request.POST['tags']
-		pessoa.twitter = request.POST['versionamento']
-		pessoa.gplus = request.POST['manual']
-		pessoa.skype = request.POST['manual']
+		pessoa.facebook = request.POST['facebook']
+		pessoa.twitter = request.POST['twitter']
+		pessoa.gplus = request.POST['gplus']
+		pessoa.skype = request.POST['skype']
 		#pessoa.avatar = request.POST['manual']
 		#pessoa.notificacoes = request.POST['manual']
 		#pessoa.tags = request.POST['manual']

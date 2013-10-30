@@ -8,7 +8,7 @@ class Pessoa(models.Model):
 	nome = models.CharField(max_length='200', blank=False)
 	nickname = models.CharField(max_length='200', blank=False)
 	descricao = models.CharField(max_length='200', blank=True)
-	codigo = models.CharField(max_length='200', blank=False)
+	friendcode = models.CharField(max_length='200', blank=False)
 	email = models.CharField(max_length='200', blank=False)
 	senha = models.CharField(max_length='200', blank=False)
 	badge = models.CharField(max_length='200', blank=True)
