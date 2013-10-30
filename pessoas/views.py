@@ -24,14 +24,20 @@ def validaEmail(email):
 	else:
 		return False
 
+def verificaLogin(request): 
+	#PROVISORIO, DEPOIS IMPLEMENTAR AS FERRAMENTAS DO DJANGO
+	#TODAS AS PÁGINAS INTERNAS DEVEM CHAMAR ESSA FUNCAO PARA VALIDAR SE JÁ FOI FEITO O LOGIN POR ENQUANTO	
+	if !request.session['pessoa']:
+		return render_response(request,'index.html')
+
 #===PESSOA=======================================================
 #def pessoa_pesquisa(request, pagina=1):
 
 def pessoa_login(request):
 	#RECUPERAR OBJETO DA PESSOA NO VISUAL
-	#<div>{{ request.session.pessoa.email }}</div>
+	#<div>{{ request.session.pessoa }}</div>
 
-	request.session['pessoa'] = ''
+	request.session['pessoa'] = False
 
 	#pessoaSessao = request.GET.get('pessoa')
 
@@ -45,8 +51,8 @@ def pessoa_login(request):
 			Q(ativo='SIM'))
 
 		if pessoa:
-			#request.session['pessoa'] = pessoa.codigo
-			return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+			request.session['pessoa'] = pessoa[0].codigo
+			return render_response(request,'pessoas/home.html', {'pessoa': pessoa[0]} )
 		else:
 			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
 	else:
@@ -71,7 +77,7 @@ def pessoa_adicionar(request):
 	pessoa.save()
 	validaEmail(pessoa.email)
 		
-	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail<br />'+pessoa.email+'<br />for confirmation!'} )
+	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail '+pessoa.email+' for confirmation!'} )
 
 def pessoa_editar(request):
 	
