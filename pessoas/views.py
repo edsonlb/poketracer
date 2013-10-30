@@ -27,6 +27,31 @@ def validaEmail(email):
 #===PESSOA=======================================================
 #def pessoa_pesquisa(request, pagina=1):
 
+def pessoa_login(request):
+	#RECUPERAR OBJETO DA PESSOA NO VISUAL
+	#<div>{{ request.session.pessoa.email }}</div>
+
+	request.session['pessoa'] = ''
+
+	#pessoaSessao = request.GET.get('pessoa')
+
+	email = request.POST.get('email', '').upper().strip()
+	senha = request.POST.get('senha', '').upper().strip()
+
+	if len(email) > 3 and len(senha) > 3:
+		pessoa = Pessoa.objects.filter(
+			Q(email=email) | 
+			Q(senha=senha) |
+			Q(ativo='SIM'))
+
+		if pessoa:
+			request.session['pessoa'] = pessoa.codigo
+			return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+		else:
+			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
+	else:
+		return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
+
 def pessoa_mostrar(request, id = 0):
 	pessoa = Pessoa.objects.get(codigo=id)
 	return render_response(request,'pessoas/formulario.html', {'pessoa': pessoa, 'acao': 'salvar'} )
@@ -45,10 +70,13 @@ def safari_adicionar(request):
 	return render_response(request,'registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Safari successfully registered.'} )
 
 def pessoa_adicionar(request):
+
+	#VALIDAR DADOS QUE VEM DA TELA E VERIFICAR SE JA TEM PESSOA COM O MESMO EMAIL NO SISTEMA
+
 	pessoa = Pessoa(
 		nome = request.POST.get('nome', '').upper(),
 		nickname = request.POST.get('nickname', ''),
-		codigo = request.POST.get('codigo', ''),
+		friendcode = request.POST.get('friendcode', ''),
 		email = request.POST.get('email', '').upper(),
 		senha = request.POST.get('senha', '').upper(),
 		)
@@ -56,23 +84,23 @@ def pessoa_adicionar(request):
 	pessoa.save()
 	validaEmail(pessoa.email)
 		
-	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail '+pessoa.email+' for confirmation.'} )
+	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail<br />'+pessoa.email+'<br />for confirmation!'} )
 
 def pessoa_editar(request):
 	
 	if request.POST['codigo'] >= 1:
 		pessoa = Pessoa.objects.get(codigo=request.POST['codigo'])
-		pessoa.nome = request.POST['sistema'].upper()
-		pessoa.nickname = request.POST['versao']
-		pessoa.descricao = request.POST['observacao'].upper()
-		pessoa.codigo = request.POST['descricao'].upper()
+		pessoa.nome = request.POST['nome'].upper()
+		pessoa.nickname = request.POST['nickname']
+		pessoa.descricao = request.POST['descricao'].upper()
+		pessoa.friendcode = request.POST['friendcode'].upper()
 		#pessoa.email = request.POST['gerente'].upper()
-		pessoa.senha = request.POST['link']
+		pessoa.senha = request.POST['senha']
 		#pessoa.badge = request.POST['download']
-		pessoa.facebook = request.POST['tags']
-		pessoa.twitter = request.POST['versionamento']
-		pessoa.gplus = request.POST['manual']
-		pessoa.skype = request.POST['manual']
+		pessoa.facebook = request.POST['facebook']
+		pessoa.twitter = request.POST['twitter']
+		pessoa.gplus = request.POST['gplus']
+		pessoa.skype = request.POST['skype']
 		#pessoa.avatar = request.POST['manual']
 		#pessoa.notificacoes = request.POST['manual']
 		#pessoa.tags = request.POST['manual']
