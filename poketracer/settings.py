@@ -14,7 +14,7 @@ MEDIA_ROOT_VAR = os.path.dirname(os.path.realpath(__file__))+'/templates'
 MEDIA_ROOT_VAR = MEDIA_ROOT_VAR.replace('/poketracer/templates', '/templates')
 
 ADMINS = (
-    # ('Celula', 'suporte@celuladigital.com.br'),
+    # ('celula', 'suporte@celuladigital.com.br'),
 )
 
 MANAGERS = ADMINS
