@@ -27,11 +27,16 @@ def validaEmail(email):
 def verificaLogin(request): 
 	#PROVISORIO, DEPOIS IMPLEMENTAR AS FERRAMENTAS DO DJANGO
 	#TODAS AS PÁGINAS INTERNAS DEVEM CHAMAR ESSA FUNCAO PARA VALIDAR SE JÁ FOI FEITO O LOGIN POR ENQUANTO	
-	if !request.session['pessoa']:
+	if not request.session['pessoa']:
 		return render_response(request,'index.html')
 
 #===PESSOA=======================================================
 #def pessoa_pesquisa(request, pagina=1):
+
+def pessoa_logout(request):
+	request.session['pessoa'] = False
+	return render_response(request,'index.html')
+
 
 def pessoa_login(request):
 	#RECUPERAR OBJETO DA PESSOA NO VISUAL
@@ -99,13 +104,18 @@ def pessoa_editar(request):
 		#pessoa.tags = request.POST['manual']
 		#pessoa.ativo = request.POST['manual']
 		pessoa.save()
-		return render_response( request,'pessoas/listagem.html', {'avisoTipo': 'alert-success', 'msg': 'Success!'} )
+		return render_response( request,'/pessoas/listagem.html', {'avisoTipo': 'alert-success', 'msg': 'Success!'} )
 	else:
-		return render_response( request,'pessoas/listagem.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!'} )
+		return render_response( request,'/pessoas/listagem.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!'} )
+
 
 #===FIM PESSOA=======================================================
 
 #===SAFARI=======================================================
+def sarafi_url(request): 
+	verificaLogin(request)
+	return render_response( request,'pessoas/registersafari.html' )
+
 #===FIM SAFARI=======================================================
 
 #===AMIGO=======================================================
