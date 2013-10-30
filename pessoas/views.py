@@ -27,7 +27,7 @@ def validaEmail(email):
 def verificaLogin(request): 
 	#PROVISORIO, DEPOIS IMPLEMENTAR AS FERRAMENTAS DO DJANGO
 	#TODAS AS PÁGINAS INTERNAS DEVEM CHAMAR ESSA FUNCAO PARA VALIDAR SE JÁ FOI FEITO O LOGIN POR ENQUANTO	
-	if not request.session['pessoa']:
+	if request.session['pessoa'] == False:
 		return render_response(request,'index.html')
 
 #===PESSOA=======================================================
@@ -43,8 +43,6 @@ def pessoa_login(request):
 	#<div>{{ request.session.pessoa }}</div>
 
 	request.session['pessoa'] = False
-
-	#pessoaSessao = request.GET.get('pessoa')
 
 	email = request.POST.get('email', '').upper().strip()
 	senha = request.POST.get('senha', '').upper().strip()

@@ -25,13 +25,15 @@ class Pessoa(models.Model):
 	data_alteracao = models.DateTimeField(auto_now=True, auto_now_add=True)
 	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido   
 
+	def __unicode__ (self):
+		return self.nome+' ('+self.nickname+')' 
 
 class Safari(models.Model):
 	codigo = models.AutoField(primary_key=True)
 	tipo = models.CharField(max_length='200', blank=False)
-	pokemon1 = models.CharField(max_length='100', blank=True)
-	pokemon2 = models.CharField(max_length='400', blank=True)
-	pokemon3 = models.CharField(max_length='400', blank=True)
+	pokemon1 = models.ForeignKey(Pokemon, related_name='pokemon1')
+	pokemon2 = models.ForeignKey(Pokemon, related_name='pokemon2')
+	pokemon3 = models.ForeignKey(Pokemon, related_name='pokemon3')
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 	ativo = models.CharField(max_length='3', default='SIM')
 
