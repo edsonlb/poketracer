@@ -1,12 +1,59 @@
 {% extends "template2.html" %}
+
 {% block titulo %}pokeTracer (Homepage){% endblock %}
 
-
 {%block conteudo %}
-  
+  <div class="jumbotron">
     <div class="container">
+
+    <div class="row">
+    <div class="col-lg-4">
+      <img src="{{ MEDIA_URL }}img/addsafari.png">
+    </div>
+    <div class="col-lg-4">
+
+      <form action="/poketracer/safari/add/" method="POST" class="navbar-form navbar-right">
+        {% csrf_token %}
+	        <input name="tipo" type="text" placeholder="Type of Safari" class="form-control" required>
+	        <select name="pokemon1" class="form-control">
+				  <option>Select Pokemon 1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+			</select>
+			<select name="pokemon2" class="form-control">
+				  <option> Select Pokemon 2</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+			</select>
+			<select name="pokemon3" class="form-control">
+				  <option>Select Pokemon 3</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+			</select>
+        <input name="data_cadastro" type="text" placeholder="Date of Registration yyyy/mm/dd " class="form-control" required>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+        
+      </form>
+      </div>
+      <div class="col-lg-4">
+        {% if msg %}
+          <div class="alert {{ avisoTipo }} alert-dismissable"><div align="center">{{ msg }}</div>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          </div>
+        {% endif %}
+        </div>
+    </div>
+    </div>
+        
+        
+      </div>
     </div>
 
-    <div class="container">    
-    </div>
 {%endblock %}

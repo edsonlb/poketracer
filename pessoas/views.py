@@ -56,6 +56,19 @@ def pessoa_mostrar(request, id = 0):
 	pessoa = Pessoa.objects.get(codigo=id)
 	return render_response(request,'pessoas/formulario.html', {'pessoa': pessoa, 'acao': 'salvar'} )
 
+def safari_adicionar(request):
+	safari = Safari(
+		tipo = request.POST.get('tipo', '').upper(),
+		pokemon1 = request.POST.get('pokemon1', '').upper(),
+		pokemon2 = request.POST.get('pokemon2', '').upper(),
+		pokemon3 = request.POST.get('pokemon3', '').upper(),
+		data_cadastro = request.POST.get('data_cadastro', '').upper(),
+		)
+
+	safari.save()
+		
+	return render_response(request,'registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Safari successfully registered.'} )
+
 def pessoa_adicionar(request):
 
 	#VALIDAR DADOS QUE VEM DA TELA E VERIFICAR SE JA TEM PESSOA COM O MESMO EMAIL NO SISTEMA
