@@ -23,10 +23,7 @@ class Pessoa(models.Model):
 	tags = models.CharField(max_length='400', blank=True)
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 	data_alteracao = models.DateTimeField(auto_now=True, auto_now_add=True)
-	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido
-
-	def __unicode__(self):
-		return self.nome+'('+self.nickname+')'   
+	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido   
 
 
 class Safari(models.Model):

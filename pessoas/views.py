@@ -45,7 +45,7 @@ def pessoa_login(request):
 			Q(ativo='SIM'))
 
 		if pessoa:
-			request.session['pessoa'] = pessoa.codigo
+			#request.session['pessoa'] = pessoa.codigo
 			return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
 		else:
 			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
