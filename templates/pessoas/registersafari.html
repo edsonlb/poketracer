@@ -12,14 +12,6 @@
     </div>
     <div class="col-lg-4">
 
-codigo = models.AutoField(primary_key=True)
-	tipo = models.CharField(max_length='200', blank=False)
-	pokemon1 = models.CharField(max_length='100', blank=True)
-	pokemon2 = models.CharField(max_length='400', blank=True)
-	pokemon3 = models.CharField(max_length='400', blank=True)
-	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
-	ativo = models.CharField(max_length='3', default='SIM')
-
       <form action="/poketracer/safari/add/" method="POST" class="navbar-form navbar-right">
         {% csrf_token %}
 	        <input name="tipo" type="text" placeholder="Type of Safari" class="form-control" required>
@@ -64,23 +56,4 @@ codigo = models.AutoField(primary_key=True)
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>Friend Codes</h2>
-          <p>A quick and easy way to add new GameBoy players to your friend list. Add only trustworthy colleagues to play online! Bonuses for those who add another player faster! <b>pokeTracer</b> is safe and a reliable system. Look for friends at any time!</p>
-          <p><a class="btn btn-info" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Safari Zone</h2>
-          <p>Find out exactly which Pokémon your friends have before adding them! Save time on catching more Pokémons and increasing your collection! Never been so easy to catch the right Pokémon for your needs! Compatible with Pokémon X and Y Editions. Join our comunity!</p>
-          <p><a class="btn btn-info" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Where to Find Them?</h2>
-          <p>The pokeTracer system offers a refined search for people and their Pokémons for the new generation of gaming consoles! In short time this will be the largest online database of Pokémon Friend Codes in the world! So enjoy! It's free!</p>
-          <p><a class="btn btn-info" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-    </div>
 {%endblock %}

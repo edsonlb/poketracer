@@ -32,7 +32,7 @@ def pessoa_mostrar(request, id = 0):
 	return render_response(request,'pessoas/formulario.html', {'pessoa': pessoa, 'acao': 'salvar'} )
 
 def safari_adicionar(request):
-	Safari = Safari(
+	safari = Safari(
 		tipo = request.POST.get('tipo', '').upper(),
 		pokemon1 = request.POST.get('pokemon1', '').upper(),
 		pokemon2 = request.POST.get('pokemon2', '').upper(),
@@ -40,10 +40,9 @@ def safari_adicionar(request):
 		data_cadastro = request.POST.get('data_cadastro', '').upper(),
 		)
 
-	pessoa.save()
-	validaEmail(pessoa.email)
+	safari.save()
 		
-	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail '+pessoa.email+' for confirmation.'} )
+	return render_response(request,'registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Safari successfully registered.'} )
 
 def pessoa_adicionar(request):
 	pessoa = Pessoa(
