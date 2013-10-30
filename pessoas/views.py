@@ -108,6 +108,9 @@ def pessoa_editar(request):
 	else:
 		return render_response( request,'/pessoas/listagem.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!'} )
 
+def pessoa_url(request): 
+	verificaLogin(request)
+	return render_response( request,'pessoas/home.html' )
 
 #===FIM PESSOA=======================================================
 
@@ -115,6 +118,19 @@ def pessoa_editar(request):
 def sarafi_url(request): 
 	verificaLogin(request)
 	return render_response( request,'pessoas/registersafari.html' )
+
+def safari_adicionar(request):
+	safari = Safari(
+		tipo = request.POST.get('tipo', '').upper(),
+		pokemon1 = request.POST.get('pokemon1', '').upper(),
+		pokemon2 = request.POST.get('pokemon2', '').upper(),
+		pokemon3 = request.POST.get('pokemon3', '').upper(),
+		data_cadastro = request.POST.get('data_cadastro', '').upper(),
+		)
+
+	safari.save()
+		
+	return render_response(request,'registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Safari successfully registered.'} )
 
 #===FIM SAFARI=======================================================
 
