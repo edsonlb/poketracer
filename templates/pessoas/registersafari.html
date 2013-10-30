@@ -14,7 +14,27 @@
 
       <form action="/poketracer/safari/add/" method="POST" class="navbar-form navbar-right">
         {% csrf_token %}
-	        <input name="tipo" type="text" placeholder="Type of Safari" class="form-control" required>
+	        <select name="tipo" class="form-control">
+				  <option> Select Type</option>
+				  	<option>NORMAL</option>
+					<option>FIGHTING</option>
+					<option>FLYING</option>
+					<option>POISON</option>
+					<option>GROUND</option>
+					<option>ROCK</option>
+					<option>BUG</option>
+					<option>GHOTS</option>
+					<option>STEEL</option>
+					<option>FIRE</option>
+					<option>WATER</option>
+					<option>GRASS</option>
+					<option>ELECTRIC</option>
+					<option>PSYCHIC</option>
+					<option>ICE</option>
+					<option>DRAGON</option>
+					<option>DARK</option>
+					<option>FAIRY</option>
+			</select>
 	        <select name="pokemon1" class="form-control">
 				  <option>Select Pokemon 1</option>
 				  <option>2</option>
