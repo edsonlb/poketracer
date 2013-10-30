@@ -18,5 +18,6 @@ urlpatterns = patterns('',
 	url(r'^poketracer/donatefalse/$', TemplateView.as_view(template_name="donatefalse.html")),
 	#url(r'^admin/funcionario/', include('sistema.urls_funcionario')),
 	url(r'^poketracer/home/$', TemplateView.as_view(template_name="pessoas/home.html")),
-	url(r'^poketracer/home/safari/add/$', TemplateView.as_view(template_name="pessoas/registersafari.html")),
+	url(r'^poketracer/home/safari/$', TemplateView.as_view(template_name="pessoas/registersafari.html")),
+	url(r'^poketracer/home/safari/add/$', 'pessoas.views.safari_adicionar'),
 )
