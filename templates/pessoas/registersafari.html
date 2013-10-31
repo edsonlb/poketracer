@@ -2,79 +2,89 @@
 
 {% block titulo %}pokeTracer (Homepage){% endblock %}
 
+{%block conteudoMenu %}
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li><a href="/poketracer/home/">Dashboard</a></li>
+      <li><a href="/poketracer/home/safari">My Safari</a></li>
+      <li><a href="/poketracer/home/pokemon">My Friends</a></li>
+      <li><a href="/poketracer/home/friendcode">Friend Code Search</a></li>
+      <li><a href="/poketracer/home/pokemon">Pokémons</a></li>
+    </ul>
+  </div>
+{%endblock %}
+
+
 {%block conteudo %}
-  <div class="jumbotron">
+  <div class="container">
+    <h2>My Safari</h2>
+  </div>
+
     <div class="container">
+        <div class="row">
+	        <div class="col-lg-4">
+	        </div>
+	        <div class="col-lg-4">
+	          <form action="/poketracer/home/safari/add/" method="POST" class="navbar-form navbar-right">
+		        {% csrf_token %}
 
-    <div class="row">
-    <div class="col-lg-4">
-      <img src="{{ MEDIA_URL }}img/registersafari.png">
-    </div>
-    <div class="col-lg-4">
+			        <select name="tipo" class="form-control">
+						  <option value="0"> Select Type</option>
+							<option value="BUG">BUG</option>
+							<option value="DARK">DARK</option>
+							<option value="DRAGON">DRAGON</option>
+							<option value="ELECTRIC">ELECTRIC</option>
+							<option value="FAIRY">FAIRY</option>
+							<option value="FIGHTING">FIGHTING</option>
+							<option value="FLYING">FLYING</option>
+							<option value="FIRE">FIRE</option>
+							<option value="GRASS">GRASS</option>
+							<option value="GHOTS">GHOTS</option>
+							<option value="GROUND">GROUND</option>
+							<option value="ICE">ICE</option>
+						  	<option value="NORMAL">NORMAL</option>
+							<option value="POISON">POISON</option>
+							<option value="PSYCHIC">PSYCHIC</option>
+							<option value="ROCK">ROCK</option>
+							<option value="STEEL">STEEL</option>
+							<option value="WATER">WATER</option>
+					</select>
 
-      <form action="/poketracer/home/safari/add/" method="POST" class="navbar-form navbar-right">
-        {% csrf_token %}
+			        <select name="pokemon1" class="form-control">
+						  <option value="0">Select Pokemon 1</option>
+						  {% for pokemons in pokemon %}
+						  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }} &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
+						  {% endfor %}
+					</select>
 
-	        <select name="tipo" class="form-control">
-				  <option value="0"> Select Type</option>
-					<option value="BUG">BUG</option>
-					<option value="DARK">DARK</option>
-					<option value="DRAGON">DRAGON</option>
-					<option value="ELECTRIC">ELECTRIC</option>
-					<option value="FAIRY">FAIRY</option>
-					<option value="FIGHTING">FIGHTING</option>
-					<option value="FLYING">FLYING</option>
-					<option value="FIRE">FIRE</option>
-					<option value="GRASS">GRASS</option>
-					<option value="GHOTS">GHOTS</option>
-					<option value="GROUND">GROUND</option>
-					<option value="ICE">ICE</option>
-				  	<option value="NORMAL">NORMAL</option>
-					<option value="POISON">POISON</option>
-					<option value="PSYCHIC">PSYCHIC</option>
-					<option value="ROCK">ROCK</option>
-					<option value="STEEL">STEEL</option>
-					<option value="WATER">WATER</option>
-			</select>
+					<select name="pokemon2" class="form-control">
+						  <option value="0">Select Pokemon 2</option>
+						  {% for pokemons in pokemon %}
+						  		<option value="{{ pokemons.codigo }}" align="center" ><div align="center"> {{ pokemons.numero }} &nbsp &nbsp &nbsp  {{ pokemons.nome|upper }}</div></option>
+						  {% endfor %}
+					</select>
 
-	        <select name="pokemon1" class="form-control">
-				  <option value="0">Select Pokemon 1</option>
-				  {% for pokemons in pokemon %}
-				  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }} &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
-				  {% endfor %}
-			</select>
+					<select name="pokemon3" class="form-control">
+						  <option value="0">Select Pokemon 3</option>
+						  {% for pokemons in pokemon %}
+						  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }}  &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
+						  {% endfor %}
+					</select><br>
+		        
 
-			<select name="pokemon2" class="form-control">
-				  <option value="0">Select Pokemon 2</option>
-				  {% for pokemons in pokemon %}
-				  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }} &nbsp &nbsp &nbsp  {{ pokemons.nome|upper }}</option>
-				  {% endfor %}
-			</select>
-
-			<select name="pokemon3" class="form-control">
-				  <option value="0">Select Pokemon 3</option>
-				  {% for pokemons in pokemon %}
-				  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }}  &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
-				  {% endfor %}
-			</select>
+		        <button type="submit" class="btn btn-primary">Register</button>
+		        
+		      </form>
+	       </div>
         
+	        <div class="col-lg-4">
+	        	{% if msg %}
+		          <div class="alert {{ avisoTipo }} alert-dismissable"><div align="center">{{ msg }}</div>
+		            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		          </div>
+	        	{% endif %}
+	        </div>
 
-        <button type="submit" class="btn btn-primary">Register</button>
-        
-      </form>
-      </div>
-      <div class="col-lg-4">
-        {% if msg %}
-          <div class="alert {{ avisoTipo }} alert-dismissable"><div align="center">{{ msg }}</div>
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          </div>
-        {% endif %}
         </div>
     </div>
-    </div>
-        
-        
-      </div>
-    </div>
-
 {%endblock %}
