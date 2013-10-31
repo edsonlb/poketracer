@@ -27,7 +27,7 @@ def validaEmail(email):
 def verificaLogin(request): 
 	#PROVISORIO, DEPOIS IMPLEMENTAR AS FERRAMENTAS DO DJANGO
 	#TODAS AS PÁGINAS INTERNAS DEVEM CHAMAR ESSA FUNCAO PARA VALIDAR SE JÁ FOI FEITO O LOGIN POR ENQUANTO	
-	if request.session['pessoa'] == False:
+	if not request.session['pessoa']:
 		return render_response(request,'index.html')
 
 #===PESSOA=======================================================
@@ -41,6 +41,8 @@ def pessoa_logout(request):
 def pessoa_login(request):
 	#RECUPERAR OBJETO DA PESSOA NO VISUAL
 	#<div>{{ request.session.pessoa }}</div>
+	# RECUPERAR O CODIGO DA PESSOA NO PYTHON
+	#request.session['pessoa']
 
 	request.session['pessoa'] = False
 
@@ -48,10 +50,7 @@ def pessoa_login(request):
 	senha = request.POST.get('senha', '').upper().strip()
 
 	if len(email) > 3 and len(senha) > 3:
-		pessoa = Pessoa.objects.filter(
-			Q(email=email) | 
-			Q(senha=senha) |
-			Q(ativo='SIM'))
+		pessoa = Pessoa.objects.get(email=email, senha=senha, ativo='SIM')
 
 		if pessoa:
 			request.session['pessoa'] = pessoa[0].codigo
@@ -108,7 +107,9 @@ def pessoa_editar(request):
 
 def pessoa_url(request): 
 	verificaLogin(request)
-	return render_response( request,'pessoas/home.html' )
+
+	pessoa = Pessoa.objects.get(codigo=request.session['pessoa'])
+	return render_response( request,'pessoas/home.html', {'pessoa': pessoa} )
 
 #===FIM PESSOA=======================================================
 
