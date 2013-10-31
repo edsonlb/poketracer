@@ -17,45 +17,45 @@
 
 	        <select name="tipo" class="form-control">
 				  <option value="0"> Select Type</option>
-					<option value="BUG">>BUG</option>
-					<option value="DARK">>DARK</option>
-					<option value="DRAGON">>DRAGON</option>
-					<option value="ELECTRIC">>ELECTRIC</option>
-					<option value="FAIRY">>FAIRY</option>
+					<option value="BUG">BUG</option>
+					<option value="DARK">DARK</option>
+					<option value="DRAGON">DRAGON</option>
+					<option value="ELECTRIC">ELECTRIC</option>
+					<option value="FAIRY">FAIRY</option>
 					<option value="FIGHTING">FIGHTING</option>
-					<option value="FLYING">>FLYING</option>
-					<option value="FIRE">>FIRE</option>
-					<option value="GRASS">>GRASS</option>
-					<option value="GHOTS">>GHOTS</option>
-					<option value="GROUND">>GROUND</option>
-					<option value="ICE">>ICE</option>
+					<option value="FLYING">FLYING</option>
+					<option value="FIRE">FIRE</option>
+					<option value="GRASS">GRASS</option>
+					<option value="GHOTS">GHOTS</option>
+					<option value="GROUND">GROUND</option>
+					<option value="ICE">ICE</option>
 				  	<option value="NORMAL">NORMAL</option>
-					<option value="POISON">>POISON</option>
-					<option value="PSYCHIC">>PSYCHIC</option>
-					<option value="ROCK">>ROCK</option>
-					<option value="STEEL">>STEEL</option>
-					<option value="WATER">>WATER</option>
+					<option value="POISON">POISON</option>
+					<option value="PSYCHIC">PSYCHIC</option>
+					<option value="ROCK">ROCK</option>
+					<option value="STEEL">STEEL</option>
+					<option value="WATER">WATER</option>
 			</select>
+
 	        <select name="pokemon1" class="form-control">
 				  <option value="0">Select Pokemon 1</option>
-				  <option value="31">146 MOLTRES</option>
-				  <option value="42">151 MEW</option>
-				  <option value="5">152 CHARMANDER</option>
-				  <option value="20">56 PIKACHU</option>
+				  {% for pokemons in pokemon %}
+				  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }} &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
+				  {% endfor %}
 			</select>
+
 			<select name="pokemon2" class="form-control">
 				  <option value="0">Select Pokemon 2</option>
-				  <option value="31">146 MOLTRES</option>
-				  <option value="42">151 MEW</option>
-				  <option value="5">152 CHARMANDER</option>
-				  <option value="20">56 PIKACHU</option>
+				  {% for pokemons in pokemon %}
+				  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }} &nbsp &nbsp &nbsp  {{ pokemons.nome|upper }}</option>
+				  {% endfor %}
 			</select>
+
 			<select name="pokemon3" class="form-control">
 				  <option value="0">Select Pokemon 3</option>
-				  <option value="31">146 MOLTRES</option>
-				  <option value="42">151 MEW</option>
-				  <option value="5">152 CHARMANDER</option>
-				  <option value="20">56 PIKACHU</option>
+				  {% for pokemons in pokemon %}
+				  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }}  &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
+				  {% endfor %}
 			</select>
         
 

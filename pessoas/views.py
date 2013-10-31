@@ -2,6 +2,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pessoas.models import Pessoa, Safari, Amigo
+from pokemons.models import Pokemon
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.core.mail import send_mail
@@ -113,9 +114,12 @@ def pessoa_url(request):
 #===FIM PESSOA=======================================================
 
 #===SAFARI=======================================================
+
 def sarafi_url(request): 
+	pokemon = Pokemon.objects.all()
+
 	verificaLogin(request)
-	return render_response( request,'pessoas/registersafari.html' )
+	return render_response( request,'pessoas/registersafari.html' , {'pokemon':pokemon} )
 
 def safari_adicionar(request):
 	safari = Safari(
