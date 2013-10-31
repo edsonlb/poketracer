@@ -7,6 +7,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
+from datetime import date
 
 def render_response(req, *args, **kwargs):
 	kwargs['context_instance'] = RequestContext(req)
@@ -122,17 +123,35 @@ def sarafi_url(request):
 	return render_response( request,'pessoas/registersafari.html' , {'pokemon':pokemon} )
 
 def safari_adicionar(request):
-	safari = Safari(
-		tipo = request.POST.get('tipo', '').upper(),
-		pokemon1 = request.POST.get('pokemon1', '').upper(),
-		pokemon2 = request.POST.get('pokemon2', '').upper(),
-		pokemon3 = request.POST.get('pokemon3', '').upper(),
-		data_cadastro = request.POST.get('data_cadastro', '').upper(),
-		)
 
-	safari.save()
+	if request.method == 'POST':
+
+		safari = Safari() #COLOCAR PARA CRIA O OBJETO 
+		safari.tipo = request.POST['tipo']
+
+		pokemon = Pokemon(codigo=request.POST['pokemon1'])
+		safari.pokemon1 = pokemon
+		pokemon = Pokemon(codigo=request.POST['pokemon2'])
+		safari.pokemon2 = pokemon
+		pokemon = Pokemon(codigo=request.POST['pokemon3'])
+		safari.pokemon3 = pokemon
+		safari.save()
+
+		amigo = Amigo()
+		amigo.avaliacao = 5 #AVALIACAO VAI DE 0 A 5
+		amigo.descricao = '#' #PADRAO SO PARA NAO DEIXAR NADA EM BRANCO
+		pessoa = Pessoa(codigo=request.session['pessoa'])
+		amigo.pessoa_cadastro = pessoa #PESSOA QUE EFETUOU O CADASTRO
+		amigo.pessoa_amiga = pessoa #PESSOA PARA QUEM ELA VAI CADASTRAR O SAFARI
+		amigo.safari = safari
+		amigo.tags = '#' #PADRAO SO PARA NAO DEIXAR NADA EM BRANCO
 		
-	return render_response(request,'registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Safari successfully registered.'} )
+		amigo.save()
+
+		return render_response(request,'pessoas/registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Your Safari successfully registered.'} )
+	else:
+		return render_response(request,'pessoas/registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Error!.'} )	
+	
 
 #===FIM SAFARI=======================================================
 
