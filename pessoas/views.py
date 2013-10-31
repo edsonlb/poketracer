@@ -16,7 +16,7 @@ def validaEmail(email):
 	# Descobrir o código da pessoa, somar com mais 321 e enviar o link criado para o e-mail da pessoa.
 	# Quando o e-mail voltar, ele habilita o ativo SIM no cadastro da pessoa e libera ela para entrar no sistema.
 	
-	mensagem = '<b>TESTE</b><br /> http://www.pokertrace.com/validation/321'
+	mensagem = 'Texto da mensagem em inglês com o link de validação http://www.pokertrace.com/validation/321'
 
 	if email:
 		send_mail('PokeTracer: E-mail validation', mensagem, 'PokeTracer <mail@poketracer.com.br>',[email], fail_silently=False)
@@ -24,16 +24,25 @@ def validaEmail(email):
 	else:
 		return False
 
+def verificaLogin(request): 
+	#PROVISORIO, DEPOIS IMPLEMENTAR AS FERRAMENTAS DO DJANGO
+	#TODAS AS PÁGINAS INTERNAS DEVEM CHAMAR ESSA FUNCAO PARA VALIDAR SE JÁ FOI FEITO O LOGIN POR ENQUANTO	
+	if request.session['pessoa'] == False:
+		return render_response(request,'index.html')
+
 #===PESSOA=======================================================
 #def pessoa_pesquisa(request, pagina=1):
 
+def pessoa_logout(request):
+	request.session['pessoa'] = False
+	return render_response(request,'index.html')
+
+
 def pessoa_login(request):
 	#RECUPERAR OBJETO DA PESSOA NO VISUAL
-	#<div>{{ request.session.pessoa.email }}</div>
+	#<div>{{ request.session.pessoa }}</div>
 
-	request.session['pessoa'] = ''
-
-	#pessoaSessao = request.GET.get('pessoa')
+	request.session['pessoa'] = False
 
 	email = request.POST.get('email', '').upper().strip()
 	senha = request.POST.get('senha', '').upper().strip()
@@ -45,8 +54,8 @@ def pessoa_login(request):
 			Q(ativo='SIM'))
 
 		if pessoa:
-			request.session['pessoa'] = pessoa.codigo
-			return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+			request.session['pessoa'] = pessoa[0].codigo
+			return render_response(request,'pessoas/home.html', {'pessoa': pessoa[0]} )
 		else:
 			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
 	else:
@@ -55,19 +64,6 @@ def pessoa_login(request):
 def pessoa_mostrar(request, id = 0):
 	pessoa = Pessoa.objects.get(codigo=id)
 	return render_response(request,'pessoas/formulario.html', {'pessoa': pessoa, 'acao': 'salvar'} )
-
-def safari_adicionar(request):
-	safari = Safari(
-		tipo = request.POST.get('tipo', '').upper(),
-		pokemon1 = request.POST.get('pokemon1', '').upper(),
-		pokemon2 = request.POST.get('pokemon2', '').upper(),
-		pokemon3 = request.POST.get('pokemon3', '').upper(),
-		data_cadastro = request.POST.get('data_cadastro', '').upper(),
-		)
-
-	safari.save()
-		
-	return render_response(request,'registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Safari successfully registered.'} )
 
 def pessoa_adicionar(request):
 
@@ -84,7 +80,7 @@ def pessoa_adicionar(request):
 	pessoa.save()
 	validaEmail(pessoa.email)
 		
-	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail<br />'+pessoa.email+'<br />for confirmation!'} )
+	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail '+pessoa.email+' for confirmation!'} )
 
 def pessoa_editar(request):
 	
@@ -106,13 +102,34 @@ def pessoa_editar(request):
 		#pessoa.tags = request.POST['manual']
 		#pessoa.ativo = request.POST['manual']
 		pessoa.save()
-		return render_response( request,'pessoas/listagem.html', {'avisoTipo': 'alert-success', 'msg': 'Success!'} )
+		return render_response( request,'/pessoas/listagem.html', {'avisoTipo': 'alert-success', 'msg': 'Success!'} )
 	else:
-		return render_response( request,'pessoas/listagem.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!'} )
+		return render_response( request,'/pessoas/listagem.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!'} )
+
+def pessoa_url(request): 
+	verificaLogin(request)
+	return render_response( request,'pessoas/home.html' )
 
 #===FIM PESSOA=======================================================
 
 #===SAFARI=======================================================
+def sarafi_url(request): 
+	verificaLogin(request)
+	return render_response( request,'pessoas/registersafari.html' )
+
+def safari_adicionar(request):
+	safari = Safari(
+		tipo = request.POST.get('tipo', '').upper(),
+		pokemon1 = request.POST.get('pokemon1', '').upper(),
+		pokemon2 = request.POST.get('pokemon2', '').upper(),
+		pokemon3 = request.POST.get('pokemon3', '').upper(),
+		data_cadastro = request.POST.get('data_cadastro', '').upper(),
+		)
+
+	safari.save()
+		
+	return render_response(request,'registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Safari successfully registered.'} )
+
 #===FIM SAFARI=======================================================
 
 #===AMIGO=======================================================

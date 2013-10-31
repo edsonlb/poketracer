@@ -54,6 +54,19 @@
               </ul>
             </li> -->
           </ul>
+
+          {% if request.session.pessoa %}
+          <ul class="nav nav-pills navbar-right navbar-form">
+            <li > <!-- class="active" -->
+              <a href="/poketracer/logout/">
+                <!-- <span class="badge pull-right">0</span> PARA USAR QUANDO TIVER NOTIFICACOES! NAO RETIRAR-->
+                Logout
+            </a>
+            </li>
+          </ul>
+          
+          {% else %}
+
           <form  action="/poketracer/login/" method="POST" class="navbar-form navbar-right">
           {% csrf_token %}
             <div class="form-group">
@@ -65,9 +78,14 @@
             <button type="submit" class="btn btn-success">{% if avisoLogin %}{{ avisoLogin }}{% else %}Login{% endif %}</button>
             <a href="/poketracer/register/" class="btn btn-primary">Register!</a>
             </form>
+            {% endif %}
+            
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+
+    {%block conteudoMenu %}
+    {% endblock %}
 
     {%block conteudo %}
     {% endblock %}
