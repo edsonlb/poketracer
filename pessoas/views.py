@@ -16,7 +16,7 @@ def validaEmail(email):
 	# Descobrir o código da pessoa, somar com mais 321 e enviar o link criado para o e-mail da pessoa.
 	# Quando o e-mail voltar, ele habilita o ativo SIM no cadastro da pessoa e libera ela para entrar no sistema.
 	
-	mensagem = '<b>TESTE</b><br /> http://www.pokertrace.com/validation/321'
+	mensagem = 'Texto da mensagem em inglês com o link de validação http://www.pokertrace.com/validation/321'
 
 	if email:
 		send_mail('PokeTracer: E-mail validation', mensagem, 'PokeTracer <mail@poketracer.com.br>',[email], fail_silently=False)

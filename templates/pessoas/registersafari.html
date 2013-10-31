@@ -1,4 +1,4 @@
-{% extends "template2.html" %}
+{% extends "template.html" %}
 
 {% block titulo %}pokeTracer (Homepage){% endblock %}
 
@@ -8,35 +8,56 @@
 
     <div class="row">
     <div class="col-lg-4">
-      <img src="{{ MEDIA_URL }}img/logoRegistroSite.png">
+      <img src="{{ MEDIA_URL }}img/registersafari.png">
     </div>
     <div class="col-lg-4">
 
       <form action="/poketracer/safari/add/" method="POST" class="navbar-form navbar-right">
         {% csrf_token %}
-	        <input name="tipo" type="text" placeholder="Type of Safari" class="form-control" required>
+
+	        <select name="tipo" class="form-control">
+				  <option value="0"> Select Type</option>
+				  	<option value="NORMAL">NORMAL</option>
+					<option value="FIGHTING">FIGHTING</option>
+					<option value="FLYING">>FLYING</option>
+					<option value="">>POISON</option>
+					<option value="">>GROUND</option>
+					<option value="">>ROCK</option>
+					<option value="">>BUG</option>
+					<option value="">>GHOTS</option>
+					<option value="">>STEEL</option>
+					<option value="">>FIRE</option>
+					<option value="">>WATER</option>
+					<option value="">>GRASS</option>
+					<option value="">>ELECTRIC</option>
+					<option value="">>PSYCHIC</option>
+					<option value="">>ICE</option>
+					<option value="">>DRAGON</option>
+					<option value="">>DARK</option>
+					<option value="">>FAIRY</option>
+			</select>
 	        <select name="pokemon1" class="form-control">
-				  <option>Select Pokemon 1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
+				  <option value="0">Select Pokemon 1</option>
+				  <option value="31">146 MOLTRES</option>
+				  <option value="42">151 MEW</option>
+				  <option value="5">152 CHARMANDER</option>
+				  <option value="20">56 PIKACHU</option>
 			</select>
 			<select name="pokemon2" class="form-control">
-				  <option> Select Pokemon 2</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
+				  <option value="0">Select Pokemon 2</option>
+				  <option value="31">146 MOLTRES</option>
+				  <option value="42">151 MEW</option>
+				  <option value="5">152 CHARMANDER</option>
+				  <option value="20">56 PIKACHU</option>
 			</select>
 			<select name="pokemon3" class="form-control">
-				  <option>Select Pokemon 3</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
+				  <option value="0">Select Pokemon 3</option>
+				  <option value="31">146 MOLTRES</option>
+				  <option value="42">151 MEW</option>
+				  <option value="5">152 CHARMANDER</option>
+				  <option value="20">56 PIKACHU</option>
 			</select>
-        <input name="data_cadastro" type="text" placeholder="Date of Registration yyyy/mm/dd " class="form-control" required>
+        
 
         <button type="submit" class="btn btn-primary">Register</button>
         
