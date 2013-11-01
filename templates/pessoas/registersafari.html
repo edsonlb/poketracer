@@ -1,0 +1,99 @@
+{% extends "template.html" %}
+
+{% block titulo %}pokeTracer (Homepage){% endblock %}
+
+{%block conteudo %}
+  <div class="container">
+    <h2>My Safari</h2>
+  </div>
+
+    <div class="container">
+        <div class="row">
+	        <div class="col-lg-4">
+	        &nbsp 
+	        </div>
+	        <div class="col-lg-4">
+	          <form action="/poketracer/home/safari/add/" method="POST" class="navbar-form navbar-right">
+		        {% csrf_token %}
+			        <select name="tipo" class="form-control">
+			        	{% if amigo %}
+						 	<option value="{{ amigo.safari.tipo }}" selected>Selected = {{ amigo.safari.tipo }}</option>
+						{% else %}
+							<option value="0" selected>Select Type</option>
+						{% endif %}
+							<option value="BUG">BUG</option>
+							<option value="DARK">DARK</option>
+							<option value="DRAGON">DRAGON</option>
+							<option value="ELECTRIC">ELECTRIC</option>
+							<option value="FAIRY">FAIRY</option>
+							<option value="FIGHTING">FIGHTING</option>
+							<option value="FLYING">FLYING</option>
+							<option value="FIRE">FIRE</option>
+							<option value="GRASS">GRASS</option>
+							<option value="GHOTS">GHOTS</option>
+							<option value="GROUND">GROUND</option>
+							<option value="ICE">ICE</option>
+						  	<option value="NORMAL">NORMAL</option>
+							<option value="POISON">POISON</option>
+							<option value="PSYCHIC">PSYCHIC</option>
+							<option value="ROCK">ROCK</option>
+							<option value="STEEL">STEEL</option>
+							<option value="WATER">WATER</option>
+					</select><hr>
+			        <select name="pokemon1" class="form-control">
+			        	{% if amigo %}
+						 	<option value="{{ amigo.safari.pokemon1.codigo }}" selected>Selected = {{ amigo.safari.pokemon1.numero }} &nbsp {{ amigo.safari.pokemon1.nome }}</option>
+						{% else %}
+							<option value="0">Select Pokemon 1</option>
+						{% endif %}
+						  
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+					</select>
+
+					<select name="pokemon2" class="form-control">
+			        	{% if amigo %}
+						 	<option value="{{ amigo.safari.pokemon2.codigo }}" selected>Selected = {{ amigo.safari.pokemon2.numero }} &nbsp {{ amigo.safari.pokemon2.nome }}</option>
+						{% else %}
+							<option value="0">Select Pokemon 2</option>
+						{% endif %}
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}" align="center" > {{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+					</select>
+
+					<select name="pokemon3" class="form-control">
+			        	{% if amigo %}
+						 	<option value="{{ amigo.safari.pokemon3.codigo }}" selected>Selected = {{ amigo.safari.pokemon3.numero }} &nbsp {{ amigo.safari.pokemon3.nome }}</option>
+						{% else %}
+							<option value="0">Select Pokemon 3</option>
+						{% endif %}
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }}  &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+					</select><br /><br />
+
+
+					{% if amigo %}
+						<input type="hidden" name="acao" value="alterar">
+		        		<button type="submit" class="btn btn-primary">Update your Safari!</button>
+		        	{% else %}
+		        		<button type="submit" class="btn btn-primary">Save your Safari!</button>
+		        	{% endif %}
+		        
+		      </form>
+	       </div>
+        
+	        <div class="col-lg-4">
+	        	{% if msg %}
+		          <div class="alert {{ avisoTipo }} alert-dismissable"><div align="center">{{ msg }}</div>
+		            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		          </div>
+	        	{% endif %}
+	        	&nbsp
+	        </div>
+
+        </div>
+    </div>
+{%endblock %}

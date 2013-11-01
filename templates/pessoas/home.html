@@ -1,0 +1,180 @@
+{% extends "template.html" %}
+
+{% block titulo %}pokeTracer (Homepage){% endblock %}
+
+{%block conteudo %}
+  <div class="container">
+    <h2>Dashboard</h2>
+  </div>
+
+{% if msg %}
+  <div class="container">
+        <div class="alert {{ avisoTipo }} alert-dismissable">{{ msg }}
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">close &times;</button>
+        </div>          
+  </div>
+{% endif %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><b>ADDED FRIENDS</b></div>
+              <div class="panel-body">
+                <p>Last added friends by me...</p>
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item"><a href="#">Edsonlb (0000-0000-0000)</a></li>
+              <li class="list-group-item"><a href="#">Dapibus (0000-0000-0000)</a></li>
+              <li class="list-group-item"><a href="#">Morbi (0000-0000-0000)</a></li>
+              <li class="list-group-item"><a href="#">Porta (0000-0000-0000)</a></li>
+              <li class="list-group-item"><a href="#">Vestibulum (0000-0000-0000)</a></li>
+              <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><b>ADDED ME</b></div>
+              <div class="panel-body">
+                <p>Latest people who added me...</p>
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
+              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
+              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
+              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
+              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
+              </ul>
+          </div>
+       </div>
+        <div class="col-lg-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><b>FRIENDS REPLY</b></div>
+              <div class="panel-body">
+                <p>Latest friend connection...</p>
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
+              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
+              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
+              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
+              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="panel panel-info">
+            <div class="panel-heading"><b>RECENTLY SAFARI UPDATES</b></div>
+              <div class="panel-body">
+                <p>Last added Safaris by users...</p>
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item"><a href="#">Crasjusto (odioDRT)</a></li>
+              <li class="list-group-item"><a href="#">Dapibus (ac facilisis in)</a></li>
+              <li class="list-group-item"><a href="#">Morbi (leo risus)</a></li>
+              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
+              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="panel panel-info">
+            <div class="panel-heading"><b>MOST QUALIFIED USER</b></div>
+              <div class="panel-body">
+                <p>User by qualifications...</p>
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
+              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
+              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
+              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
+              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
+              </ul>
+          </div>
+       </div>
+        <div class="col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-heading"><b>MY INFORMATION</b></div>
+              <ul class="list-group">
+              <li class="list-group-item">
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Nintendo Friend Code</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.friendcode }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">PokeTracer Code</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.codigo }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">My PokeTracer Rating</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.codigo }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">In Game Name</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.nickname }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Real Name</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.nome }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Quote</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.descricao }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">E-mail</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.email }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Skype</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.skype }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Twitter</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.twitter }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Google+</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.gplus }}">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Facebook</span>
+                  <input type="text" class="form-control" disabled value="{{ pessoa.facebook }}">
+                </div>
+
+                <hr>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">User Type</span>
+                  <input type="text" class="form-control" disabled value="ICE">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Pokémon 1</span>
+                  <input type="text" class="form-control" disabled value="ICE">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Pokémon 2</span>
+                  <input type="text" class="form-control" disabled value="ICE">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Pokémon 3</span>
+                  <input type="text" class="form-control" disabled value="ICE">
+                </div>
+              </li>
+ 
+              </ul>
+          </div>
+        </div>
+      </div>
+
+
+      </div> <!-- CONTEINER -->
+{%endblock %}

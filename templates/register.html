@@ -13,17 +13,22 @@
     <div class="col-lg-4">
       <form action="/poketracer/add/" method="POST" class="navbar-form navbar-right">
         {% csrf_token %}
-        <input name="nome" type="text" placeholder="Full Real Name" class="form-control">
-        <input name="nickname" type="text" placeholder="In Game Name" class="form-control">
-        <input name="codigo" type="text" placeholder="Your Friend Code: XXXX-XXXX-XXXX" class="form-control">
-        <input name="email" type="text" placeholder="E-mail" class="form-control">
-        <input name="senha" type="password" placeholder="Password" class="form-control">
+        <input name="nome" type="text" placeholder="Full Real Name" class="form-control" required>
+        <input name="nickname" type="text" placeholder="In Game Name" class="form-control" required>
+        <input name="friendcode" type="text" placeholder="Your Friend Code: XXXX-XXXX-XXXX" class="form-control" required>
+        <input name="email" type="email" placeholder="E-mail" class="form-control" required>
+        <input name="senha" type="password" placeholder="Password" class="form-control" required>
 
         <button type="submit" class="btn btn-primary">Register</button>
+        
       </form>
       </div>
       <div class="col-lg-4">
-
+        {% if msg %}
+          <div class="alert {{ avisoTipo }} alert-dismissable"><div align="center">{{ msg }}</div>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          </div>
+        {% endif %}
         </div>
     </div>
     </div>

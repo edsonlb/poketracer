@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-  	<title>{% block titulo %}{% trans "Poke Tracer" %}{%endblock %} - Template.html</title>
+    <title>{% block titulo %}{% trans "Poke Tracer" %}{%endblock %} - Template.html</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -38,7 +38,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/poketracer/">Home</a></li>
+            <li><a href="/poketracer/">Home</a></li>
             <li><a href="/poketracer/about">About</a></li>
             <li><a href="/poketracer/donate">Donate</a></li>
             <!-- <li class="dropdown">
@@ -54,49 +54,55 @@
               </ul>
             </li> -->
           </ul>
-
-          {% if request.session.pessoaCodigo %}
-          <ul class="nav nav-pills navbar-right navbar-form">
-            <li > <!-- class="active" -->
-              <a href="/poketracer/logout/">
-                <!-- <span class="badge pull-right">0</span> PARA USAR QUANDO TIVER NOTIFICACOES! NAO RETIRAR-->
-                Logout
-            </a>
-            </li>
-          </ul>
-          
-          {% else %}
-
-          <form  action="/poketracer/login/" method="POST" class="navbar-form navbar-right">
-          {% csrf_token %}
+          <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input name="email" type="text" placeholder="Email" class="form-control" required>
+              <input type="text" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input name="senha" type="password" placeholder="Password" class="form-control" required>
+              <input type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">{% if avisoLogin %}{{ avisoLogin }}{% else %}Login{% endif %}</button>
-            <a href="/poketracer/register/" class="btn btn-primary">Register!</a>
+            <button type="submit" class="btn btn-success">Login</button>
+            <a href="/poketracer/home/register-safari/" class="btn btn-primary">Register!</a>
             </form>
-            {% endif %}
-            
         </div><!--/.navbar-collapse -->
-      </div>
-    </div>
 
-{% if request.session.pessoaCodigo %}
-{%block conteudoMenu %}
-  <div class="container">
-    <ul class="nav nav-tabs">
-      <li><a href="/poketracer/home/">Dashboard</a></li>
-      <li><a href="/poketracer/home/safari">My Safari</a></li>
-      <li><a href="/poketracer/home/pokemon">My Friends</a></li>
-      <li><a href="/poketracer/home/friendcode">Friend Code Search</a></li>
-      <li><a href="/poketracer/home/pokemon">Pokémons</a></li>
-    </ul>
+          {%block conteudoMenu %}
+
+          <body>
+            <div class="bs-example">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                  <a href="/poketracer/home/">Home</a>
+              </li>
+              <li>
+                  <a href="/poketracer/home/safari/">Register</a>
+              </li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      Seek
+                      <span class="caret"/>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                      <li>
+                          <a href="#">Safari</a>
+                      </li>
+                      <li>
+                          <a href="#">Friends</a>
+                      </li>
+                      <li>
+                          <a href="#">##</a>
+                      </li>
+                      <li class="divider"/>
+                      <li>
+                          <a href="#">##</a>
+                      </li>
+                  </ul>
+              </li>
+            </ul>
+      </div>
+          {% endblock %}
+     </div>
   </div>
-{%endblock %}
-{% endif %}
 
     {%block conteudo %}
     {% endblock %}
@@ -105,10 +111,9 @@
       <hr>
       <footer>
         <p><div class="text-center"><a href="http://www.celuladigital.com.br" target="_blank"><img src="http://celuladigital.com.br/www/home/wp-content/uploads/iconCelulaDigital.png" alt="Desenvolvedor" /></a><br/>
-        <p> <span class="glyphicon glyphicon-envelope"></span>
-                         &nbsp; social@poketracer.com.br</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> &nbsp; social@poketracer.com.br</p>
         <a href="https://www.facebook.com/pages/Poke-Tracer/693137594046875" target="_blank">Facebook</a> | 
-        <a href="https://twitter.com/Poke_Tracer" target="_blank">Twitter</a>  &nbsp; &copy; {% now "Y" %} All rights reserved.</div></p>
+        <a href="https://twitter.com/Poke_Tracer" target="_blank">Twitter</a> &nbsp; &copy; {% now "Y" %} All rights reserved.</div></p>
       </footer>
     </div> <!-- /container -->
     <!-- Bootstrap core JavaScript
