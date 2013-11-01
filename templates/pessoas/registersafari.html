@@ -55,21 +55,21 @@
 						  {% for pokemons in pokemon %}
 						  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }} &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
 						  {% endfor %}
-					</select>
+					</select><br><br>
 
 					<select name="pokemon2" class="form-control">
 						  <option value="0">Select Pokemon 2</option>
 						  {% for pokemons in pokemon %}
 						  		<option value="{{ pokemons.codigo }}" align="center" ><div align="center"> {{ pokemons.numero }} &nbsp &nbsp &nbsp  {{ pokemons.nome|upper }}</div></option>
 						  {% endfor %}
-					</select>
+					</select><br><br>
 
 					<select name="pokemon3" class="form-control">
 						  <option value="0">Select Pokemon 3</option>
 						  {% for pokemons in pokemon %}
 						  		<option value="{{ pokemons.codigo }}">{{ pokemons.numero }}  &nbsp &nbsp &nbsp {{ pokemons.nome|upper }}</option>
 						  {% endfor %}
-					</select><br>
+					</select><br><br>
 		        
 
 		        <button type="submit" class="btn btn-primary">Register</button>
