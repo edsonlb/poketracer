@@ -1,27 +1,43 @@
 # Django settings for poketracer project.
 # -*- coding: utf-8 -*-
 
+import os
+
+HOSTING = 'poketracer' #MUDAR QUANDO ESTIVER NO SERVIDOR DE PRODUCAO OU TESTE EX: http://127.0.0.1:8000/poketracer/home/safari/
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 # COLOCAR O CAMINHO ATE O SEU DIRETORIO DE TEMPLATE - CAMINHO COMPLETO
-# MEDIA_ROOT_VAR = '/home/edson/Projetos/virtualPoketracer/poketracer/templates'
-MEDIA_ROOT_VAR = '/home/gabriel/Projetos/virtualPoketracer/poketracer/templates'
+
+#MEDIA_ROOT_VAR = '/home/edson/Projetos/virtualPoketracer/poketracer/templates'
+#MEDIA_ROOT_VAR = '/home/gabriel/Projetos/virtualPoketracer/poketracer/templates'
+#MEDIA_ROOT_VAR = '/home/lucaslinux/projetos/poketracer/templates'
+MEDIA_ROOT_VAR = os.path.dirname(os.path.realpath(__file__))+'/templates'
+MEDIA_ROOT_VAR = MEDIA_ROOT_VAR.replace('/poketracer/templates', '/templates')
 
 ADMINS = (
-    # ('Celula', 'suporte@celuladigital.com.br'),
+    # ('celula', 'suporte@celuladigital.com.br'),
 )
 
 MANAGERS = ADMINS
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mail@poketracer.com.br'
+EMAIL_HOST_PASSWORD = 'ADMIN1212'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'PokeTracer <mail@poketracer.com.br>'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'bancoTeste.sqlite3',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': 'bancoTeste.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'celuladigital15', 
+        'USER': 'celuladigital15',
+        'PASSWORD': 'CDS1005',
+        'HOST': '201.76.55.146',
+        'PORT': '3306',
     }
 }
 
@@ -40,15 +56,11 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 LANGUAGE_CODE = 'pt-br'
 LANGUAGE = (
-<<<<<<< HEAD
-    ('pt-br', u'Português'),
-    ('en', u'Inglês'),
-    ('es', u'Espanhol'),
-=======
+
     ('pt-br', u'Portugues'),
     ('en', u'Ingles'),
     ('es', u'Espanhol')
->>>>>>> test
+
 )
 
 
@@ -114,10 +126,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-<<<<<<< HEAD
+
     #'django.middleware.locale.localeMiddleware',
-=======
->>>>>>> test
+
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',

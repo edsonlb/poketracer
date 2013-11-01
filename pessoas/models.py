@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 from django.db import models
-<<<<<<< HEAD
+from pokemons.models import Pokemon 
+
 
 class Pessoa(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -8,7 +9,7 @@ class Pessoa(models.Model):
 	nome = models.CharField(max_length='200', blank=False)
 	nickname = models.CharField(max_length='200', blank=False)
 	descricao = models.CharField(max_length='200', blank=True)
-	codigo = models.CharField(max_length='200', blank=False)
+	friendcode = models.CharField(max_length='200', blank=False)
 	email = models.CharField(max_length='200', blank=False)
 	senha = models.CharField(max_length='200', blank=False)
 	badge = models.CharField(max_length='200', blank=True)
@@ -23,18 +24,20 @@ class Pessoa(models.Model):
 	tags = models.CharField(max_length='400', blank=True)
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 	data_alteracao = models.DateTimeField(auto_now=True, auto_now_add=True)
-	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido
+	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido   
 
-	def __unicode__(self):
-		return self.nome+'('+self.nickname+')'   
+	def __unicode__ (self):
+		return self.nome+' ('+self.nickname+')' 
 
+	def getCodigo():
+		return self.codigo
 
 class Safari(models.Model):
 	codigo = models.AutoField(primary_key=True)
 	tipo = models.CharField(max_length='200', blank=False)
-	pokemon1 = models.CharField(max_length='100', blank=True)
-	pokemon2 = models.CharField(max_length='400', blank=True)
-	pokemon3 = models.CharField(max_length='400', blank=True)
+	pokemon1 = models.ForeignKey(Pokemon, related_name='pokemon1')
+	pokemon2 = models.ForeignKey(Pokemon, related_name='pokemon2')
+	pokemon3 = models.ForeignKey(Pokemon, related_name='pokemon3')
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 	ativo = models.CharField(max_length='3', default='SIM')
 
@@ -55,5 +58,4 @@ class Amigo(models.Model):
 
 	def __unicode__ (self):
 		return self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')' 
-=======
->>>>>>> test
+

@@ -7,10 +7,18 @@ from django.conf import settings
 
 urlpatterns = patterns('',
 	url(r'^media(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-	#url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-	#url(r'^admin/painel', include(admin.site.urls)),
 
-	url(r'^poketracer/$', TemplateView.as_view(template_name="index.html")),
-	
-	#url(r'^admin/funcionario/', include('sistema.urls_funcionario')),
+	url(r'^'+settings.HOSTING+'/$', TemplateView.as_view(template_name="index.html")),
+	url(r'^'+settings.HOSTING+'/about/$', TemplateView.as_view(template_name="about.html")),
+	url(r'^'+settings.HOSTING+'/donate/$', TemplateView.as_view(template_name="donate.html")),
+	url(r'^'+settings.HOSTING+'/register/$', TemplateView.as_view(template_name="register.html")),
+	url(r'^'+settings.HOSTING+'/add/$', 'pessoas.views.pessoa_adicionar'),
+	url(r'^'+settings.HOSTING+'/validation/(?P<codigo>\d+)', 'pessoas.views.pessoa_validarEmail'),
+	url(r'^'+settings.HOSTING+'/login/$', 'pessoas.views.pessoa_login'),
+	url(r'^'+settings.HOSTING+'/logout/$', 'pessoas.views.pessoa_logout'),
+	url(r'^'+settings.HOSTING+'/donatetrue/$', TemplateView.as_view(template_name="donatetrue.html")),
+	url(r'^'+settings.HOSTING+'/donatefalse/$', TemplateView.as_view(template_name="donatefalse.html")),
+	url(r'^'+settings.HOSTING+'/home/$', 'pessoas.views.pessoa_url'),
+	url(r'^'+settings.HOSTING+'/home/safari/$', 'pessoas.views.sarafi_url'),
+	url(r'^'+settings.HOSTING+'/home/safari/add/$', 'pessoas.views.safari_adicionar'),
 )
