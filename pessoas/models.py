@@ -29,6 +29,9 @@ class Pessoa(models.Model):
 	def __unicode__ (self):
 		return self.nome+' ('+self.nickname+')' 
 
+	def getCodigo():
+		return self.codigo
+
 class Safari(models.Model):
 	codigo = models.AutoField(primary_key=True)
 	tipo = models.CharField(max_length='200', blank=False)

@@ -8,17 +8,20 @@ from django.db.models import Q
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from datetime import date
+from django.shortcuts import redirect
+from django.conf import settings
+
 
 def render_response(req, *args, **kwargs):
 	kwargs['context_instance'] = RequestContext(req)
 	return render_to_response(*args, **kwargs)
 
-def validaEmail(email):
+def validaEmail(email, codigo):
 
 	# Descobrir o código da pessoa, somar com mais 321 e enviar o link criado para o e-mail da pessoa.
 	# Quando o e-mail voltar, ele habilita o ativo SIM no cadastro da pessoa e libera ela para entrar no sistema.
-	
-	mensagem = 'Texto da mensagem em inglês com o link de validação http://www.pokertrace.com/validation/321'
+	codigo = codigo + 321
+	mensagem = 'Click on this link or Copy & Paste in your internet Browser to validate your registration at PokeTracer: http://www.pokertrace.com/validation/%d' % codigo 
 
 	if email:
 		send_mail('PokeTracer: E-mail validation', mensagem, 'PokeTracer <mail@poketracer.com.br>',[email], fail_silently=False)
@@ -26,42 +29,68 @@ def validaEmail(email):
 	else:
 		return False
 
-def verificaLogin(request): 
-	#PROVISORIO, DEPOIS IMPLEMENTAR AS FERRAMENTAS DO DJANGO
-	#TODAS AS PÁGINAS INTERNAS DEVEM CHAMAR ESSA FUNCAO PARA VALIDAR SE JÁ FOI FEITO O LOGIN POR ENQUANTO	
-	if request.session['pessoa'] == False:
-		return render_response(request,'index.html')
+def validaLogin(request):
+	if request.session['pessoaCodigo']: 
+		return True
+	else:
+		return False
 
 #===PESSOA=======================================================
-#def pessoa_pesquisa(request, pagina=1):
+
+def pessoa_url(request): 
+
+	if validaLogin(request):
+		pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
+		return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+	else:
+		return render_response(request,'index.html')
+
+def pessoa_validarEmail(request, codigo=0):
+	try:
+		codigo = int(codigo) - int(321)
+		pessoa = Pessoa.objects.get(codigo=codigo, ativo='VAL')
+
+		print '--->'+pessoa.nome
+
+		if pessoa:
+			pessoa.ativo = 'SIM'
+			pessoa.save()
+			return render_response(request,'index.html', {'avisoLogin': 'OK! You can Login now!'} )
+	except Exception as e:
+		return render_response(request,'index.html', {'avisoLogin': 'User already checked!'} )
 
 def pessoa_logout(request):
-	request.session['pessoa'] = False
+	request.session['pessoaCodigo'] = False
 	return render_response(request,'index.html')
 
 
 def pessoa_login(request):
 	#RECUPERAR OBJETO DA PESSOA NO VISUAL
-	#<div>{{ request.session.pessoa }}</div>
+	#	<div>{{ request.session.pessoaCodigo }}</div>
+	# RECUPERAR O CODIGO DA PESSOA NO PYTHON
+	#	request.session['pessoaCodigo']
 
-	request.session['pessoa'] = False
+	if request.method == 'POST':
+		request.session['pessoaCodigo'] = False
+		email = request.POST.get('email', '').upper().strip()
+		senha = request.POST.get('senha', '').upper().strip()
 
-	email = request.POST.get('email', '').upper().strip()
-	senha = request.POST.get('senha', '').upper().strip()
+		if len(email) > 3 and len(senha) > 3:
 
-	if len(email) > 3 and len(senha) > 3:
-		pessoa = Pessoa.objects.filter(
-			Q(email=email) | 
-			Q(senha=senha) |
-			Q(ativo='SIM'))
+			try:
+				pessoa = Pessoa.objects.get(email=email, senha=senha, ativo='SIM')
+			except Exception as e:
+				return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
 
-		if pessoa:
-			request.session['pessoa'] = pessoa[0].codigo
-			return render_response(request,'pessoas/home.html', {'pessoa': pessoa[0]} )
+			if pessoa.codigo > 0:
+				request.session['pessoaCodigo'] = pessoa.codigo
+				return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+			else:
+				return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!!'} )
 		else:
-			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
+			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!!!'} )
 	else:
-		return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!'} )
+		return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!!!!'} )
 
 def pessoa_mostrar(request, id = 0):
 	pessoa = Pessoa.objects.get(codigo=id)
@@ -80,7 +109,7 @@ def pessoa_adicionar(request):
 		)
 
 	pessoa.save()
-	validaEmail(pessoa.email)
+	validaEmail(pessoa.email, pessoa.codigo)
 		
 	return render_response(request,'register.html', {'avisoTipo': 'alert-success', 'msg': 'Verify your e-mail '+pessoa.email+' for confirmation!'} )
 
@@ -108,25 +137,42 @@ def pessoa_editar(request):
 	else:
 		return render_response( request,'/pessoas/listagem.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!'} )
 
-def pessoa_url(request): 
-	verificaLogin(request)
-	return render_response( request,'pessoas/home.html' )
 
 #===FIM PESSOA=======================================================
 
 #===SAFARI=======================================================
 
-def sarafi_url(request): 
-	pokemon = Pokemon.objects.all()
-	
-	verificaLogin(request)
-	return render_response( request,'pessoas/registersafari.html' , {'pokemon':pokemon} )
+def sarafi_url(request):
+
+	if validaLogin(request):
+		pokemons = Pokemon.objects.filter(ativo='SIM').order_by('numero')
+
+		pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
+
+		amigo = Amigo.objects.filter(pessoa_cadastro=pessoa,pessoa_amiga=pessoa,ativo='SIM')[:1]
+
+		print int(amigo[0].avaliacao)
+		print amigo[0].pessoa_cadastro.nome
+		print amigo[0].pessoa_amiga.nome
+		print amigo[0].safari
+
+		return render_response( request,'pessoas/registersafari.html' , {'pokemons':pokemons, 'amigo': amigo[0]} )
+	else:
+		return render_response( request,'index.html')
 
 def safari_adicionar(request):
 
 	if request.method == 'POST':
 
-		safari = Safari() #COLOCAR PARA CRIA O OBJETO
+		if request.POST['acao'] == 'alterar':
+			pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
+			amigo = Amigo.objects.filter(pessoa_cadastro=pessoa,pessoa_amiga=pessoa,ativo='SIM')[:1]
+			amigo = amigo[0]
+			safari = amigo.safari  #COLOCAR PARA CRIA O OBJETO
+		else:
+			safari = Safari() #COLOCAR PARA CRIA O OBJETO
+			amigo = Amigo()
+
 		safari.tipo = request.POST['tipo']
 
 		pokemon = Pokemon(codigo=request.POST['pokemon1'])
@@ -137,10 +183,9 @@ def safari_adicionar(request):
 		safari.pokemon3 = pokemon
 		safari.save()
 
-		amigo = Amigo()
 		amigo.avaliacao = 5 #AVALIACAO VAI DE 0 A 5
 		amigo.descricao = '#' #PADRAO SO PARA NAO DEIXAR NADA EM BRANCO
-		pessoa = Pessoa(codigo=request.session['pessoa'])
+		pessoa = Pessoa(codigo=request.session['pessoaCodigo'])
 		amigo.pessoa_cadastro = pessoa #PESSOA QUE EFETUOU O CADASTRO
 		amigo.pessoa_amiga = pessoa #PESSOA PARA QUEM ELA VAI CADASTRAR O SAFARI
 		amigo.safari = safari
@@ -148,12 +193,11 @@ def safari_adicionar(request):
 		
 		amigo.save()
 
-		return render_response(request,'pessoas/registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Your Safari successfully registered.'} )
+		return render_response(request,'pessoas/home.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Your Safari successfully registered.'} )
 	else:
-		return render_response(request,'pessoas/registersafari.html', {'avisoTipo': 'alert-success', 'msg': 'Error!.'} )
+		return render_response(request,'pessoas/home.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!.'} )
 
 #===FIM SAFARI=======================================================
 
 #===AMIGO=======================================================
 #===FIM AMIGO=======================================================
-ted

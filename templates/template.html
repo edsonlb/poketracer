@@ -55,7 +55,7 @@
             </li> -->
           </ul>
 
-          {% if request.session.pessoa %}
+          {% if request.session.pessoaCodigo %}
           <ul class="nav nav-pills navbar-right navbar-form">
             <li > <!-- class="active" -->
               <a href="/poketracer/logout/">
@@ -84,8 +84,19 @@
       </div>
     </div>
 
-    {%block conteudoMenu %}
-    {% endblock %}
+{% if request.session.pessoaCodigo %}
+{%block conteudoMenu %}
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li><a href="/poketracer/home/">Dashboard</a></li>
+      <li><a href="/poketracer/home/safari">My Safari</a></li>
+      <li><a href="/poketracer/home/pokemon">My Friends</a></li>
+      <li><a href="/poketracer/home/friendcode">Friend Code Search</a></li>
+      <li><a href="/poketracer/home/pokemon">Pokémons</a></li>
+    </ul>
+  </div>
+{%endblock %}
+{% endif %}
 
     {%block conteudo %}
     {% endblock %}
