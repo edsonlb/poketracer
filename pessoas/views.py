@@ -41,7 +41,18 @@ def pessoa_url(request):
 
 	if validaLogin(request):
 		pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
-		return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+		amigos1 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
+		amigos2 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
+		amigos3 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
+		amigos4 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
+		amigos5 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
+
+		return render_response(request,'pessoas/home.html', {'pessoa': pessoa,
+															 'amigo1': amigos1,
+															 'amigo2': amigos2,
+															 'amigo3': amigos3,
+															 'amigo4': amigos4,
+															 'amigo5': amigos5 })
 	else:
 		return render_response(request,'index.html')
 
@@ -84,7 +95,7 @@ def pessoa_login(request):
 
 			if pessoa.codigo > 0:
 				request.session['pessoaCodigo'] = pessoa.codigo
-				return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+				return render_response(request,'pessoas/home.html', {'pessoa': pessoa } )
 			else:
 				return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!!'} )
 		else:
@@ -151,10 +162,6 @@ def sarafi_url(request):
 
 		amigo = Amigo.objects.filter(pessoa_cadastro=pessoa,pessoa_amiga=pessoa,ativo='SIM')[:1]
 
-		print int(amigo[0].avaliacao)
-		print amigo[0].pessoa_cadastro.nome
-		print amigo[0].pessoa_amiga.nome
-		print amigo[0].safari
 
 		return render_response( request,'pessoas/registersafari.html' , {'pokemons':pokemons, 'amigo': amigo[0]} )
 	else:
@@ -199,5 +206,9 @@ def safari_adicionar(request):
 
 #===FIM SAFARI=======================================================
 
+
 #===AMIGO=======================================================
-#===FIM AMIGO=======================================================
+
+
+
+#===FIM AMIGO===================================================
