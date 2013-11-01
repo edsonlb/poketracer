@@ -159,19 +159,6 @@ def sarafi_url(request):
 		return render_response( request,'pessoas/registersafari.html' , {'pokemons':pokemons, 'amigo': amigo[0]} )
 	else:
 		return render_response( request,'index.html')
-	# amigo = Amigo.objects.get(codigo=request.session['pessoaCodigo'])
-	# print (amigo.pessoa_cadastro.codigo)
-	# print (amigo.pessoa_amiga.codigo)
-
-	# if amigo.pessoa_cadastro.codigo:
-	# 	return render_response( request,'pessoas/registersafari.html' , {'msg':'já cadastrou'} )
-	
-	# else:
-	# 	pokemon = Pokemon.objects.filter(ativo='SIM')
-		
-	# 	verificaLogin(request)
-
-	# 	return render_response( request,'pessoas/registersafari.html' , {'pokemon':pokemon} )
 
 def safari_adicionar(request):
 
@@ -203,7 +190,7 @@ def safari_adicionar(request):
 		amigo.pessoa_amiga = pessoa #PESSOA PARA QUEM ELA VAI CADASTRAR O SAFARI
 		amigo.safari = safari
 		amigo.tags = '#' #PADRAO SO PARA NAO DEIXAR NADA EM BRANCO
-
+		
 		amigo.save()
 
 		return render_response(request,'pessoas/home.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Your Safari successfully registered.'} )

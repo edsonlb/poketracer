@@ -72,8 +72,7 @@
 						  {% for pokemon in pokemons %}
 						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }}  &nbsp {{ pokemon.nome|upper }}</option>
 						  {% endfor %}
-					</select><br /><br />
-
+					</select><br><br>
 
 					{% if amigo %}
 						<input type="hidden" name="acao" value="alterar">
