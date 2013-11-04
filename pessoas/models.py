@@ -14,7 +14,6 @@ class Pessoa(models.Model):
 	senha = models.CharField(max_length='200', blank=False)
 	badge = models.CharField(max_length='200', blank=True)
 	pokemons = models.CharField(max_length='300', blank=True) #RETIRAR QUANDO O OBJ POKEMON ESTIVER PRONTO
-	#amigos = models.ManyToManyField(Pessoa, through='Amigo') ESTA COMPLICADO ESSE RELACIONAMENTO DE MUITOS P MUITOS NA MESMA TABELA
 	facebook = models.CharField(max_length='300', blank=True)
 	twitter = models.CharField(max_length='300', blank=True)
 	gplus = models.CharField(max_length='300', blank=True)
@@ -28,9 +27,6 @@ class Pessoa(models.Model):
 
 	def __unicode__ (self):
 		return self.nome+' ('+self.nickname+')' 
-
-	def getCodigo():
-		return self.codigo
 
 class Safari(models.Model):
 	codigo = models.AutoField(primary_key=True)

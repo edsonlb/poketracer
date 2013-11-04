@@ -41,7 +41,8 @@ def pessoa_url(request):
 
 	if validaLogin(request):
 		pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
-		return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
+		meuSafari = Amigo.objects.get(pessoa_cadastro_id=request.session['pessoaCodigo'],pessoa_amiga_id=request.session['pessoaCodigo'],ativo='SIM')
+		return render_response(request,'pessoas/home.html', {'pessoa': pessoa, 'meuSafari': meuSafari} )
 	else:
 		return render_response(request,'index.html')
 
@@ -61,6 +62,7 @@ def pessoa_validarEmail(request, codigo=0):
 
 def pessoa_logout(request):
 	request.session['pessoaCodigo'] = False
+	request.session.flush()
 	return render_response(request,'index.html')
 
 
@@ -91,10 +93,6 @@ def pessoa_login(request):
 			return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!!!'} )
 	else:
 		return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!!!!'} )
-
-def pessoa_mostrar(request, id = 0):
-	pessoa = Pessoa.objects.get(codigo=id)
-	return render_response(request,'pessoas/formulario.html', {'pessoa': pessoa, 'acao': 'salvar'} )
 
 def pessoa_adicionar(request):
 
@@ -137,40 +135,60 @@ def pessoa_editar(request):
 	else:
 		return render_response( request,'/pessoas/listagem.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!'} )
 
+def pessoa_perfil(request, codigo=0):
+	if codigo > 0:
+		try:
+			indicacoesSafari = Amigo.objects.filter(pessoa_amiga_id=codigo, ativo='SIM').order_by('data_cadastro')
+		except Exception as e:
+			indicacoesSafari = Amigo()
+
+		try:
+			#PRIMEIRO PROCURA O DADO MAIS COMPLETO DO SAFARI
+			pessoa = Amigo.objects.get(pessoa_cadastro_id=codigo,pessoa_amiga_id=codigo,ativo='SIM')
+			return render_response( request,'pessoas/user.html' , {'pessoa': pessoa, 'indicacoesSafari': indicacoesSafari}  )
+		except Exception as e:
+			#SE NAO RETORNAR NADA NO SAFARI, ELE TENTA DIRETO PELO PERFIL
+			try:
+				pessoa = Pessoa.objects.get(codigo=codigo,ativo='SIM')
+				return render_response( request,'pessoas/user.html' , {'pessoa': pessoa, 'indicacoesSafari': indicacoesSafari} )
+			except Exception as e:
+				#SE NAO RETORNAR NADA MESMO ASSIM, ELE RETORNA PARA A PAGINA INICIAL
+				return render_response( request,'index.html')
+
+	else:
+		return render_response( request,'index.html') #SE CASO PASSAR A URL SEM CODIGO
 
 #===FIM PESSOA=======================================================
 
 #===SAFARI=======================================================
 
 def sarafi_url(request):
-
 	if validaLogin(request):
 		pokemons = Pokemon.objects.filter(ativo='SIM').order_by('numero')
+		try:
+			meuSafari = Amigo.objects.get(pessoa_cadastro_id=request.session['pessoaCodigo'],pessoa_amiga_id=request.session['pessoaCodigo'],ativo='SIM')
+		except Exception as e:
+			meuSafari = Amigo()
 
-		pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
+		try:
+			indicacoesSafari = Amigo.objects.filter(pessoa_amiga_id=request.session['pessoaCodigo'],ativo='SIM').order_by('data_cadastro')[:5]
+		except Exception as e:
+			indicacoesSafari = Amigo()
 
-		amigo = Amigo.objects.filter(pessoa_cadastro=pessoa,pessoa_amiga=pessoa,ativo='SIM')[:1]
-
-		print int(amigo[0].avaliacao)
-		print amigo[0].pessoa_cadastro.nome
-		print amigo[0].pessoa_amiga.nome
-		print amigo[0].safari
-
-		return render_response( request,'pessoas/registersafari.html' , {'pokemons':pokemons, 'amigo': amigo[0]} )
+		return render_response( request,'pessoas/registersafari.html' , {'pokemons':pokemons, 'meuSafari': meuSafari, 'indicacoesSafari': indicacoesSafari} )
 	else:
 		return render_response( request,'index.html')
 
 def safari_adicionar(request):
-
 	if request.method == 'POST':
 
+		pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
+
 		if request.POST['acao'] == 'alterar':
-			pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
-			amigo = Amigo.objects.filter(pessoa_cadastro=pessoa,pessoa_amiga=pessoa,ativo='SIM')[:1]
-			amigo = amigo[0]
-			safari = amigo.safari  #COLOCAR PARA CRIA O OBJETO
+			amigo = Amigo.objects.get(pessoa_cadastro_id=request.session['pessoaCodigo'],pessoa_amiga_id=request.session['pessoaCodigo'],ativo='SIM')
+			safari = amigo.safari 
 		else:
-			safari = Safari() #COLOCAR PARA CRIA O OBJETO
+			safari = Safari() #COLOCAR PARA CRIA O OBJETO EM BRANCO
 			amigo = Amigo()
 
 		safari.tipo = request.POST['tipo']
@@ -200,4 +218,54 @@ def safari_adicionar(request):
 #===FIM SAFARI=======================================================
 
 #===AMIGO=======================================================
+
+def friend_url(request):
+	if validaLogin(request):
+		amigos = Amigo.objects.filter(pessoa_cadastro_id=request.session['pessoaCodigo'],ativo='SIM').order_by('data_cadastro')
+
+		return render_response( request,'pessoas/friends.html' , {'amigos':amigos} )
+	else:
+		return render_response( request,'index.html')
+
+def friend_search(request):
+	if validaLogin(request):
+		if request.method == 'POST':
+			textoPesquisa = request.POST['textoPesquisa'].upper().strip();
+		else:
+			textoPesquisa = ''
+
+		if len(textoPesquisa) > 1:
+			sql = ("SELECT pa.codigo FROM pessoas_amigo pa "
+				" INNER JOIN pessoas_pessoa pesCad on pesCad.codigo = pa.pessoa_cadastro_id "
+				" LEFT JOIN pessoas_safari pesSaf on pesSaf.codigo = pa.safari_id "
+				" LEFT JOIN pokemons_pokemon pok1 on pok1.codigo = pesSaf.pokemon1_id "
+				" LEFT JOIN pokemons_pokemon pok2 on pok2.codigo = pesSaf.pokemon2_id "
+				" LEFT JOIN pokemons_pokemon pok3 on pok3.codigo = pesSaf.pokemon3_id "
+				" WHERE "
+				" (pesCad.nome like '%s' OR "
+				" pesCad.nome like '%s' OR "
+				" pesCad.nickname like '%s' OR "
+				" pesCad.friendcode like '%s' OR "
+				" pesSaf.tipo like '%s' OR "
+				" pok1.nome like '%s' OR "
+				" pok2.nome like '%s' OR "
+				" pok1.tags like '%s' OR "
+				" pok2.tags like '%s' OR "
+				" pok3.tags like '%s' OR "
+				" pok3.nome like '%s') AND "
+				" pa.pessoa_amiga_id = pa.pessoa_cadastro_id") % ('%%'+textoPesquisa+'%%','%%'+textoPesquisa+'%%','%%'+textoPesquisa+'%%','%%'+textoPesquisa+'%%', '%%'+textoPesquisa+'%%', '%%'+textoPesquisa+'%%', '%%'+textoPesquisa+'%%',
+				'%%'+textoPesquisa+'%%','%%'+textoPesquisa+'%%','%%'+textoPesquisa+'%%','%%'+textoPesquisa+'%%')
+	
+			amigos = Amigo.objects.raw(sql)
+		else:	
+			amigos = Amigo.objects.filter(pessoa_cadastro_id=request.session['pessoaCodigo'],ativo='SIM').order_by('data_cadastro')
+
+		return render_response( request,'pessoas/friends.html' , {'amigos':amigos, 'textoPesquisa': textoPesquisa} )
+	else:
+		return render_response( request,'index.html')
+
+
+
+
+
 #===FIM AMIGO=======================================================

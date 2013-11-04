@@ -6,18 +6,22 @@
   <div class="container">
     <h2>My Safari</h2>
   </div>
-
+<br />
     <div class="container">
         <div class="row">
-	        <div class="col-lg-4">
-	        &nbsp 
-	        </div>
-	        <div class="col-lg-4">
-	          <form action="/poketracer/home/safari/add/" method="POST" class="navbar-form navbar-right">
-		        {% csrf_token %}
-			        <select name="tipo" class="form-control">
-			        	{% if amigo %}
-						 	<option value="{{ amigo.safari.tipo }}" selected>Selected = {{ amigo.safari.tipo }}</option>
+		<div class="col-lg-6">
+		<form action="/poketracer/home/safari/add/" method="POST">
+		{% csrf_token %}
+          <div class="panel panel-primary">
+            <div class="panel-heading"><b>ADD OR UPDATE YOUR SAFARI INFORMATION HERE</b></div>
+              <div class="panel-body">
+                <p>Add the information you know about your Safari to make it easy other find you in Friend`s Search</p>
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item">
+              	<select name="tipo" class="form-control">
+			        	{% if meuSafari.codigo > 0 %}
+						 	<option value="{{ meuSafari.safari.tipo }}" selected>Selected = {{ meuSafari.safari.tipo }}</option>
 						{% else %}
 							<option value="0" selected>Select Type</option>
 						{% endif %}
@@ -39,10 +43,11 @@
 							<option value="ROCK">ROCK</option>
 							<option value="STEEL">STEEL</option>
 							<option value="WATER">WATER</option>
-					</select><hr>
-			        <select name="pokemon1" class="form-control">
-			        	{% if amigo %}
-						 	<option value="{{ amigo.safari.pokemon1.codigo }}" selected>Selected = {{ amigo.safari.pokemon1.numero }} &nbsp {{ amigo.safari.pokemon1.nome }}</option>
+				</select></li>
+              <li class="list-group-item">
+              	<select name="pokemon1" class="form-control">
+			        	{% if meuSafari.codigo > 0 %}
+						 	<option value="{{ meuSafari.safari.pokemon1.codigo }}" selected>Selected = {{ meuSafari.safari.pokemon1.numero }} &nbsp {{ meuSafari.safari.pokemon1.nome }}</option>
 						{% else %}
 							<option value="0">Select Pokemon 1</option>
 						{% endif %}
@@ -50,48 +55,61 @@
 						  {% for pokemon in pokemons %}
 						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
 						  {% endfor %}
-					</select>
-
-					<select name="pokemon2" class="form-control">
-			        	{% if amigo %}
-						 	<option value="{{ amigo.safari.pokemon2.codigo }}" selected>Selected = {{ amigo.safari.pokemon2.numero }} &nbsp {{ amigo.safari.pokemon2.nome }}</option>
+				</select></li>
+              <li class="list-group-item">
+              	<select name="pokemon2" class="form-control">
+			        	{% if meuSafari.codigo > 0 %}
+						 	<option value="{{ meuSafari.safari.pokemon2.codigo }}" selected>Selected = {{ meuSafari.safari.pokemon2.numero }} &nbsp {{ meuSafari.safari.pokemon2.nome }}</option>
 						{% else %}
 							<option value="0">Select Pokemon 2</option>
 						{% endif %}
 						  {% for pokemon in pokemons %}
 						  		<option value="{{ pokemon.codigo }}" align="center" > {{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
 						  {% endfor %}
-					</select>
-
-					<select name="pokemon3" class="form-control">
-			        	{% if amigo %}
-						 	<option value="{{ amigo.safari.pokemon3.codigo }}" selected>Selected = {{ amigo.safari.pokemon3.numero }} &nbsp {{ amigo.safari.pokemon3.nome }}</option>
+				</select>
+              </li>
+              <li class="list-group-item">
+              	<select name="pokemon3" class="form-control">
+			        	{% if meuSafari.codigo > 0%}
+						 	<option value="{{ meuSafari.safari.pokemon3.codigo }}" selected>Selected = {{ meuSafari.safari.pokemon3.numero }} &nbsp {{ meuSafari.safari.pokemon3.nome }}</option>
 						{% else %}
 							<option value="0">Select Pokemon 3</option>
 						{% endif %}
 						  {% for pokemon in pokemons %}
 						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }}  &nbsp {{ pokemon.nome|upper }}</option>
 						  {% endfor %}
-					</select><br><br>
-
-					{% if amigo %}
+				</select>
+              </li>
+              <li class="list-group-item"><div align="center">
+                        {% if meuSafari.codigo > 0 %}
 						<input type="hidden" name="acao" value="alterar">
 		        		<button type="submit" class="btn btn-primary">Update your Safari!</button>
 		        	{% else %}
+		        		<input type="hidden" name="acao" value="ínserir">
 		        		<button type="submit" class="btn btn-primary">Save your Safari!</button>
 		        	{% endif %}
-		        
-		      </form>
-	       </div>
+		        	</div>
+              </li>
+              </ul>
+          </div>        
+		</form>
+       </div>
         
-	        <div class="col-lg-4">
-	        	{% if msg %}
-		          <div class="alert {{ avisoTipo }} alert-dismissable"><div align="center">{{ msg }}</div>
-		            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		          </div>
-	        	{% endif %}
-	        	&nbsp
-	        </div>
+		<div class="col-lg-6">
+          <div class="panel panel-info">
+            <div class="panel-heading"><b>HINTS FROM OTHER PEOPLE</b></div>
+              <div class="panel-body">
+                <p>If someone has already suggested your Safari data, then Poketracer will provide the information below so you can complete your registration and be available to other on the Friend Search</p>
+              </div>
+              <ul class="list-group">
+              {% if indicacoesSafari.codigo > 0 %}
+              {% for indicacao in indicacoesSafari %}
+              <li class="list-group-item">{{ indicacao.safari.tipo }} ({{ indicacao.safari.pokemon1.nome }}, {{ indicacao.safari.pokemon2.nome }}, {{ indicacao.safari.pokemon3.nome }}) from <a href="#">{{ indicacao.pessoa_cadastro.nickname }}</a></li>
+              {% endfor %}
+              {% endif %}
+              </ul>
+          </div>
+       </div>
 
         </div>
     </div>

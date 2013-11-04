@@ -58,7 +58,7 @@
           {% if request.session.pessoaCodigo %}
           <ul class="nav nav-pills navbar-right navbar-form">
             <li > <!-- class="active" -->
-              <a href="/poketracer/logout/">
+              <a href="/poketracer/logout/" title="Logout user #{{ request.session.pessoaCodigo }}">
                 <!-- <span class="badge pull-right">0</span> PARA USAR QUANDO TIVER NOTIFICACOES! NAO RETIRAR-->
                 Logout
             </a>
@@ -89,9 +89,8 @@
   <div class="container">
     <ul class="nav nav-tabs">
       <li><a href="/poketracer/home/">Dashboard</a></li>
-      <li><a href="/poketracer/home/safari">My Safari</a></li>
-      <li><a href="/poketracer/home/pokemon">My Friends</a></li>
-      <li><a href="/poketracer/home/friendcode">Friend Code Search</a></li>
+      <li><a href="/poketracer/home/safari/">Safari</a></li>
+      <li><a href="/poketracer/home/friends/">Friends</a></li>
       <li><a href="/poketracer/home/pokemon">Pokémons</a></li>
     </ul>
   </div>
@@ -104,16 +103,12 @@
     <div class="container">
       <hr>
       <footer>
-        <p><div class="text-center"><a href="http://www.celuladigital.com.br" target="_blank"><img src="http://celuladigital.com.br/www/home/wp-content/uploads/iconCelulaDigital.png" alt="Desenvolvedor" /></a><br/>
-        <p> <span class="glyphicon glyphicon-envelope"></span>
-                         &nbsp; social@poketracer.com.br</p>
+        <div class="text-center">
+        <p><span class="glyphicon glyphicon-envelope"></span>&nbsp; social@poketracer.com.br</p>
         <a href="https://www.facebook.com/pages/Poke-Tracer/693137594046875" target="_blank">Facebook</a> | 
-        <a href="https://twitter.com/Poke_Tracer" target="_blank">Twitter</a>  &nbsp; &copy; {% now "Y" %} All rights reserved.</div></p>
+        <a href="https://twitter.com/Poke_Tracer" target="_blank">Twitter</a>  &nbsp; &copy; {% now "Y" %} All rights reserved. PokeTracer v0.6 pre-alfa</div>
       </footer>
     </div> <!-- /container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ MEDIA_URL }}bootstrap3/assets/js/jquery.js"></script>
     <script src="{{ MEDIA_URL }}bootstrap3/js/bootstrap.min.js"></script>
   </body>
