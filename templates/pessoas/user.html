@@ -1,0 +1,115 @@
+{% extends "template.html" %}
+
+{% block titulo %}pokeTracer (Homepage){% endblock %}
+
+{%block conteudo %}
+  <div class="container">
+    <h2><img src="{{ MEDIA_URL }}img/avatarUser.png"> PokeTrainer #{{ pessoa.pessoa_cadastro.codigo }}</h2>
+  </div>
+<br />
+    <div class="container">
+        <div class="row">
+		<div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading"><b>Personal Information</b></div>
+              <div class="panel-body">
+              {% if request.session.pessoaCodigo %}
+              	<form action="/poketracer/home/friends/search/" method="POST" class="form-inline">
+              	<div align="center">
+          			{% csrf_token %}
+          			<input type="hidden" name="acao" value="alterar">
+		        	<button type="submit" class="btn btn-primary">Add as friend, leave comments and help us map the PokeTrainers!</button>
+		        </div>
+		        </form>
+              {% else %}
+                <p>Once you are logged in <b>PokeTracer</b> you can do more stuffs with this profile! So register or login to join this commutiny!</p>
+               {% endif %}
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item">
+              <b>Nintendo Friend Code:</b> {{ pessoa.pessoa_cadastro.friendcode }}
+              </li>
+              <li class="list-group-item">
+              <b>Name:</b> {{ pessoa.pessoa_cadastro.nome }}
+              </li>
+              <li class="list-group-item">
+              <b>In Game Name:</b> {{ pessoa.pessoa_cadastro.nickname }}
+              </li>
+              <li class="list-group-item">
+              <b>Facebook:</b> {{ pessoa.pessoa_cadastro.facebook }}
+              </li>
+              <li class="list-group-item">
+              <b>Twitter:</b> {{ pessoa.pessoa_cadastro.twitter }}
+              </li>
+              <li class="list-group-item">
+              <b>Google Plus:</b> {{ pessoa.pessoa_cadastro.gplus }}
+              </li>
+              <li class="list-group-item">
+              <b>Skype:</b> {{ pessoa.pessoa_cadastro.skype }}
+              </li>
+              <li class="list-group-item">
+              <b>Last Update:</b> {{ pessoa.pessoa_cadastro.data_alteracao }}
+              </li>
+              <li class="list-group-item">
+              <b>Member Since:</b> {{ pessoa.pessoa_cadastro.data_cadastro }}
+              </li>
+
+              </ul>
+          </div>        
+       </div>
+        
+		<div class="col-lg-6">
+          <div class="panel panel-info">
+            <div class="panel-heading"><b>FRIEND CODE: {{ pessoa.pessoa_cadastro.friendcode }}</b></div>
+              <div class="panel-body">
+              {% if pessoa.pessoa_cadastro.descricao|length > 3 %}
+               	<p>{{ pessoa.pessoa_cadastro.descricao }}</p>
+              {% else %}
+              	<p>This user is quiet, never wrote anything here yet.</p>
+              {% endif %}
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item">
+              	<b>My Type:</b> {{ pessoa.safari.tipo }}	
+              </li>
+              <li class="list-group-item">
+              	<b>Pokémon 1:</b> {{ pessoa.safari.pokemon1.numero }} - {{ pessoa.safari.pokemon1.nome }} ({{ pessoa.safari.pokemon1.tags }})	
+              </li>
+              <li class="list-group-item">
+              	<b>Pokémon 2:</b> {{ pessoa.safari.pokemon2.numero }} - {{ pessoa.safari.pokemon2.nome }} ({{ pessoa.safari.pokemon1.tags }})	
+              </li>
+              <li class="list-group-item">
+              	<b>Pokémon 3:</b> {{ pessoa.safari.pokemon3.numero }} - {{ pessoa.safari.pokemon3.nome }} ({{ pessoa.safari.pokemon1.tags }})	
+              </li>
+              </ul>
+          </div>
+       </div>
+
+		<div class="col-lg-6">
+          <div class="panel panel-info">
+            <div class="panel-heading"><b>INFORMATION FROM OTHERS ON POKETRACER</b></div>
+              <div class="panel-body">
+              	{% if indicacoesSafari.codigo > 0  %}
+              	{% for indicacao in indicacoesSafari %}
+               		<p>"{{ indicacoesSafari.descricao }}"</p>
+               	{% endfor %}
+               	{% else %}
+               		<p>No comment from other participants yet! But this person seems to be cool!</p>
+              	{% endif %}
+              </div>
+              <ul class="list-group">
+              <li class="list-group-item">
+              	<b>Rating :</b> {{ pessoa.avaliacao }}
+              </li>
+              {% if indicacoesSafari > 0 %}
+              {% for indicacao in indicacoesSafari %}
+              <li class="list-group-item">{{ indicacao.safari.tipo }} ({{ indicacao.safari.pokemon1.nome }}, {{ indicacao.safari.pokemon2.nome }}, {{ indicacao.safari.pokemon3.nome }}) from <a href="/poketracer/{{ indicacao.pessoa_cadastro.codigo }}">{{ indicacao.pessoa_cadastro.nickname }}</a></li>
+              {% endfor %}
+              {% endif %}
+              </ul>
+          </div>
+       </div>
+
+        </div>
+    </div>
+{%endblock %}
