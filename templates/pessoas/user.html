@@ -1,8 +1,13 @@
 {% extends "template.html" %}
 
+
 {% block titulo %}pokeTracer (Homepage){% endblock %}
 
 {%block conteudo %}
+	<!-- SLIDE -->
+   <link href="{{ MEDIA_URL }}imgslider/themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+   <script src="{{ MEDIA_URL }}imgslider/themes/1/js-image-slider.js" type="text/javascript"></script>
+
   <div class="container">
     <h2><img src="{{ MEDIA_URL }}img/avatarUser.png"> PokeTrainer #{{ pessoa.pessoa_cadastro.codigo }}</h2>
   </div>
@@ -14,13 +19,11 @@
             <div class="panel-heading"><b>Personal Information</b></div>
               <div class="panel-body">
               {% if request.session.pessoaCodigo %}
-              	<form action="/poketracer/home/friends/search/" method="POST" class="form-inline">
               	<div align="center">
           			{% csrf_token %}
           			<input type="hidden" name="acao" value="alterar">
-		        	<button type="submit" class="btn btn-primary">Add as friend, leave comments and help us map the PokeTrainers!</button>
+		        	<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add as friend, leave comments and <br />help us map the PokeTrainers!</button>
 		        </div>
-		        </form>
               {% else %}
                 <p>Once you are logged in <b>PokeTracer</b> you can do more stuffs with this profile! So register or login to join this commutiny!</p>
                {% endif %}
@@ -57,17 +60,32 @@
               </ul>
           </div>        
        </div>
+
         
 		<div class="col-lg-6">
           <div class="panel panel-info">
             <div class="panel-heading"><b>FRIEND CODE: {{ pessoa.pessoa_cadastro.friendcode }}</b></div>
               <div class="panel-body">
-              {% if pessoa.pessoa_cadastro.descricao|length > 3 %}
-               	<p>{{ pessoa.pessoa_cadastro.descricao }}</p>
-              {% else %}
-              	<p>This user is quiet, never wrote anything here yet.</p>
-              {% endif %}
-              </div>
+        			<div class="row">
+						<div class="col-lg-6">
+              				<!-- SLIDE COM FOTOS DOS POKEMONS -->
+        					<div id="sliderFrame">
+        					<div id="slider">
+            					<img src="http://img.pokemondb.net/artwork/pikachu.jpg" alt="PIKACHU" />
+            					<img src="http://img.pokemondb.net/artwork/dream/hawlucha.png" alt="CHARMANDER" />
+            					<img src="http://img.pokemondb.net/artwork/pidgeot.jpg" alt="BUBBAFET" />
+        					</div>
+    						</div>
+    					</div>
+    					<div class="col-lg-6">
+    					<br /><br />
+              			{% if pessoa.pessoa_cadastro.descricao|length > 3 %}
+               			<p>{{ pessoa.pessoa_cadastro.descricao }}</p>
+              			{% else %}
+              			<p>This user is quiet, never wrote anything here yet.</p>
+              			{% endif %}
+              			</div>
+              		</div><br /><br />
               <ul class="list-group">
               <li class="list-group-item">
               	<b>My Type:</b> {{ pessoa.safari.tipo }}	
@@ -82,7 +100,8 @@
               	<b>Pokémon 3:</b> {{ pessoa.safari.pokemon3.numero }} - {{ pessoa.safari.pokemon3.nome }} ({{ pessoa.safari.pokemon1.tags }})	
               </li>
               </ul>
-          </div>
+       </div>
+       </div>
        </div>
 
 		<div class="col-lg-6">
@@ -112,4 +131,120 @@
 
         </div>
     </div>
+
+<!-- MODAL PARA ADICAO  -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<form action="/poketracer/home/friends/add/" method="POST">
+	<input type="hidden" name="pessoa_amiga" value="{{ pessoa.pessoa_cadastro.codigo }}">
+	{% csrf_token %}
+  	<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">COMPLETE THE INFORMATIONS AND ADD AS FRIEND!</h4>
+      </div>
+      <div class="modal-body">
+		<div class="container">
+        <div class="row">
+		<div class="col-lg-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><b>{{ pessoa.pessoa_cadastro.nickname }} SAFARI INFO</b></div>
+              <ul class="list-group">
+              <li class="list-group-item">
+              	<select name="tipo" class="form-control">
+							<option value="I DONT KNOW!" selected>Select this user Type</option>
+							<option value="I DONT KNOW!" >I DON'T KNOW!</option>
+							<option value="BUG">BUG</option>
+							<option value="DARK">DARK</option>
+							<option value="DRAGON">DRAGON</option>
+							<option value="ELECTRIC">ELECTRIC</option>
+							<option value="FAIRY">FAIRY</option>
+							<option value="FIGHTING">FIGHTING</option>
+							<option value="FLYING">FLYING</option>
+							<option value="FIRE">FIRE</option>
+							<option value="GRASS">GRASS</option>
+							<option value="GHOTS">GHOTS</option>
+							<option value="GROUND">GROUND</option>
+							<option value="ICE">ICE</option>
+						  	<option value="NORMAL">NORMAL</option>
+							<option value="POISON">POISON</option>
+							<option value="PSYCHIC">PSYCHIC</option>
+							<option value="ROCK">ROCK</option>
+							<option value="STEEL">STEEL</option>
+							<option value="WATER">WATER</option>
+							<option value="I DONT KNOW!">I DON'T KNOW!</option>
+				</select></li>
+              <li class="list-group-item">
+              	<select name="pokemon1" class="form-control">
+							<option value="0" selected>her/his Pokemon 1</option>	
+							<option value="I DONT KNOW!">I DON'T KNOW!</option>					  
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+						  <option value="I DONT KNOW!">I DON'T KNOW!</option>	
+				</select></li>
+              <li class="list-group-item">
+              	<select name="pokemon2" class="form-control">
+							<option value="0" selected>her/his Pokemon 2</option>
+							<option value="0">I DON'T KNOW!</option>
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}" align="center" > {{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+						  <option value="I DONT KNOW!">I DON'T KNOW!</option>	
+				</select>
+              </li>
+              <li class="list-group-item">
+              	<select name="pokemon3" class="form-control">
+							<option value="0" selected>her/his Pokemon 3</option>
+							<option value="0">I DON'T KNOW!</option>
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }}  &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+						  <option value="I DONT KNOW!">I DON'T KNOW!</option>	
+				</select>
+              </li>
+              </ul>
+          </div>        
+		
+       </div>
+        
+		<div class="col-lg-6">
+          <div class="panel panel-info">
+            <div class="panel-heading"><b>CONNECTION</b></div>
+              <div class="panel-body">
+              <b>Friend Review</b>
+                <textarea name="descricao" class="form-control" rows="3"></textarea>
+              </div>
+              
+              <div class="panel-body">
+              <b>Friend Rating</b>
+				<select name="avaliacao" class="form-control">
+					<option value="5">5 Stars *****</option>
+					<option value="4">4 Stars ****</option>
+					<option value="3">3 Stars ***</option>
+					<option value="2">2 Stars **</option>
+					<option value="1">1 Stars *</option>
+					<option value="0">0 Stars</option>
+				</select>
+              </div>
+
+              <div class="panel-body">
+              <b>Tag for ths user:</b>              
+				<input name="tags" type="text" class="form-control" id="exampleInputEmail1" placeholder="you, name, it!">tags separated by commas ,
+              </div>
+              
+          </div>
+       </div>
+
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">SAVE</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </form>
+</div><!-- /.modal -->
 {%endblock %}

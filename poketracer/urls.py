@@ -23,5 +23,6 @@ urlpatterns = patterns('',
 	url(r'^'+settings.HOSTING+'/home/safari/add/$', 'pessoas.views.safari_adicionar'),
 	url(r'^'+settings.HOSTING+'/home/friends/$', 'pessoas.views.friend_url'),
 	url(r'^'+settings.HOSTING+'/home/friends/search/$', 'pessoas.views.friend_search'),
+	url(r'^'+settings.HOSTING+'/home/friends/add/$', 'pessoas.views.pessoa_perfil'),	
 	url(r'^'+settings.HOSTING+'/(?P<codigo>\d+)', 'pessoas.views.pessoa_perfil'),
 )

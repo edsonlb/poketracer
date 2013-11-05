@@ -10,3 +10,6 @@ class Pokemon(models.Model):
 	tags = models.CharField(max_length='400', blank=True)
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 	ativo = models.CharField(max_length='3', default='SIM') 
+
+	def __unicode__ (self):
+		return unicode(self.numero+'  '+self.nome)

@@ -23,8 +23,9 @@
 			        	{% if meuSafari.codigo > 0 %}
 						 	<option value="{{ meuSafari.safari.tipo }}" selected>Selected = {{ meuSafari.safari.tipo }}</option>
 						{% else %}
-							<option value="0" selected>Select Type</option>
+							<option value="I DONT KNOW!" selected>Select Type</option>
 						{% endif %}
+							<option value="I DONT KNOW!" >I DON'T KNOW!</option>
 							<option value="BUG">BUG</option>
 							<option value="DARK">DARK</option>
 							<option value="DRAGON">DRAGON</option>
@@ -43,41 +44,48 @@
 							<option value="ROCK">ROCK</option>
 							<option value="STEEL">STEEL</option>
 							<option value="WATER">WATER</option>
+							<option value="I DONT KNOW!">I DON'T KNOW!</option>
 				</select></li>
               <li class="list-group-item">
               	<select name="pokemon1" class="form-control">
+              			<option value="I DONT KNOW!" >I DON'T KNOW!</option>
 			        	{% if meuSafari.codigo > 0 %}
 						 	<option value="{{ meuSafari.safari.pokemon1.codigo }}" selected>Selected = {{ meuSafari.safari.pokemon1.numero }} &nbsp {{ meuSafari.safari.pokemon1.nome }}</option>
 						{% else %}
-							<option value="0">Select Pokemon 1</option>
+							<option value="I DONT KNOW!" selected>Select Pokemon 1</option>
 						{% endif %}
 						  
-						  {% for pokemon in pokemons %}
-						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
-						  {% endfor %}
+						{% for pokemon in pokemons %}
+							<option value="{{ pokemon.codigo }}">{{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						{% endfor %}
+						<option value="I DONT KNOW!" >I DON'T KNOW!</option>
 				</select></li>
               <li class="list-group-item">
               	<select name="pokemon2" class="form-control">
+              			<option value="I DONT KNOW!" >I DON'T KNOW!</option>
 			        	{% if meuSafari.codigo > 0 %}
 						 	<option value="{{ meuSafari.safari.pokemon2.codigo }}" selected>Selected = {{ meuSafari.safari.pokemon2.numero }} &nbsp {{ meuSafari.safari.pokemon2.nome }}</option>
 						{% else %}
-							<option value="0">Select Pokemon 2</option>
+							<option value="I DONT KNOW!" selected>Select Pokemon 2</option>
 						{% endif %}
-						  {% for pokemon in pokemons %}
-						  		<option value="{{ pokemon.codigo }}" align="center" > {{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
-						  {% endfor %}
+						{% for pokemon in pokemons %}
+							<option value="{{ pokemon.codigo }}" align="center" > {{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						{% endfor %}
+						<option value="I DONT KNOW!" >I DON'T KNOW!</option>
 				</select>
               </li>
               <li class="list-group-item">
               	<select name="pokemon3" class="form-control">
+              			<option value="I DONT KNOW!" >I DON'T KNOW!</option>
 			        	{% if meuSafari.codigo > 0%}
 						 	<option value="{{ meuSafari.safari.pokemon3.codigo }}" selected>Selected = {{ meuSafari.safari.pokemon3.numero }} &nbsp {{ meuSafari.safari.pokemon3.nome }}</option>
 						{% else %}
-							<option value="0">Select Pokemon 3</option>
+							<option value="I DONT KNOW!" selected>Select Pokemon 3</option>
 						{% endif %}
-						  {% for pokemon in pokemons %}
-						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }}  &nbsp {{ pokemon.nome|upper }}</option>
-						  {% endfor %}
+						{% for pokemon in pokemons %}
+							<option value="{{ pokemon.codigo }}">{{ pokemon.numero }}  &nbsp {{ pokemon.nome|upper }}</option>
+						{% endfor %}
+						<option value="I DONT KNOW!" >I DON'T KNOW!</option>
 				</select>
               </li>
               <li class="list-group-item"><div align="center">

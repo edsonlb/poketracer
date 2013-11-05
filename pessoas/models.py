@@ -26,7 +26,7 @@ class Pessoa(models.Model):
 	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido   
 
 	def __unicode__ (self):
-		return self.nome+' ('+self.nickname+')' 
+		return unicode(self.nome+' ('+self.nickname+')')
 
 class Safari(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -38,7 +38,7 @@ class Safari(models.Model):
 	ativo = models.CharField(max_length='3', default='SIM')
 
 	def __unicode__ (self):
-		return self.tipo 
+		return unicode(self.tipo) 
 
 class Amigo(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -53,5 +53,8 @@ class Amigo(models.Model):
 	ativo = models.CharField(max_length='3', default='SIM') 
 
 	def __unicode__ (self):
-		return self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')' 
+		return unicode(self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')')
+
+	def __getitem__(self, val):
+		return self
 
