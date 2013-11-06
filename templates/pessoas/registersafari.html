@@ -77,7 +77,7 @@
               <li class="list-group-item">
               	<select name="pokemon3" class="form-control">
               			<option value="I DONT KNOW!" >I DON'T KNOW!</option>
-			        	{% if meuSafari.codigo > 0%}
+			        	{% if meuSafari.codigo > 0 %}
 						 	<option value="{{ meuSafari.safari.pokemon3.codigo }}" selected>Selected = {{ meuSafari.safari.pokemon3.numero }} &nbsp {{ meuSafari.safari.pokemon3.nome }}</option>
 						{% else %}
 							<option value="I DONT KNOW!" selected>Select Pokemon 3</option>
@@ -89,12 +89,12 @@
 				</select>
               </li>
               <li class="list-group-item"><div align="center">
-                        {% if meuSafari.codigo > 0 %}
+                    {% if meuSafari.codigo > 0 %}
 						<input type="hidden" name="acao" value="alterar">
-		        		<button type="submit" class="btn btn-primary">Update your Safari!</button>
+		        		<button type="submit" class="btn btn-primary">UPDATE your Safari!</button>
 		        	{% else %}
-		        		<input type="hidden" name="acao" value="ínserir">
-		        		<button type="submit" class="btn btn-primary">Save your Safari!</button>
+		        		<input type="hidden" name="acao" value="inserir">
+		        		<button type="submit" class="btn btn-primary">SAVE your Safari!</button>
 		        	{% endif %}
 		        	</div>
               </li>

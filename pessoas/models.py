@@ -55,6 +55,9 @@ class Amigo(models.Model):
 	def __unicode__ (self):
 		return unicode(self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')')
 
-	def __getitem__(self, val):
-		return self
+	def getSafari (self):
+		return self.safari
+
+	#def __getitem__(self, val):
+	#	return self
 

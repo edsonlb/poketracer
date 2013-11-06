@@ -55,9 +55,9 @@
               <td><a href="/poketracer/{{ amigo.pessoa_amiga.codigo }}" target="_brank">{{ amigo.pessoa_amiga.nickname|upper }}</a></td>
               <td>{{ amigo.pessoa_amiga.friendcode }}</td>
               <td>{{ amigo.safari.tipo|upper }}</td>
-              <td>{{ amigo.safari.pokemon1.nome|upper }}</td>
-              <td>{{ amigo.safari.pokemon2.nome|upper }}</td>
-              <td>{{ amigo.safari.pokemon3.nome|upper }}</td>
+              <td><a href="{{ amigo.safari.pokemon1.pokedex_link }}" target="_blank">{{ amigo.safari.pokemon1.nome|upper }}</a></td>
+              <td><a href="{{ amigo.safari.pokemon2.pokedex_link }}" target="_blank">{{ amigo.safari.pokemon2.nome|upper }}</a></td>
+              <td><a href="{{ amigo.safari.pokemon3.pokedex_link }}" target="_blank">{{ amigo.safari.pokemon3.nome|upper }}</a></td>
               <td><div align="center">{{ amigo.avaliacao }}</div></td>
             </tr>
           {% endfor %}
