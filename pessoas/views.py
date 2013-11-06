@@ -10,6 +10,7 @@ from django.core.mail import EmailMessage
 from datetime import date
 from django.shortcuts import redirect
 from django.conf import settings
+from django.db.models import Sum
 
 
 def render_response(req, *args, **kwargs):
@@ -40,13 +41,28 @@ def validaLogin(request):
 def pessoa_url(request): 
 
 	if validaLogin(request):
+		amigos1 = Amigo.objects.filter(pessoa_cadastro_id=request.session['pessoaCodigo'],ativo='SIM').order_by('data_cadastro')[:5]
+		amigos2 = Amigo.objects.filter(pessoa_amiga_id=request.session['pessoaCodigo'],ativo='SIM').order_by('data_cadastro')[:5]
+		
+		if amigos1:
+			for verificandoAmigo in amigos1:
+				amigos3 = Amigo.objects.filter(pessoa_cadastro_id=verificandoAmigo.pessoa_amiga.codigo, pessoa_amiga_id=request.session['pessoaCodigo'] ,ativo='SIM')[:5]	
+
+		amigos4 = Amigo.objects.filter(ativo='SIM').order_by('data_alteracao')[:5]
+		amigos5 = Amigo.objects.annotate(avaliacaoTotal=Sum('avaliacao')).order_by('avaliacao')[:5]
+
 		try:
 			meuSafari = Amigo.objects.get(pessoa_cadastro_id=request.session['pessoaCodigo'],pessoa_amiga_id=request.session['pessoaCodigo'],ativo='SIM')
 		except Exception as e:
-			print e
+			raise e
 			meuSafari = Amigo()
 
-		return render_response(request,'pessoas/home.html', {'meuSafari': meuSafari} )
+		return render_response(request,'pessoas/home.html', {'meuSafari': meuSafari,
+															 'amigo1': amigos1,
+															 'amigo2': amigos2,
+															 'amigo3': amigos3,
+															 'amigo4': amigos4,
+															 'amigo5': amigos5 })
 	else:
 		return render_response(request,'index.html')
 
@@ -91,7 +107,6 @@ def pessoa_login(request):
 			if pessoa.codigo > 0:
 				request.session['pessoaCodigo'] = pessoa.codigo
 				return redirect('/'+settings.HOSTING+'/home', {'pessoa': pessoa})
-				#return render_response(request,'pessoas/home.html', {'pessoa': pessoa} )
 			else:
 				return render_response(request,'index.html', {'avisoLogin': 'Error - Try Again!!'} )
 		else:
@@ -262,7 +277,9 @@ def sarafi_url(request):
 			print e
 			indicacoesSafari = Amigo()
 
+
 		return render_response( request,'pessoas/registersafari.html' , {'pokemons':pokemons, 'meuSafari': meuSafari, 'indicacoesSafari': indicacoesSafari} )
+
 	else:
 		return render_response( request,'index.html')
 
@@ -314,6 +331,7 @@ def safari_adicionar(request):
 
 #===FIM SAFARI=======================================================
 
+
 #===AMIGO=======================================================
 
 def friend_url(request):
@@ -361,8 +379,5 @@ def friend_search(request):
 	else:
 		return render_response( request,'index.html')
 
-
-
-
-
 #===FIM AMIGO=======================================================
+

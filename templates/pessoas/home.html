@@ -24,11 +24,9 @@
                 <p>Last added friends by me...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Edsonlb (0000-0000-0000)</a></li>
-              <li class="list-group-item"><a href="#">Dapibus (0000-0000-0000)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (0000-0000-0000)</a></li>
-              <li class="list-group-item"><a href="#">Porta (0000-0000-0000)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (0000-0000-0000)</a></li>
+              {% for amigo in amigo1 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_amiga.codigo }}">{{ amigo.pessoa_amiga.nickname|upper }} ( {{ amigo.pessoa_amiga.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -40,11 +38,9 @@
                 <p>Latest people who added me...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
-              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo2 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -56,11 +52,9 @@
                 <p>Latest friend connection...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
-              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo3 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -76,11 +70,9 @@
                 <p>Last added Safaris by users...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Crasjusto (odioDRT)</a></li>
-              <li class="list-group-item"><a href="#">Dapibus (ac facilisis in)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (leo risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo4 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -92,11 +84,9 @@
                 <p>User by qualifications...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
-              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo5 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
