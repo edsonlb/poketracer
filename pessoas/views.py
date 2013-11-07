@@ -41,23 +41,8 @@ def pessoa_url(request):
 
 	if validaLogin(request):
 		pessoa = Pessoa.objects.get(codigo=request.session['pessoaCodigo'])
-<<<<<<< HEAD
-		amigos1 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
-		amigos2 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
-		amigos3 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
-		amigos4 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
-		amigos5 = Amigo.objects.filter(pessoa_cadastro=pessoa,ativo='SIM').order_by('data_cadastro')[:5]
-
-		return render_response(request,'pessoas/home.html', {'pessoa': pessoa,
-															 'amigo1': amigos1,
-															 'amigo2': amigos2,
-															 'amigo3': amigos3,
-															 'amigo4': amigos4,
-															 'amigo5': amigos5 })
-=======
 		meuSafari = Amigo.objects.get(pessoa_cadastro_id=request.session['pessoaCodigo'],pessoa_amiga_id=request.session['pessoaCodigo'],ativo='SIM')
 		return render_response(request,'pessoas/home.html', {'pessoa': pessoa, 'meuSafari': meuSafari} )
->>>>>>> 050b0d69d3d4f3d7ea488d277caca20a89397c65
 	else:
 		return render_response(request,'index.html')
 
@@ -237,11 +222,6 @@ def safari_adicionar(request):
 
 #===AMIGO=======================================================
 
-<<<<<<< HEAD
-
-
-#===FIM AMIGO===================================================
-=======
 def friend_url(request):
 	if validaLogin(request):
 		amigos = Amigo.objects.filter(pessoa_cadastro_id=request.session['pessoaCodigo'],ativo='SIM').order_by('data_cadastro')
@@ -292,4 +272,4 @@ def friend_search(request):
 
 
 #===FIM AMIGO=======================================================
->>>>>>> 050b0d69d3d4f3d7ea488d277caca20a89397c65
+
