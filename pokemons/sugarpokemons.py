@@ -208,12 +208,12 @@ page_source = page_source.replace('</a> &middot; <a href="', ' $segundotipo$ ') 
 page_source = page_source.replace('" class="itype', ' $3$ ') #SEGUNDO TIPO DE POKEMON
 
 
-pagepokemons = open('/home/lucaslinux/projetos/poketracer/pokemons/pokemonstxt.txt','w')
+pagepokemons = open('pokemonstxt.txt','w')
 pagepokemons.write(page_source)
 
 pagepokemons.close()
 
-pagepokemons = open('/home/lucaslinux/projetos/poketracer/pokemons/pokemonstxt.txt','r')
+pagepokemons = open('pokemonstxt.txt','r')
 
 
 
@@ -233,7 +233,7 @@ cursor = db.cursor()
 cursor.execute("TRUNCATE pokemons_pokemon")
 db.commit()
 
-cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','pokemonCoringa.jpg','http://poketracer.com', 0, 'SELECT ONE!', '')")
+cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://127.0.0.1:8000/media/img/idontknow.png','http://poketracer.com', 0, 'I DONT KNOW!', 'I DONT KNOW!')")
 db.commit()
 
 for linha in pagepokemons.readlines():
@@ -267,7 +267,53 @@ for linha in pagepokemons.readlines():
 		if len(tipo_pokemon2.strip()) > 2:
 			print tipo_pokemon2.strip()
 
-		cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/"+nome_pokemon.strip().lower()+".jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", '"+nome_pokemon.strip().upper()+"', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+		if nome_pokemon.strip() == 'deoxys':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/deoxys-normal.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'DEOXYS', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/deoxys-attack.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'DEOXYS ATTACK', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/deoxys-defense.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'DEOXYS DEFENSE', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/deoxys-speed.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'DEOXYS SPEED', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+		elif nome_pokemon.strip() == 'wormadam':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/wormadam-plant.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'WORMADAM PLANT', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/wormadam-sandy.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'WORMADAM SANDY', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/wormadam-trash.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'WORMADAM TRASH', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+		elif nome_pokemon.strip() == 'rotom':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/rotom-normal.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'ROTOM', 'ELECTRIC GHOST')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/rotom-heat.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'ROTOM HEAT', 'ELECTRIC FIRE')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/rotom-wash.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'ROTOM WASH', 'ELECTRIC WATER')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/rotom-frost.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'ROTOM FROST', 'ELECTRIC ICE')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/rotom-fan.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'ROTOM FAN', 'ELECTRIC FLYING')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/rotom-mow.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'ROTOM MOW', 'ELECTRIC GRASS')")
+		elif nome_pokemon.strip() == 'giratina':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/giratina-altered.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'GIRATINA ALTERED', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/giratina-origin.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'GIRATINA ORIGIN', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+		elif nome_pokemon.strip() == 'shaymin':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/shaymin-land.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'SHAYMIN LAND', 'GRASS')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/shaymin-sky.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'SHAYMIN SKY', '	GRASS FLYING')")
+		elif nome_pokemon.strip() == 'darmanitan':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/darmanitan-standard.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'DARMANITAN', 'FIRE')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/darmanitan-zen.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'DARMANITAN ZEN', 'FIRE PSYCHIC')")
+		elif nome_pokemon.strip() == 'meloetta':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/meloetta-aria.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'MELOETTA ARIA', 'NORMAL PSYCHIC')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/meloetta-pirouette.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'MELOETTA PIROUETTE', 'NORMAL FIGHTING')")
+		elif nome_pokemon.strip() == 'aegislash':
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/aegislash-blade.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'AEGISLASH BLADE', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/aegislash-shield.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", 'AEGISLASH SHIELD', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+		else:
+			try:
+				teste = urllib2.urlopen(urllib2.Request('http://img.pokemondb.net/artwork/'+nome_pokemon.strip().lower()+'.jpg'))
+				cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/"+nome_pokemon.strip().lower()+".jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", '"+nome_pokemon.strip().upper()+"', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+			except Exception as e: 
+				try:
+					teste = urllib2.urlopen(urllib2.Request('http://img.pokemondb.net/artwork/dream/'+nome_pokemon.strip().lower()+'.png'))
+					cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/dream/"+nome_pokemon.strip().lower()+".png','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", '"+nome_pokemon.strip().upper()+"', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+				except Exception as e:
+					try:
+						teste = urllib2.urlopen(urllib2.Request('http://img.pokemondb.net/artwork/'+nome_pokemon.strip().lower()+'-male.jpg'))
+						cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://img.pokemondb.net/artwork/"+nome_pokemon.strip().lower()+"-male.jpg','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", '"+nome_pokemon.strip().upper()+"', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+					except Exception as e:
+						cursor.execute("INSERT INTO pokemons_pokemon (pokecode, foto, pokedex_link, numero,nome,tags) VALUES ('#','http://127.0.0.1:8000/media/img/idontknow.png','http://pokemondb.net/pokedex/"+nome_pokemon.strip().lower()+"', "+numero_pokemon.strip()+", '"+nome_pokemon.strip().upper()+"', '"+tipo_pokemon1.strip().upper() +" "+tipo_pokemon2.strip().upper()+"')")
+
+
 		db.commit()
 
 	

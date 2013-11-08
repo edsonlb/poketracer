@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 
 
-{% block titulo %}pokeTracer (Homepage){% endblock %}
+{% block titulo %}{{ pessoa.pessoa_cadastro.nickname }} - pokeTracer{% endblock %}
 
 {%block conteudo %}
 	<!-- SLIDE -->
@@ -98,13 +98,13 @@
               	<b>My Type:</b> {{ pessoa.safari.tipo }}	
               </li>
               <li class="list-group-item">
-              	<b>Pokémon 1:</b> {{ pessoa.safari.pokemon1.numero }} - <a href="{{ pessoa.safari.pokemon1.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon1.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
+              	<b>Pokémon 1:</b> <img src="{{ pessoa.safari.pokemon1.foto }}" title="{{ pessoa.safari.pokemon1.tags|upper }}" width="30" height="30" class="img-circle" /> {{ pessoa.safari.pokemon1.numero }} - <a href="{{ pessoa.safari.pokemon1.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon1.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
               </li>
               <li class="list-group-item">
-              	<b>Pokémon 2:</b> {{ pessoa.safari.pokemon2.numero }} - <a href="{{ pessoa.safari.pokemon2.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon2.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
+              	<b>Pokémon 2:</b> <img src="{{ pessoa.safari.pokemon2.foto }}" title="{{ pessoa.safari.pokemon2.tags|upper }}" width="30" height="30" class="img-circle" /> {{ pessoa.safari.pokemon2.numero }} - <a href="{{ pessoa.safari.pokemon2.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon2.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
               </li>
               <li class="list-group-item">
-              	<b>Pokémon 3:</b> {{ pessoa.safari.pokemon3.numero }} - <a href="{{ pessoa.safari.pokemon3.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon3.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
+              	<b>Pokémon 3:</b> <img src="{{ pessoa.safari.pokemon3.foto }}" title="{{ pessoa.safari.pokemon3.tags|upper }}" width="30" height="30" class="img-circle" /> {{ pessoa.safari.pokemon3.numero }} - <a href="{{ pessoa.safari.pokemon3.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon3.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
               </li>
               </ul>
        </div>
@@ -129,7 +129,9 @@
               </li>
               {% if indicacoesSafari %}
               {% for indicacao in indicacoesSafari %}
-              <li class="list-group-item">{{ indicacao.safari.tipo }} (<a href="{{ indicacao.safari.pokemon1.pokedex_link }}" target="_blank">{{ indicacao.safari.pokemon1.nome }}</a>, <a href="{{ indicacao.safari.pokemon2.pokedex_link }}" target="_blank">{{ indicacao.safari.pokemon2.nome }}</a>, <a href="{{ indicacao.safari.pokemon3.pokedex_link }}" target="_blank">{{ indicacao.safari.pokemon3.nome }}</a>) from <a href="/poketracer/{{ indicacao.pessoa_cadastro.codigo }}"><b>{{ indicacao.pessoa_cadastro.nickname }}</b></a></li>
+              <li class="list-group-item">{{ indicacao.safari.tipo }} <a href="{{ indicacao.safari.pokemon1.pokedex_link }}" target="_blank"><img src="{{ indicacao.safari.pokemon1.foto }}" title="{{ indicacao.safari.pokemon1.numero }} - {{ indicacao.safari.pokemon1.nome }} - {{ indicacao.safari.pokemon1.tags|upper }}" width="30" height="30" class="img-circle" /></a>
+              <a href="{{ indicacao.safari.pokemon2.pokedex_link }}" target="_blank"><img src="{{ indicacao.safari.pokemon2.foto }}" title="{{ indicacao.safari.pokemon2.numero }} - {{ indicacao.safari.pokemon2.nome }} - {{ indicacao.safari.pokemon2.tags|upper }}" width="30" height="30" class="img-circle" /></a>
+              <a href="{{ indicacao.safari.pokemon3.pokedex_link }}" target="_blank"><img src="{{ indicacao.safari.pokemon3.foto }}" title="{{ indicacao.safari.pokemon3.numero }} - {{ indicacao.safari.pokemon3.nome }} - {{ indicacao.safari.pokemon3.tags|upper }}" width="30" height="30" class="img-circle" /></a> from <a href="/poketracer/{{ indicacao.pessoa_cadastro.codigo }}"><b>{{ indicacao.pessoa_cadastro.nickname }}</b></a></li>
               {% endfor %}
               {% endif %}
               </ul>
