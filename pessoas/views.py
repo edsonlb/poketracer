@@ -354,10 +354,10 @@ def safari_adicionar(request):
 		amigo.tags = '#'+str(request.session['pessoaCodigo']) #PADRAO SO PARA NAO DEIXAR NADA EM BRANCO
 		
 		amigo.save()
-
-		return render_response(request,'pessoas/home.html', {'avisoTipo': 'alert-success', 'msg': 'Thank you. Your Safari successfully registered.'} )
+		# return redirect('/'+settings.HOSTING+'/home', {'pessoa': pessoa})
+		return redirect('/'+settings.HOSTING+'/home' , {'avisoTipo': 'alert-success', 'msg': 'Thank you. Your Safari successfully registered.'} )
 	else:
-		return render_response(request,'pessoas/home.html', {'avisoTipo': 'alert-danger', 'msg': 'Error!.'} )
+		return redirect('/'+settings.HOSTING+'/home' , {'avisoTipo': 'alert-danger', 'msg': 'Error!.'} )
 
 
 #===FIM SAFARI=======================================================

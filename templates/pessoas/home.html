@@ -6,7 +6,7 @@
   <div class="container">
     <h2>Dashboard</h2>
   </div>
-
+  {{msg}}
 {% if msg %}
   <div class="container">
         <div class="alert {{ avisoTipo }} alert-dismissable">{{ msg }}
@@ -26,9 +26,9 @@
               <ul class="list-group">
               {% if amigo1 %}
               {% for amigo in amigo1 %}
-                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_amiga.codigo }}">{{ amigo.pessoa_amiga.nickname|upper }} ( {{ amigo.pessoa_amiga.friendcode }} )</a></li>
+                <li class="list-group-item"><a href="/{{ amigo.pessoa_amiga.codigo }}">{{ amigo.pessoa_amiga.nickname|upper }} ( {{ amigo.pessoa_amiga.friendcode }} )</a></li>
               {% endfor %}
-              <li class="list-group-item"><a href="/poketracer/home/list/added-friends/"><b>VIEW MORE &raquo;</b></a></li>
+              <li class="list-group-item"><a href="/home/list/added-friends/"><b>VIEW MORE &raquo;</b></a></li>
               {% endif %}
               </ul>
           </div>
@@ -42,9 +42,9 @@
               <ul class="list-group">
               {% if amigo2 %}
               {% for amigo in amigo2 %}
-                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+                <li class="list-group-item"><a href="/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
               {% endfor %}
-              <li class="list-group-item"><a href="/poketracer/home/list/added-me/"><b>VIEW MORE &raquo;</b></a></li>
+              <li class="list-group-item"><a href="/home/list/added-me/"><b>VIEW MORE &raquo;</b></a></li>
               {% endif %}
               </ul>
           </div>
@@ -58,9 +58,9 @@
               <ul class="list-group">
               {% if amigo3 %}
               {% for amigo in amigo3 %}
-                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+                <li class="list-group-item"><a href="/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
               {% endfor %}
-              <li class="list-group-item"><a href="/poketracer/home/list/friends-reply/"><b>VIEW MORE &raquo;</b></a></li>
+              <li class="list-group-item"><a href="/home/list/friends-reply/"><b>VIEW MORE &raquo;</b></a></li>
               {% endif %}
               </ul>
           </div>
@@ -78,9 +78,9 @@
               <ul class="list-group">
               {% if amigo4 %}
               {% for amigo in amigo4 %}
-                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+                <li class="list-group-item"><a href="/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
               {% endfor %}
-              <li class="list-group-item"><a href="/poketracer/home/list/safari-updates/"><b>VIEW MORE &raquo;</b></a></li>
+              <li class="list-group-item"><a href="/home/list/safari-updates/"><b>VIEW MORE &raquo;</b></a></li>
               {% endif %}
               </ul>
           </div>
@@ -94,9 +94,9 @@
               <ul class="list-group">
               {% if amigo5 %}
               {% for amigo in amigo5 %}
-                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+                <li class="list-group-item"><a href="/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
               {% endfor %}
-              <li class="list-group-item"><a href="/poketracer/home/list/ranking/"><b>VIEW MORE &raquo;</b></a></li>
+              <li class="list-group-item"><a href="/home/list/ranking/"><b>VIEW MORE &raquo;</b></a></li>
               {% endif %}
               </ul>
           </div>
@@ -106,7 +106,7 @@
             <div class="panel-heading"><b>MY INFORMATION</b></div>
               <ul class="list-group">
               <li class="list-group-item">
-              <form action="/poketracer/home/user/update/" method="POST">
+              <form action="/home/user/update/" method="POST">
               {% csrf_token %}
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">E-mail</span>
