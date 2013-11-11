@@ -25,7 +25,7 @@
               </div>
               <ul class="list-group">
               {% for amigo in amigo1 %}
-                <li class="list-group-item"><a href="#">{{ amigo.pessoa_amiga.nickname|upper }}  ( {{ amigo.pessoa_amiga.friendcode }} )</a></li>
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_amiga.codigo }}">{{ amigo.pessoa_amiga.nickname|upper }} ( {{ amigo.pessoa_amiga.friendcode }} )</a></li>
               {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
@@ -38,11 +38,9 @@
                 <p>Latest people who added me...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
-              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo2 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -54,11 +52,9 @@
                 <p>Latest friend connection...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
-              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo3 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -74,11 +70,9 @@
                 <p>Last added Safaris by users...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Crasjusto (odioDRT)</a></li>
-              <li class="list-group-item"><a href="#">Dapibus (ac facilisis in)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (leo risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo4 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -90,11 +84,9 @@
                 <p>User by qualifications...</p>
               </div>
               <ul class="list-group">
-              <li class="list-group-item"><a href="#">Augustus (Abull)</a></li>
-              <li class="list-group-item"><a href="#">DNosde (Xacilisis)</a></li>
-              <li class="list-group-item"><a href="#">Morbi (Risus)</a></li>
-              <li class="list-group-item"><a href="#">Porta (consectetur)</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum (ateros)</a></li>
+              {% for amigo in amigo5 %}
+                <li class="list-group-item"><a href="/poketracer/{{ amigo.pessoa_cadastro.codigo }}">{{ amigo.pessoa_cadastro.nickname|upper }} ( {{ amigo.pessoa_cadastro.friendcode }} )</a></li>
+              {% endfor %}
               <li class="list-group-item"><a href="#"><b>VIEW MORE &raquo;</b></a></li>
               </ul>
           </div>
@@ -106,47 +98,47 @@
               <li class="list-group-item">
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">Nintendo Friend Code</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.friendcode }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.friendcode }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">PokeTracer Code</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.codigo }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.codigo }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">My PokeTracer Rating</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.codigo }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.codigo }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">In Game Name</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.nickname }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.nickname }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">Real Name</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.nome }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.nome }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">Quote</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.descricao }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.descricao }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">E-mail</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.email }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.email }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">Skype</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.skype }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.skype }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">Twitter</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.twitter }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.twitter }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">Google+</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.gplus }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.gplus }}">
                 </div>
                 <div class="input-group input-group-sm">
                   <span class="input-group-addon">Facebook</span>
-                  <input type="text" class="form-control" disabled value="{{ pessoa.facebook }}">
+                  <input type="text" class="form-control" disabled value="{{ meuSafari.pessoa_cadastro.facebook }}">
                 </div>
 
                 <hr>

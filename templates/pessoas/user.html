@@ -1,8 +1,13 @@
 {% extends "template.html" %}
 
+
 {% block titulo %}pokeTracer (Homepage){% endblock %}
 
 {%block conteudo %}
+	<!-- SLIDE -->
+   <link href="{{ MEDIA_URL }}imgslider/themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+   <script src="{{ MEDIA_URL }}imgslider/themes/1/js-image-slider.js" type="text/javascript"></script>
+
   <div class="container">
     <h2><img src="{{ MEDIA_URL }}img/avatarUser.png"> PokeTrainer #{{ pessoa.pessoa_cadastro.codigo }}</h2>
   </div>
@@ -11,20 +16,25 @@
         <div class="row">
 		<div class="col-lg-6">
           <div class="panel panel-default">
-            <div class="panel-heading"><b>Personal Information</b></div>
+            <div class="panel-heading"><b>PERSONAL INFORMATION</b></div>
               <div class="panel-body">
               {% if request.session.pessoaCodigo %}
-              	<form action="/poketracer/home/friends/search/" method="POST" class="form-inline">
-              	<div align="center">
+                <div align="center">
           			{% csrf_token %}
-          			<input type="hidden" name="acao" value="alterar">
-		        	<button type="submit" class="btn btn-primary">Add as friend, leave comments and help us map the PokeTrainers!</button>
-		        </div>
-		        </form>
+                  {% if request.session.pessoaCodigo == pessoa.pessoa_cadastro.codigo %}
+                    <p>This is your public profile! That's how other people see you!</p>
+                  {% else %}
+                    {% if amizade %}
+                    <a href="/poketracer/home/friends/remove/{{ pessoa.pessoa_cadastro.codigo }}" class="btn btn-warning"> Remove Friend!</a>
+                    {% else %}
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add as friend, leave comments and <br />help us map the PokeTrainers!</button>
+                    {% endif %}
+                  {% endif %}
+		            </div>
               {% else %}
-                <p>Once you are logged in <b>PokeTracer</b> you can do more stuffs with this profile! So register or login to join this commutiny!</p>
-               {% endif %}
-              </div>
+                <p>Once you are logged in <b>PokeTracer</b> you can do more stuffs with this profile! So register or login to join this commutiny! <a href="/poketracer/register/">Register now!</a></p>
+              {% endif %}
+            </div>
               <ul class="list-group">
               <li class="list-group-item">
               <b>Nintendo Friend Code:</b> {{ pessoa.pessoa_cadastro.friendcode }}
@@ -57,41 +67,57 @@
               </ul>
           </div>        
        </div>
+
         
 		<div class="col-lg-6">
           <div class="panel panel-info">
             <div class="panel-heading"><b>FRIEND CODE: {{ pessoa.pessoa_cadastro.friendcode }}</b></div>
               <div class="panel-body">
-              {% if pessoa.pessoa_cadastro.descricao|length > 3 %}
-               	<p>{{ pessoa.pessoa_cadastro.descricao }}</p>
-              {% else %}
-              	<p>This user is quiet, never wrote anything here yet.</p>
-              {% endif %}
-              </div>
+        			<div class="row">
+						<div class="col-lg-6">
+              				<!-- SLIDE COM FOTOS DOS POKEMONS -->
+        					<div id="sliderFrame">
+        					<div id="slider">
+            					<img src="{{ pessoa.safari.pokemon1.foto }}" alt="{{ pessoa.safari.pokemon1.nome }}" />
+            					<img src="{{ pessoa.safari.pokemon2.foto }}" alt="{{ pessoa.safari.pokemon2.nome }}" />
+            					<img src="{{ pessoa.safari.pokemon3.foto }}" alt="{{ pessoa.safari.pokemon3.nome }}" />
+        					</div>
+    						</div>
+    					</div>
+    					<div class="col-lg-6">
+    					<br /><br />
+              			{% if pessoa.pessoa_cadastro.descricao|length > 3 %}
+               			<p>{{ pessoa.pessoa_cadastro.descricao }}</p>
+              			{% else %}
+              			<p>This user is quiet, never wrote anything here yet.</p>
+              			{% endif %}
+              			</div>
+              		</div><br /><br />
               <ul class="list-group">
               <li class="list-group-item">
               	<b>My Type:</b> {{ pessoa.safari.tipo }}	
               </li>
               <li class="list-group-item">
-              	<b>Pokémon 1:</b> {{ pessoa.safari.pokemon1.numero }} - {{ pessoa.safari.pokemon1.nome }} ({{ pessoa.safari.pokemon1.tags }})	
+              	<b>Pokémon 1:</b> {{ pessoa.safari.pokemon1.numero }} - <a href="{{ pessoa.safari.pokemon1.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon1.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
               </li>
               <li class="list-group-item">
-              	<b>Pokémon 2:</b> {{ pessoa.safari.pokemon2.numero }} - {{ pessoa.safari.pokemon2.nome }} ({{ pessoa.safari.pokemon1.tags }})	
+              	<b>Pokémon 2:</b> {{ pessoa.safari.pokemon2.numero }} - <a href="{{ pessoa.safari.pokemon2.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon2.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
               </li>
               <li class="list-group-item">
-              	<b>Pokémon 3:</b> {{ pessoa.safari.pokemon3.numero }} - {{ pessoa.safari.pokemon3.nome }} ({{ pessoa.safari.pokemon1.tags }})	
+              	<b>Pokémon 3:</b> {{ pessoa.safari.pokemon3.numero }} - <a href="{{ pessoa.safari.pokemon3.pokedex_link }}" target="_blank">{{ pessoa.safari.pokemon3.nome }}</a> ({{ pessoa.safari.pokemon1.tags }})	
               </li>
               </ul>
-          </div>
+       </div>
+       </div>
        </div>
 
 		<div class="col-lg-6">
           <div class="panel panel-info">
             <div class="panel-heading"><b>INFORMATION FROM OTHERS ON POKETRACER</b></div>
               <div class="panel-body">
-              	{% if indicacoesSafari.codigo > 0  %}
+              	{% if indicacoesSafari  %}
               	{% for indicacao in indicacoesSafari %}
-               		<p>"{{ indicacoesSafari.descricao }}"</p>
+               		<p>"{{ indicacao.descricao }}" from <a href="/poketracer/{{ indicacao.pessoa_cadastro.codigo }}"><b>{{ indicacao.pessoa_cadastro.nickname }}</b></a></p>
                	{% endfor %}
                	{% else %}
                		<p>No comment from other participants yet! But this person seems to be cool!</p>
@@ -101,9 +127,9 @@
               <li class="list-group-item">
               	<b>Rating :</b> {{ pessoa.avaliacao }}
               </li>
-              {% if indicacoesSafari > 0 %}
+              {% if indicacoesSafari %}
               {% for indicacao in indicacoesSafari %}
-              <li class="list-group-item">{{ indicacao.safari.tipo }} ({{ indicacao.safari.pokemon1.nome }}, {{ indicacao.safari.pokemon2.nome }}, {{ indicacao.safari.pokemon3.nome }}) from <a href="/poketracer/{{ indicacao.pessoa_cadastro.codigo }}">{{ indicacao.pessoa_cadastro.nickname }}</a></li>
+              <li class="list-group-item">{{ indicacao.safari.tipo }} (<a href="{{ indicacao.safari.pokemon1.pokedex_link }}" target="_blank">{{ indicacao.safari.pokemon1.nome }}</a>, <a href="{{ indicacao.safari.pokemon2.pokedex_link }}" target="_blank">{{ indicacao.safari.pokemon2.nome }}</a>, <a href="{{ indicacao.safari.pokemon3.pokedex_link }}" target="_blank">{{ indicacao.safari.pokemon3.nome }}</a>) from <a href="/poketracer/{{ indicacao.pessoa_cadastro.codigo }}"><b>{{ indicacao.pessoa_cadastro.nickname }}</b></a></li>
               {% endfor %}
               {% endif %}
               </ul>
@@ -112,4 +138,120 @@
 
         </div>
     </div>
+
+<!-- MODAL PARA ADICAO  -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<form action="/poketracer/home/friends/add/" method="POST">
+	<input type="hidden" name="pessoa_amiga" value="{{ pessoa.pessoa_cadastro.codigo }}">
+	{% csrf_token %}
+  	<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">COMPLETE THE INFORMATIONS AND ADD AS FRIEND!</h4>
+      </div>
+      <div class="modal-body">
+		<div class="container">
+        <div class="row">
+		<div class="col-lg-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><b>{{ pessoa.pessoa_cadastro.nickname }} SAFARI INFO</b></div>
+              <ul class="list-group">
+              <li class="list-group-item">
+              	<select name="tipo" class="form-control">
+							<option value="I DONT KNOW!" selected>Select this user Type</option>
+							<option value="I DONT KNOW!" >I DON'T KNOW!</option>
+							<option value="BUG">BUG</option>
+							<option value="DARK">DARK</option>
+							<option value="DRAGON">DRAGON</option>
+							<option value="ELECTRIC">ELECTRIC</option>
+							<option value="FAIRY">FAIRY</option>
+							<option value="FIGHTING">FIGHTING</option>
+							<option value="FLYING">FLYING</option>
+							<option value="FIRE">FIRE</option>
+							<option value="GRASS">GRASS</option>
+							<option value="GHOTS">GHOTS</option>
+							<option value="GROUND">GROUND</option>
+							<option value="ICE">ICE</option>
+						  	<option value="NORMAL">NORMAL</option>
+							<option value="POISON">POISON</option>
+							<option value="PSYCHIC">PSYCHIC</option>
+							<option value="ROCK">ROCK</option>
+							<option value="STEEL">STEEL</option>
+							<option value="WATER">WATER</option>
+							<option value="I DONT KNOW!">I DON'T KNOW!</option>
+				</select></li>
+              <li class="list-group-item">
+              	<select name="pokemon1" class="form-control">
+							<option value="I DONT KNOW!" selected>her/his Pokemon 1</option>	
+							<option value="I DONT KNOW!">I DON'T KNOW!</option>					  
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+						  <option value="I DONT KNOW!">I DON'T KNOW!</option>	
+				</select></li>
+              <li class="list-group-item">
+              	<select name="pokemon2" class="form-control">
+							<option value="I DONT KNOW!" selected>her/his Pokemon 2</option>
+							<option value="I DONT KNOW!">I DON'T KNOW!</option>
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}" align="center" > {{ pokemon.numero }} &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+						  <option value="I DONT KNOW!">I DON'T KNOW!</option>	
+				</select>
+              </li>
+              <li class="list-group-item">
+              	<select name="pokemon3" class="form-control">
+							<option value="I DONT KNOW!" selected>her/his Pokemon 3</option>
+							<option value="I DONT KNOW!">I DON'T KNOW!</option>
+						  {% for pokemon in pokemons %}
+						  		<option value="{{ pokemon.codigo }}">{{ pokemon.numero }}  &nbsp {{ pokemon.nome|upper }}</option>
+						  {% endfor %}
+						  <option value="I DONT KNOW!">I DON'T KNOW!</option>	
+				</select>
+              </li>
+              </ul>
+          </div>        
+		
+       </div>
+        
+		<div class="col-lg-6">
+          <div class="panel panel-info">
+            <div class="panel-heading"><b>CONNECTION</b></div>
+              <div class="panel-body">
+              <b>Friend Review</b>
+                <textarea name="descricao" class="form-control" rows="3"></textarea>
+              </div>
+              
+              <div class="panel-body">
+              <b>Friend Rating</b>
+				<select name="avaliacao" class="form-control">
+					<option value="5">5 Stars *****</option>
+					<option value="4">4 Stars ****</option>
+					<option value="3">3 Stars ***</option>
+					<option value="2">2 Stars **</option>
+					<option value="1">1 Stars *</option>
+					<option value="0">0 Stars</option>
+				</select>
+              </div>
+
+              <div class="panel-body">
+              <b>Tag for ths user:</b>              
+				<input name="tags" type="text" class="form-control" id="exampleInputEmail1" placeholder="you, name, it!">tags separated by commas ,
+              </div>
+              
+          </div>
+       </div>
+
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">SAVE</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </form>
+</div><!-- /.modal -->
 {%endblock %}
