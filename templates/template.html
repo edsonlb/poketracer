@@ -33,14 +33,14 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="/">pokeTracer</a>
+          <a class="navbar-brand" href="{{ HOSTING }}">pokeTracer</a>
 
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/donate/">Donate</a></li>
+            <li class="active"><a href="{{ HOSTING }}">Home</a></li>
+            <li><a href="{{ HOSTING }}/about/">About</a></li>
+            <li><a href="{{ HOSTING }}/donate/">Donate</a></li>
             <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -58,7 +58,7 @@
           {% if request.session.pessoaCodigo %}
           <ul class="nav nav-pills navbar-right navbar-form">
             <li > <!-- class="active" -->
-              <a href="/logout/" title="Logout user #{{ request.session.pessoaCodigo }}">
+              <a href="{{ HOSTING }}/logout/" title="Logout user #{{ request.session.pessoaCodigo }}">
                 <!-- <span class="badge pull-right">0</span> PARA USAR QUANDO TIVER NOTIFICACOES! NAO RETIRAR-->
                 Logout
             </a>
@@ -67,7 +67,7 @@
           
           {% else %}
 
-          <form  action="/login/" method="POST" class="navbar-form navbar-right">
+          <form  action="{{ HOSTING }}/login/" method="POST" class="navbar-form navbar-right">
           {% csrf_token %}
             <div class="form-group">
               <input name="email" type="text" placeholder="Email" class="form-control" required>
@@ -76,7 +76,7 @@
               <input name="senha" type="password" placeholder="Password" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-success">{% if avisoLogin %}{{ avisoLogin }}{% else %}Login{% endif %}</button>
-            <a href="/register/" class="btn btn-primary">Register!</a>
+            <a href="{{ HOSTING }}/register/" class="btn btn-primary">Register!</a>
             </form>
             {% endif %}
             
@@ -88,10 +88,10 @@
 {%block conteudoMenu %}
   <div class="container">
     <ul class="nav nav-tabs">
-      <li><a href="/home/">Dashboard</a></li>
-      <li><a href="/home/safari/">Safari</a></li>
-      <li><a href="/home/friends/">Friends</a></li>
-      <li><a href="/home/pokemon">Pokémons</a></li>
+      <li><a href="{{ HOSTING }}/home/">Dashboard</a></li>
+      <li><a href="{{ HOSTING }}/home/safari/">Safari</a></li>
+      <li><a href="{{ HOSTING }}/home/friends/">Friends</a></li>
+      <li><a href="{{ HOSTING }}/home/pokemon">Pokémons</a></li>
     </ul>
   </div>
 {%endblock %}
