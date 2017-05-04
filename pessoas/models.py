@@ -14,6 +14,10 @@ class Pessoa(models.Model):
 	senha = models.CharField(max_length='200', blank=False)
 	badge = models.CharField(max_length='200', blank=True)
 	pokemons = models.CharField(max_length='300', blank=True) #RETIRAR QUANDO O OBJ POKEMON ESTIVER PRONTO
+<<<<<<< HEAD
+=======
+	#amigos = models.ManyToManyField(Pessoa, through='Amigo') ESTA COMPLICADO ESSE RELACIONAMENTO DE MUITOS P MUITOS NA MESMA TABELA
+>>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
 	facebook = models.CharField(max_length='300', blank=True)
 	twitter = models.CharField(max_length='300', blank=True)
 	gplus = models.CharField(max_length='300', blank=True)
@@ -23,6 +27,7 @@ class Pessoa(models.Model):
 	tags = models.CharField(max_length='400', blank=True)
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 	data_alteracao = models.DateTimeField(auto_now=True, auto_now_add=True)
+<<<<<<< HEAD
 	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido  
 
 	gameregion = models.CharField(max_length='300', blank=True)
@@ -31,6 +36,15 @@ class Pessoa(models.Model):
 
 	def __unicode__ (self):
 		return unicode(self.nome+' ('+self.nickname+')')
+=======
+	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido   
+
+	def __unicode__ (self):
+		return self.nome+' ('+self.nickname+')' 
+
+	def getCodigo():
+		return self.codigo
+>>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
 
 class Safari(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -42,7 +56,11 @@ class Safari(models.Model):
 	ativo = models.CharField(max_length='3', default='SIM')
 
 	def __unicode__ (self):
+<<<<<<< HEAD
 		return unicode(self.tipo) 
+=======
+		return self.tipo 
+>>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
 
 class Amigo(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -57,8 +75,12 @@ class Amigo(models.Model):
 	ativo = models.CharField(max_length='3', default='SIM') 
 
 	def __unicode__ (self):
+<<<<<<< HEAD
 		return unicode(self.pessoa_cadastro.nome+'('+self.pessoa_cadastro.nickname+')')
 
 	def getSafari(self):
 		return self.safari
+=======
+		return self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')' 
+>>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
 

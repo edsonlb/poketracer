@@ -9,7 +9,11 @@ class Pokemon(models.Model):
 	pokedex_link = models.CharField(max_length='400', blank=True)
 	tags = models.CharField(max_length='400', blank=True)
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
+<<<<<<< HEAD
 	ativo = models.CharField(max_length='3', default='SIM') 
 
 	def __unicode__ (self):
 		return unicode(self.numero+'  '+self.nome)
+=======
+	ativo = models.CharField(max_length='3', default='SIM') 
+>>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
