@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.http import HttpResponse
 from django.core import serializers
 from django.utils import simplejson
@@ -15,3 +16,6 @@ def seleciona_por_tipo(request, tipo):
 		return HttpResponse(pokemons)
 	except pokemons_query.DoesNotExists:
 		return None
+=======
+# Create your views here.
+>>>>>>> a8c17f46a81f6565aebe88e96638a4306bbaa4c2

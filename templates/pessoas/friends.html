@@ -1,0 +1,67 @@
+{% extends "template.html" %}
+
+{% block titulo %}Friends - pokeTracer{% endblock %}
+
+{%block conteudo %}
+  <div class="container">
+    <h2>My Friends</h2>
+  </div>
+
+{% if msg %}
+  <div class="container">
+        <div class="alert {{ avisoTipo }} alert-dismissable">{{ msg }}
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">close &times;</button>
+        </div>          
+  </div>
+{% endif %}
+
+    <div class="container">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Find what you want!</h3>
+        </div>
+        <div class="panel-body">
+        <form action="/poketracer/home/friends/search/" method="POST" class="form-inline">
+          {% csrf_token %}
+          <div class="input-group">
+          <input name="textoPesquisa" type="text" class="form-control" placeholder="Just write what you want and we will seek for you!" value="{{ textoPesquisa }}">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Search!</button>
+          </span>
+          </div>
+        </form>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Game Name</th>
+              <th>Friend Code</th>
+              <th>Type</th>
+              <th>Pokémon 1</th>
+              <th>Pokémon 2</th>
+              <th>Pokémon 3</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for amigo in amigos %}
+            <tr>
+              <td>{{ amigo.pessoa_amiga.codigo }}</td>
+              <td><a href="/poketracer/{{ amigo.pessoa_amiga.codigo }}" target="_brank">{{ amigo.pessoa_amiga.nickname|upper }}</a></td>
+              <td>{{ amigo.pessoa_amiga.friendcode }}</td>
+              <td>{{ amigo.safari.tipo|upper }}</td>
+              <td><img src="{{ amigo.safari.pokemon1.foto }}" title="{{ amigo.safari.pokemon1.tags|upper }}" width="50" height="50" class="img-circle" /> <a href="{{ amigo.safari.pokemon1.pokedex_link }}" target="_blank">{{ amigo.safari.pokemon1.nome|upper }}</a></td>
+              <td><img src="{{ amigo.safari.pokemon2.foto }}" title="{{ amigo.safari.pokemon2.tags|upper }}" width="50" height="50" class="img-circle" /> <a href="{{ amigo.safari.pokemon2.pokedex_link }}" target="_blank">{{ amigo.safari.pokemon2.nome|upper }}</a></td>
+              <td><img src="{{ amigo.safari.pokemon3.foto }}" title="{{ amigo.safari.pokemon3.tags|upper }}" width="50" height="50" class="img-circle" /> <a href="{{ amigo.safari.pokemon3.pokedex_link }}" target="_blank">{{ amigo.safari.pokemon3.nome|upper }}</a></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div><!-- tabela -->
+
+    </div> <!-- CONTEINER -->
+{%endblock %}

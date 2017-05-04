@@ -23,11 +23,15 @@ class Pessoa(models.Model):
 	tags = models.CharField(max_length='400', blank=True)
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 	data_alteracao = models.DateTimeField(auto_now=True, auto_now_add=True)
+<<<<<<< HEAD
 	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido  
 
 	gameregion = models.CharField(max_length='300', blank=True)
 	nativevivillon = models.CharField(max_length='300', blank=True)
 	shinyvalue = models.CharField(max_length='300', blank=True, default='0000')
+=======
+	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido   
+>>>>>>> a8c17f46a81f6565aebe88e96638a4306bbaa4c2
 
 	def __unicode__ (self):
 		return unicode(self.nome+' ('+self.nickname+')')
@@ -57,8 +61,18 @@ class Amigo(models.Model):
 	ativo = models.CharField(max_length='3', default='SIM') 
 
 	def __unicode__ (self):
+<<<<<<< HEAD
 		return unicode(self.pessoa_cadastro.nome+'('+self.pessoa_cadastro.nickname+')')
+=======
+		return unicode(self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')')
+>>>>>>> a8c17f46a81f6565aebe88e96638a4306bbaa4c2
 
 	def getSafari(self):
 		return self.safari
 
+<<<<<<< HEAD
+=======
+	#def __getitem__(self, val):
+	#	return self
+
+>>>>>>> a8c17f46a81f6565aebe88e96638a4306bbaa4c2

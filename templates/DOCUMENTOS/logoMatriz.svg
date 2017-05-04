@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="logoMatriz.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="420.04253"
+     inkscape:cy="693.83242"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="748"
+     inkscape:window-x="-4"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#428bca;stroke:none;fill-opacity:1"
+       d="M 375.78125 40.1875 C 265.87406 40.1875 174.37579 118.9037 154.53125 223.03125 L 264.21875 223.03125 C 280.56866 175.41943 325.7162 141.21875 378.875 141.21875 C 432.03443 141.21875 477.18183 175.41854 493.53125 223.03125 L 597.03125 223.03125 C 577.18671 118.9037 485.68844 40.1875 375.78125 40.1875 z "
+       id="path2985"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracerAvatar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       d="M 155.34375 312.90625 C 176.75711 415.0239 267.33064 491.71875 375.8125 491.71875 C 484.29437 491.71875 574.86789 415.0239 596.28125 312.90625 L 487.125 312.90625 C 467.56074 353.56864 425.95543 381.625 377.8125 381.625 C 329.66967 381.625 288.09556 353.5685 268.53125 312.90625 L 155.34375 312.90625 z "
+       id="path2985-1"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracerAvatar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:80px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0.03px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Saab;-inkscape-font-specification:Saab Bold"
+       x="96.492416"
+       y="292.62595"
+       id="text3866"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracerAvatar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3868"
+         x="96.492416"
+         y="292.62595"
+         style="letter-spacing:6.15999985px">pokeTracer</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#428bca;fill-opacity:1;stroke:none"
+       d="m 376.62609,936.46529 c -13.24511,0 -24.27174,9.48623 -26.66325,22.03485 l 13.21865,0 c 1.97037,-5.7378 7.41118,-9.85937 13.81744,-9.85937 6.40635,0 11.84715,4.12147 13.81744,9.85937 l 12.47298,0 c -2.39151,-12.54862 -13.41813,-22.03485 -26.66326,-22.03485 z"
+       id="path2985-0"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracerPP.png"
+       inkscape:export-xdpi="99.575241"
+       inkscape:export-ydpi="99.575241" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#428bca;fill-opacity:1;stroke:none"
+       d="m 350.06076,969.33116 c 2.58056,12.3064 13.49575,21.54904 26.5691,21.54904 13.07336,0 23.98855,-9.24264 26.56911,-21.54904 l -13.15462,0 c -2.35772,4.90032 -7.37166,8.2814 -13.17346,8.2814 -5.80179,0 -10.81195,-3.38115 -13.16969,-8.2814 l -13.64044,0 z"
+       id="path2985-1-9"
+       inkscape:export-filename="/home/edson/Projetos/virtualPoketracer/poketracer/templates/DOCUMENTOS/logoPokeTracerPP.png"
+       inkscape:export-xdpi="99.575241"
+       inkscape:export-ydpi="99.575241" />
+  </g>
+</svg>

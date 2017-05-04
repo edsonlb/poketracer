@@ -1,0 +1,115 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  	<title>{% block titulo %}{% trans "Poke Tracer" %}{%endblock %} - Template.html</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Celula Digital Software">
+    <link rel="shortcut icon" href="{{ MEDIA_URL }}bootstrap3/assets/ico/favicon.png">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ MEDIA_URL }}bootstrap3/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ MEDIA_URL }}bootstrap3/css/jumbotron.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{{ MEDIA_URL }}bootstrap3/assets/js/html5shiv.js"></script>
+      <script src="{{ MEDIA_URL }}bootstrap3/assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/poketracer/">pokeTracer</a>
+
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/poketracer/">Home</a></li>
+            <li><a href="/poketracer/about">About</a></li>
+            <li><a href="/poketracer/donate">Donate</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+
+          {% if request.session.pessoaCodigo %}
+          <ul class="nav nav-pills navbar-right navbar-form">
+            <li > <!-- class="active" -->
+              <a href="/poketracer/logout/" title="Logout user #{{ request.session.pessoaCodigo }}">
+                <!-- <span class="badge pull-right">0</span> PARA USAR QUANDO TIVER NOTIFICACOES! NAO RETIRAR-->
+                Logout
+            </a>
+            </li>
+          </ul>
+          
+          {% else %}
+
+          <form  action="/poketracer/login/" method="POST" class="navbar-form navbar-right">
+          {% csrf_token %}
+            <div class="form-group">
+              <input name="email" type="text" placeholder="Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <input name="senha" type="password" placeholder="Password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success">{% if avisoLogin %}{{ avisoLogin }}{% else %}Login{% endif %}</button>
+            <a href="/poketracer/register/" class="btn btn-primary">Register!</a>
+            </form>
+            {% endif %}
+            
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+{% if request.session.pessoaCodigo %}
+{%block conteudoMenu %}
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li><a href="/poketracer/home/">Dashboard</a></li>
+      <li><a href="/poketracer/home/safari/">Safari</a></li>
+      <li><a href="/poketracer/home/friends/">Friends</a></li>
+      <li><a href="/poketracer/home/pokemon">Pokémons</a></li>
+    </ul>
+  </div>
+{%endblock %}
+{% endif %}
+
+    {%block conteudo %}
+    {% endblock %}
+
+    <div class="container">
+      <hr>
+      <footer>
+        <div class="text-center">
+        <p><span class="glyphicon glyphicon-envelope"></span>&nbsp; social@poketracer.com.br</p>
+        <a href="https://www.facebook.com/pages/Poke-Tracer/693137594046875" target="_blank">Facebook</a> | 
+        <a href="https://twitter.com/Poke_Tracer" target="_blank">Twitter</a>  &nbsp; &copy; {% now "Y" %} All rights reserved. PokeTracer v0.6 pre-alfa</div>
+      </footer>
+    </div> <!-- /container -->
+    <script src="{{ MEDIA_URL }}bootstrap3/assets/js/jquery.js"></script>
+    <script src="{{ MEDIA_URL }}bootstrap3/js/bootstrap.min.js"></script>
+  </body>
+</html>
