@@ -1,0 +1,936 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-30 11:33-0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: pessoas/views.py:28
+#, python-format
+msgid ""
+"Click on this link or Copy & Paste in your internet Browser to validate your "
+"registration at PokeTracer: http://poketracer.com/validation/%d"
+msgstr ""
+"Clique neste link ou copie e cole-o em seu navegador para validar seu "
+"registro no PokeTracer: http://poketracer.com/validation/%d"
+
+#: pessoas/views.py:37
+msgid "Error on e-mail validation and sending! Try Again!"
+msgstr "Erro de validação no envio de e-mail! Tente novamente!"
+
+#: pessoas/views.py:42
+msgid ""
+"You requested to send your PokeTracer password by email, so here it is: "
+msgstr ""
+"Você solicitou que sua senha no Poketracer lhe fosse enviada por e-mail, "
+"portanto aqui está: "
+
+#: pessoas/views.py:64
+msgid "You added "
+msgstr "Você adicionou "
+
+#: pessoas/views.py:69
+msgid "The Pokemon trainer "
+msgstr "O treinador pokémon "
+
+#: pessoas/views.py:90
+msgid ""
+"Your profile on PokeTracer have received an update by this user ( http://"
+"poketracer.com/"
+msgstr ""
+"Seu perfil no PokeTracer recebeu uma atualização deste usuário ( http://"
+"poketracer.com/"
+
+#: pessoas/views.py:177
+msgid "Invalid E-mail! Try Again!"
+msgstr "E-mail inválido! Tente novamente!"
+
+#: pessoas/views.py:182
+msgid "An e-mail ("
+msgstr "Um e-mail ("
+
+#: pessoas/views.py:184
+msgid "Error sending email to "
+msgstr "Erro ao enviar e-mail para "
+
+#: pessoas/views.py:186
+msgid "Register at PokeTracer because we did not find your e-mail "
+msgstr "Registre-se no PokeTracer pois não encontramos o seu e-mail "
+
+#: pessoas/views.py:190
+msgid "Our system have been dropped OR erroneous data found on your profile!"
+msgstr "Nosso sistema caiu OU informação errada foi encontrada em seu perfil!"
+
+#: pessoas/views.py:203
+msgid "OK! You can Login now!"
+msgstr "OK! Você agora pode se logar!"
+
+#: pessoas/views.py:205
+msgid "User already checked!"
+msgstr "Usuário já validado!"
+
+#: pessoas/views.py:231
+msgid "Error - Try Again!"
+msgstr "Erro - Tente novamente!"
+
+#: pessoas/views.py:237
+msgid "Error - Try Again!!"
+msgstr "Erro - Tente novamente!!"
+
+#: pessoas/views.py:239
+msgid "Error - Try Again!!!"
+msgstr "Erro - Tente novamente!!!"
+
+#: pessoas/views.py:241
+msgid "Error - Try Again!!!!"
+msgstr "Erro - Tente novamente!!!!"
+
+#: pessoas/views.py:256
+msgid ""
+"Error! Your email is already registered! Look on the page footer to retrieve "
+"your password."
+msgstr ""
+"Erro! O seu e-mail já foi registrado! Procure no rodapé da página para "
+"recuperar a sua senha."
+
+#: pessoas/views.py:259
+msgid "Error! Name and Last Name required!"
+msgstr "Erro! Nome e sobrenome necessários!"
+
+#: pessoas/views.py:262
+msgid "Error! In game name required! Name > 3 character!"
+msgstr "Erro! Nome do personagem necessário! Nome > 3 caracteres!"
+
+#: pessoas/views.py:265
+msgid "Error! Choose a good password!"
+msgstr "Erro! Escolha uma senha melhor!"
+
+#: pessoas/views.py:268
+msgid "Error! Enter a real FriendCode!"
+msgstr "Erro! Insira um Friendcode real!"
+
+#: pessoas/views.py:314
+msgid "Error! Verify your information and try again!"
+msgstr "Erro! Confira suas informações e tente novamente!"
+
+#: pessoas/views.py:316
+msgid "Verify your e-mail "
+msgstr "Verifique seu e-mail! "
+
+#: pessoas/views.py:318
+msgid "Error! Wrong Captcha! Try again."
+msgstr "Erro! Captcha errado! Tente novamente."
+
+#: pessoas/views.py:568
+msgid "Thank you. Your Safari successfully registered."
+msgstr "Obrigado. Seu safari foi registrado com sucesso."
+
+#: poketracer/settings.py:81
+msgid "Português"
+msgstr "Português"
+
+#: poketracer/settings.py:82
+msgid "English"
+msgstr "English"
+
+#: poketracer/settings.py:83
+msgid "Español"
+msgstr "Español"
+
+#: templates/about.html:4 templates/template.html:62
+msgid "About"
+msgstr "Sobre"
+
+#: templates/about.html:14
+msgid "About PokeTracer.com"
+msgstr "Sobre o PokeTracer.com"
+
+#: templates/about.html:15
+msgid ""
+"PokeTracer started as a little test site in November 11, 2013. With the "
+"growing demand to meet friends for online matches of Nintendo Pokémon X and "
+"Y, and the lack of organization & pattern in the search for players, we saw "
+"that we had a greater need to organize such information.<br /><br />\n"
+"          It was then that the idea of creating the site PokeTracer began."
+msgstr ""
+"Poketracer começou como um pequeno site teste dia 11 de novembro de 2013. "
+"Com a crescente demanda para encontrar amigos online para jogar pokémon X e "
+"Y, e a falta de padrão e organização para procurar por estes jogadores, "
+"sentimos a necessidade em organizar tal informação.<br /><br />\n"
+"          Foi então que surgiu a idéia de criar o site PokeTracer."
+
+#: templates/about.html:19
+msgid "Philosophy"
+msgstr "Filosofia"
+
+#: templates/about.html:20
+msgid ""
+"PokeTracer started with one mission: to make Pokétrainers game information "
+"as easy to find and digest as possible. We try to be concise while also "
+"containing everything you need, and keep the site as fast and simple as "
+"possible.<br /><br />\n"
+"          We are also one of the first Nintendo Friend Code sites to have a "
+"responsive design - a layout which works well on all devices! Soon we will "
+"make an iPhone and Android native app too! :-D"
+msgstr ""
+"PokeTracer começou com uma missão: Fazer com que a informação dos "
+"treinadores pokémon seja mais fácil de ser encontrada e entendida. "
+"Procuramos oferecer a informação da forma mais completa e da maneira mais "
+"concisa, deixando o site o mais rápido possível.<br /><br />\n"
+"          Nós somos um dos primeiros sites de friend codes com um design "
+"responsivo - um layout que funciona bem em todos os dispositivos! Logo "
+"teremos um aplicativo nativo para iPhone!"
+
+#: templates/about.html:28
+msgid "Technology"
+msgstr "Tecnologia"
+
+#: templates/about.html:29
+#, python-format
+msgid ""
+"This site was created from scratch and uses the Python programming language "
+"with the Django framework. The database is MySQL.<br /><br />\n"
+"          Our server is Apache but we are migrating soon to Nginx which is "
+"much faster. The server right now is a simple machine located on <a "
+"href='http://en.wikipedia.org/wiki/Williamsville,_New_York' "
+"target='_blank'>Williamsville, New York - USA</a>, and the development is "
+"made in <a href='http://en.wikipedia.org/wiki/Franca' "
+"target='_blank'>Franca, São Paulo - Brazil</a> (Soo awesome!). The "
+"headquarters of this website as an Service & Product is located in <a "
+"href='http://en.wikipedia.org/wiki/Bras%%C3%%ADlia' "
+"target='_blank'>Brasília, Federal District - Brazil</a>!<br /> <br />We are "
+"going to provide this website in Spanish & Portuguese soon!"
+msgstr ""
+"Este site foi criado do zero e usa a linguagem de programação Python com o "
+"framework Django. O banco de dados é MySQL.<br /><br />\n"
+"          Nosso servidor é Nginx, que é bem rápido. The server right now is "
+"a machine located on <a href='http://en.wikipedia.org/wiki/Williamsville,"
+"_New_York' target='_blank'>Williamsville, New York - USA</a>,seu "
+"desenvolvimento é feito em <a href='http://en.wikipedia.org/wiki/Franca' "
+"target='_blank'>Franca, São Paulo - Brazil</a> (Muito Legal!). A sede deste "
+"website como um produto e serviço é localizada em <a href='http://en."
+"wikipedia.org/wiki/Bras%%C3%%ADlia' target='_blank'>Brasília, Federal "
+"District - Brazil</a>!<br /> <br />O site é internacional e pode ser "
+"visualizado em português, inglês e espanhol (BREVE!)."
+
+#: templates/about.html:33
+msgid "Future"
+msgstr "Futuro"
+
+#: templates/about.html:34
+msgid ""
+"So what's next? Well we have a to-do list as long as my leg so there are "
+"always more things to add! We will add soon a general discussion forum, plus "
+"a new server for more performance and lots of good stuff for leagues and "
+"battling.<br /><br />\n"
+"          With Pokémon X&Y and so on, we will continue to be a great source "
+"for all the information you need to make online Pokémon Friends!<br /><br /"
+">\n"
+"          Oh! It's FREE and ALWAYS will be!"
+msgstr ""
+"E então, o que vem depois? Nós temos uma lista com coisas a fazer do tamanho "
+"da minha perna, portanto muitas funcionalidades serão adicionadas! O próximo "
+"passo será o sistema que possibilitará criar e gerenciar qualquer tipo de "
+"competição pokémon.<br /><br />\n"
+"          Nós somos uma grande fonte para as informações necessárias para "
+"que você possa fazer amigos em pokémon X e Y assim como nas próximas "
+"gerações!<br /><br />\n"
+"          Ah! PokeTracer é GRATUITO e SEMPRE será!"
+
+#: templates/about.html:39
+msgid "Privacy Policy"
+msgstr "Politica de Privacidade"
+
+#: templates/about.html:40
+msgid ""
+"Only some personal/game information is required to access this website. None "
+"of them will be shared or used for other means.<br />\n"
+"\n"
+"To participate in the community (PokeTracer) a valid email address is "
+"required; it is only visible to site administrators and is only used for "
+"account validation (to prevent spam) and to send opt-in notifications.<br /"
+">\n"
+"\n"
+"Members may fill out a public profile which includes contact information "
+"they wish to post. This is entirely optional. All other information posted "
+"(i.e. as questions, answers and comments) is also public and visible to "
+"anyone.<br />\n"
+"\n"
+"We accept <a href='/donate/'>donations</a> on this site to cover our high "
+"costs. Third party vendors, including Google, use cookies to serve ads based "
+"on a user's prior visits to this website."
+msgstr ""
+
+#: templates/index.html:10 templates/pessoas/home.html:14
+msgid "close"
+msgstr "Fechar"
+
+#: templates/index.html:21
+msgid ""
+"<h2>FIND THE POKÉMON YOU WANT & MAKE FRIENDS!</h2>\n"
+"        <p align='Justify'>We make your life easier! If you're a Pokémon "
+"Trainer, register for free to speed up your search for Pokémon! This is the "
+"best way to find more Friend Codes, colleagues and increase your Safari Zone!"
+msgstr ""
+"<h2>ENCONTRE O POKÉMON QUE VOCÊ PROCURA E FAÇA AMIGOS!</h2>\n"
+"        <p align='Justify'>Nós tornamos sua vida mais fácil! Você que é um "
+"treinador pokémon pode se registrar de graça e acelerar as suas buscas por "
+"pokémons! Esta é a melhor maneira de compartilhar Friend Codes, fazer amigos "
+"e aumentar asua zona de safari!"
+
+#: templates/index.html:23
+msgid "REGISTER - Its Free!"
+msgstr "REGISTRE-SE - É de graça!"
+
+#: templates/index.html:35
+msgid ""
+"A quick and easy way to add new players to your friend list. Add only "
+"trustworthy colleagues to play online! <b>PokeTracer</b> is safe and a "
+"reliable system. Look for friends at any time!"
+msgstr ""
+"Uma maneira rápida e fácil de adicionar pessoas a sua lista de amigos. "
+"Adicione apenas colegas de confiança para jogar online! <b>PokeTracer</b> é "
+"um sistema seguro e confiável. Procure por amigos a qualquer hora!"
+
+#: templates/index.html:36 templates/index.html.py:41 templates/index.html:46
+msgid "View details"
+msgstr "Mais detalhes"
+
+#: templates/index.html:40
+msgid ""
+"Find out which Pokémon your friends have before adding them! Save time on "
+"catching Pokémon and increasing your collection! Finding the right Pokémon "
+"for your needs has never been so easy! Compatible with Pokémon X and Y. Join "
+"our comunity!"
+msgstr ""
+"Descubra quais pokémons estão nos safaris de seus amigos antes de adicioná-"
+"los. Poupe tempo na hora de capturar e aumentar a sua pokedex! Encontrar o "
+"pokémon certo para as suas necessidades nunca foi tão fácil! Compativel com "
+"pokémon X e Y. Entre para a nossa comunidade!"
+
+#: templates/index.html:44
+msgid "Where to Find Them?"
+msgstr "Aonde encontrar seus pokémons?"
+
+#: templates/index.html:45
+msgid ""
+"<b>PokeTracer</b> system offers a refined search for people and their "
+"Pokémon for the new generation of games! In short time this will be the "
+"largest online database of Pokémon Friend Codes in the world! So enjoy! It's "
+"free!"
+msgstr ""
+"O sistema <b>PokeTracer</b> oferece uma busca refinada por pessoas e seus "
+"pokémon para a nova geração de jogos! Em pouco tempo este será o maior banco "
+"de dados online de friend codes de pokémon! Aproveite!É grátis!"
+
+#: templates/linkFindPokemon.html:14
+msgid "Find Pokémon"
+msgstr "Encontrando pokémon"
+
+#: templates/linkFindPokemon.html:15
+msgid ""
+"Find someone to befriend and enter their Friend Code into your 'Friends "
+"List' found on the 3DS home screen. Once you have added each other the "
+"friendship will go from 'Provisional' to either 'Online' or 'Offline'"
+msgstr ""
+"Encontre a pessoa de seu interesse e adicione o friend code dela em sua "
+"lista de amigos na tela inicial do 3DS. Depois que vocês se adicionarem a "
+"amizade passará de 'esperando confirmação' para 'online' ou 'offline'."
+
+#: templates/linkFindPokemon.html:18
+msgid "Details"
+msgstr "Detalhes"
+
+#: templates/linkFindPokemon.html:19
+msgid ""
+"For the Third Pokémon, first ensure you have both completed the Elite Four "
+"and have access to the Friend Safari. Then, you both need to have your in-"
+"game Internet turned ON. After this has happened the 3rd blank slot in the "
+"Pokémon Safari Card will be available!<br /><br />\n"
+"          You can now catch what is normally their most scarce Pokémon. No "
+"need to be online anymore to catch all 3 Pokémon!"
+msgstr ""
+"Para o terceiro pokémon, assegure-se primeiro de que você e seu amigo "
+"derrotaram o campeão da liga depois da elite dos quatro e possuem acesso ao "
+"friend safari. Você e seu amigo precisam se conectar a internet dentro do "
+"jogo ao mesmo tempo.Depois que estes requisitos são satisfeitos a terceira "
+"posição de pokémon que estava em branco no cartão de safari será preenchida!"
+"<br /><br />\n"
+"          Você pode agora capturar o que normalmente é o pokémon mais "
+"escasso, sem a necessidade de ficar online para capturar todos os três "
+"pokémons diferentes!"
+
+#: templates/linkFriendCodes.html:15
+msgid ""
+"After you have set up your 3DS for online, push the smiley face button [:)] "
+"on the touch screen.<br /><br />\n"
+"\n"
+"There you will see a friend list, by pushing right on the pad you can see "
+"your own (mii) profile, below the name is a 12 digit code. This is your own "
+"friend code.<br /><br />\n"
+"\n"
+"When you select friend list (push left), you have the option 'Register "
+"Friend' on the touch screen. if you choose internet you can enter the friend "
+"code of another person. If he/she registers you too, he/she will show up on "
+"your friend list."
+msgstr ""
+"Depois de configurar o seu 3DS para online, aperte o botão com a carinha "
+"feliz [:)] na tela sensível ao toque.<br /><br />\n"
+"\n"
+"Você verá então uma lista de amigos, ao pressionar o cursor para a direita "
+"você verá você verá o seu próprio perfil (mii), abaixo de seu nome existe um "
+"código composto por 12 números. Este é o seu friend code.<br /><br />\n"
+"\n"
+"Quando você seleciona 'friend list' (pressionando o cursor para esquerda), "
+"você terá a opção 'Register friend' na tela sensível ao toque. Se você "
+"escolher internet, poderá adicionar o friend code de outra pessoa. Se ele/"
+"ela também te registrar, ele/ela aparecerá em sua lista de amigos."
+
+#: templates/linkFriendCodes.html:23
+msgid ""
+"Also note that for DS games, each game has to be set up seperately. Also, "
+"each DS game will give you a different friend code.<br /><br />\n"
+"          Only 3DS games will work with the friend codes set in the friend "
+"code list."
+msgstr ""
+"Perceba que para jogos de DS, cada friend code deve ser registrado de forma "
+"separada (encontrado dentro do próprio jogo). Cada jogo de DS vai te "
+"fornecer um friend code diferente.<br /><br />\n"
+"          Somente jogos para 3DS funcionarão com o friend code registrado em "
+"sua lista de friend codes."
+
+#: templates/linkFriendSafari.html:15
+msgid ""
+"The Friend Safari is an area where you can visit registered Pokémon friends "
+"safaris and catch up to 3 Pokémon. After you have finished the elite four "
+"travel to the Lumiose City Train Station, and upon entering, Prof. Sycamore "
+"will give you a Rail Ticket which allows travel to Kiloude City. On the "
+"right side of the city there is a taller than usual building with a green "
+"pokeball. This is the Friend Safari.<br /><br />\n"
+"  In each Friend Safari there are immediately 2 Pokémon on level 30. These "
+"Pokémon are usually available somewhere in the Kalos region, but may be "
+"version exclusive. Catching these can let you skip grinding levels to fill "
+"your Pokedex or relying on the GTS."
+msgstr ""
+"O friend safari é uma área aonde você pode visitar os safaris de seus amigos "
+"registrados e capturar até três pokémons diferentes. Depois de ter derrotado "
+"a Elite dos quatro, vá até a estação de trem da cidade Lumiose, ao entrar o "
+"Prof. Sycamore te entregará uma passagem de trem que te permitirá viajar "
+"para a cidade de Kiloude. No canto direito superior da cidade existe um "
+"prédio um pouco mais alto que os demais com uma pokébola verde. Este é o "
+"friend safari.<br /><br />\n"
+"  Em cada friend safari existem de imediato dois pokémons que podem ser "
+"capturados no nivel 30. Estes pokémons geralmente podem ser capturados na "
+"região de Kalos, mas também podem ser exclusivos de outras versões. Capturar "
+"estes pokémons pode economizar tempo que seria gasto evoluindo pokémons ou "
+"procurando na GTS por pokémons para completar sua pokédex."
+
+#: templates/linkFriendSafari.html:19
+msgid "The 3rd Pokémon"
+msgstr "O terceiro Pokémon"
+
+#: templates/linkFriendSafari.html:20
+msgid ""
+"This is only accessible after your friend has defeated the Champion at the "
+"end of the Elite Four *AND* they have come up in your friends list in the "
+"game.<br /><br />\n"
+"This Pokémon is almost always not naturally occurring in the game and often "
+"is exclusively available through the Friend Safari, and they might also come "
+"with their Hidden Ability!"
+msgstr ""
+"Este só pode ser acessado depois que seu amigo derrota o campeão da liga "
+"depois da elite dos quatro *e* fica online ao mesmo tempo que você no jogo, "
+"aparecendo em sua lista de amigos dentro do jogo.<br /><br />\n"
+"Este pokémon na maioria das vezes não pode ser capturado na região de Kalos "
+"e é quase que exclusivo do friend safari, além de também possuir a sua "
+"habilidade especial ou Hidden ability!"
+
+#: templates/linkFriendSafari.html:23
+msgid ""
+"Serebii</a> is a good resource showing a list of the various Pokémon "
+"obtainable through the Friend Safari!"
+msgstr ""
+"Serebii</a> e uma boa fonte para saber quais pokémons podem ser capturados "
+"nos friend safari!"
+
+#: templates/register.html:4 templates/register.html.py:40
+msgid "Register"
+msgstr "Registrar"
+
+#: templates/register.html:25
+msgid "Full Real Name"
+msgstr "Nome real completo"
+
+#: templates/register.html:26 templates/pessoas/home.html:152
+msgid "In Game Name"
+msgstr "Nome do personagem"
+
+#: templates/register.html:27
+msgid "Your Friend Code: XXXX-XXXX-XXXX"
+msgstr "Seu Friend Code: XXXX-XXXX-XXXX"
+
+#: templates/register.html:29 templates/template.html:83
+msgid "Password"
+msgstr "Senha"
+
+#: templates/template.html:33
+msgid "Safari Friend Code Exchange Made Easy"
+msgstr "Troca de friend code facilitada"
+
+#: templates/template.html:61
+msgid "Home"
+msgstr "Home"
+
+#: templates/template.html:70
+msgid "Logout"
+msgstr "Logout"
+
+#: templates/template.html:86
+msgid "Register!"
+msgstr "Registre-se!"
+
+#: templates/template.html:104
+msgid "Manage your Friend Codes"
+msgstr "Gerencie os seus Ffriend Codes"
+
+#: templates/template.html:104 templates/pessoas/home.html:4
+msgid "Dashboard"
+msgstr "Painel de controle"
+
+#: templates/template.html:105
+msgid "Use this link to share your profile"
+msgstr "Use este link para compartilhar seu perfil"
+
+#: templates/template.html:105
+msgid "My Public Profile"
+msgstr "Meu perfil público"
+
+#: templates/template.html:106
+msgid "Manage your Safari Zone"
+msgstr "Gerencie sua zona de safari"
+
+#: templates/template.html:106 templates/pessoas/registersafari.html:8
+msgid "My Safari"
+msgstr "Meu safari"
+
+#: templates/template.html:107
+msgid "Look for People, Pokémon, Vivillon, Shiny Codes and more!"
+msgstr "Procure por pessoas, Pokémon, Vivillon, Shiny Codes e mais!"
+
+#: templates/template.html:107 templates/pessoas/friends.html:4
+msgid "Search"
+msgstr "Pesquisa"
+
+#: templates/template.html:108
+msgid "Information about your favorite Pokémon"
+msgstr "Informação sobre seu Pokémon favorito"
+
+#: templates/template.html:109
+msgid "Chat with online users now!"
+msgstr "Converse com usuários online agora!"
+
+#: templates/template.html:130
+msgid ""
+"Pokémon and respective character names/images are trademarks and copyrights "
+"of their respective owners."
+msgstr ""
+"Pokémon e os respectivos nomes de personagens/imagens são marcas registradas "
+"e copyrights de seus respectivos donos."
+
+#: templates/template.html:131
+msgid ""
+"We are not affiliated with Nintendo, Creatures Inc, TPC International, Game "
+"Freak or Pokemondb.net"
+msgstr ""
+"Nós não somos afiliados com a Nintendo, Creatures.Inc, TPC Internacional, "
+"Game Freak ou Pokemondb.net"
+
+#: templates/template.html:133
+msgid "All rights reserved."
+msgstr "Todos os direitos reservados"
+
+#: templates/template.html:133
+msgid "Forgot your password? Can't verify account?"
+msgstr "Esqueceu a sua senha? Não consegue validar a sua conta?"
+
+#: templates/template.html:168
+msgid "FORGOT YOUR PASSWORD? VERIFY ACCOUNT?"
+msgstr "ESQUECEU A SUA SENHA? VALIDAR A CONTA?"
+
+#: templates/template.html:175
+msgid "Put your registration e-mail here:"
+msgstr "Coloque seu e-mail de validação aqui:"
+
+#: templates/template.html:178
+msgid "SEND!"
+msgstr "ENVIAR!"
+
+#: templates/template.html:183
+msgid "Close"
+msgstr "Fechar"
+
+#: templates/pessoas/friends.html:8
+msgid "Search Friends"
+msgstr "Procurar amigos"
+
+#: templates/pessoas/friends.html:23
+msgid "Find what you want!"
+msgstr "Encontre o que procura!"
+
+#: templates/pessoas/friends.html:29
+msgid "Just write what you want and we will seek for you!"
+msgstr "Escreva o que você gostaria de procurar e nós buscaremos para você!"
+
+#: templates/pessoas/friends.html:31
+msgid "Search!"
+msgstr "Pesquisar!"
+
+#: templates/pessoas/friends.html:34
+msgid ""
+"Not looking for anything specific? Take a look <a href='/home/list/safari-"
+"updates/'>here</a> and start adding Friend Codes! (for Vivillon 'ICY SNOW' "
+"or 'HIGH PLAINS' use 'ICYSNOW' and 'HIGHPLAINS' respectively.)"
+msgstr ""
+"Não está procurando por nada especifico? Dê uma olhada <a href='/home/list/"
+"safari-updates/'>aqui</a> e comece a adicionar Friend Codes! (para Vivillon "
+"'ICY SNOW' ou 'HIGH PLAINS' use 'ICYSNOW' e 'HIGHPLAINS' respectivamente.)"
+
+#: templates/pessoas/friends.html:39
+msgid ""
+"Sorry but we didn´t find what you were looking for! <a href='https://www."
+"facebook.com/pages/Poke-Tracer/693137594046875' target='_blank'>Spread the "
+"word about PokeTracer</a>! Each trainner that joins our database makes it "
+"easier for you to find what you need!"
+msgstr ""
+"Desculpe, mas não encontramos o que você procura! <a href='https://www."
+"facebook.com/pages/Poke-Tracer/693137594046875' target='_blank'>Divulgue o "
+"PokeTracer</a>! Cada treinador que se junta ao nosso banco de dados faz com "
+"que fique mais fácil encontrar o que procura!"
+
+#: templates/pessoas/friends.html:48 templates/pessoas/list.html:17
+msgid "Game Name (Shiny)"
+msgstr "Personagem (Shiny)"
+
+#: templates/pessoas/friends.html:49 templates/pessoas/list.html:18
+msgid "Region"
+msgstr "Região"
+
+#: templates/pessoas/friends.html:50 templates/pessoas/list.html:20
+msgid "Native Vivillon"
+msgstr "Vivillon Nativa"
+
+#: templates/pessoas/friends.html:51 templates/pessoas/list.html:21
+msgid "Safari Type"
+msgstr "Tipo Safari"
+
+#: templates/pessoas/home.html:8
+msgid "Pokémon Trainer"
+msgstr "Treinador Pokémon"
+
+#: templates/pessoas/home.html:23
+msgid "ADDED FRIENDS"
+msgstr "AMIGOS ADICIONADOS"
+
+#: templates/pessoas/home.html:25
+msgid "Last Friends added by me..."
+msgstr "Últimos amigos que adicionei..."
+
+#: templates/pessoas/home.html:36 templates/pessoas/home.html.py:56
+#: templates/pessoas/home.html:76 templates/pessoas/home.html.py:100
+msgid "VIEW MORE"
+msgstr "VER MAIS"
+
+#: templates/pessoas/home.html:43
+msgid "ADDED ME"
+msgstr "ME ADICIONOU"
+
+#: templates/pessoas/home.html:45
+msgid "Latest people who added me..."
+msgstr "Últimas pessoas que me adicionaram..."
+
+#: templates/pessoas/home.html:63
+msgid "MY FRIEND LIST"
+msgstr "MINHA LISTA DE AMIGOS(A)"
+
+#: templates/pessoas/home.html:65
+msgid "Friends added through PokeTracer..."
+msgstr "Amigos adicionados através do PokeTracer..."
+
+#: templates/pessoas/home.html:87
+msgid "NEW USERS & UPDATED SAFARIS"
+msgstr "NOVOS USUÁRIOS & ATUALIZADOS"
+
+#: templates/pessoas/home.html:89
+msgid "Start making friends right away..."
+msgstr "Comece a fazer amigos já..."
+
+#: templates/pessoas/home.html:107
+msgid "SOCIAL"
+msgstr "SOCIAL"
+
+#: templates/pessoas/home.html:116
+msgid "SOON!"
+msgstr "BREVE!"
+
+#: templates/pessoas/home.html:124
+msgid "MY INFORMATION"
+msgstr "MINHA INFORMAÇÃO"
+
+#: templates/pessoas/home.html:134
+msgid "PokeTracer Code"
+msgstr "Código PokeTracer"
+
+#: templates/pessoas/home.html:138
+msgid "My PokeTracer Rating"
+msgstr "Minha classificação PokeTracer"
+
+#: templates/pessoas/home.html:146 templates/pessoas/user.html:63
+msgid "Trainer Shiny Value:"
+msgstr "Shiny Value do Treinador"
+
+#: templates/pessoas/home.html:156
+msgid "Real Name"
+msgstr "Nome Real"
+
+#: templates/pessoas/home.html:160
+msgid "Quote"
+msgstr "Citação"
+
+#: templates/pessoas/home.html:181 templates/pessoas/user.html:66
+msgid "Game Region:"
+msgstr "Região do jogo"
+
+#: templates/pessoas/home.html:186 templates/pessoas/home.html.py:307
+#: templates/pessoas/home.html:315 templates/pessoas/home.html.py:335
+#: templates/pessoas/registersafari.html:30
+#: templates/pessoas/registersafari.html:49
+#: templates/pessoas/registersafari.html:55
+#: templates/pessoas/registersafari.html:65
+#: templates/pessoas/registersafari.html:71
+#: templates/pessoas/registersafari.html:80
+#: templates/pessoas/registersafari.html:86
+#: templates/pessoas/registersafari.html:95 templates/pessoas/user.html:167
+#: templates/pessoas/user.html.py:187 templates/pessoas/user.html:202
+#: templates/pessoas/user.html.py:215 templates/pessoas/user.html:228
+msgid "I DON'T KNOW!"
+msgstr "EU NÃO SEI!"
+
+#: templates/pessoas/home.html:310 templates/pessoas/user.html:69
+msgid "Native Vivillon:"
+msgstr "Vivillon Nativa"
+
+#: templates/pessoas/home.html:339
+msgid "User Type"
+msgstr "Tipo do usuário"
+
+#: templates/pessoas/home.html:355
+msgid "SAVE PROFILE"
+msgstr "SALVAR PERFIL"
+
+#: templates/pessoas/list.html:34
+msgid "Add me!"
+msgstr "Me adicione!"
+
+#: templates/pessoas/list.html:61
+msgid ""
+"<b>AND MUCH, MUCH, MUCH MORE!</b><br/>Look for more Friends on specific "
+"search <a href='/home/friends/' title='Click Here to search mode!'>here!"
+msgstr ""
+"<b>E MUITO, MUITO, MUITO MAIS!</b><br/>Procure por mais amigos na pesquisa "
+"<a href='/home/friends/' title='Clique aqui para o modo de pesquisa!'>aqui!"
+
+#: templates/pessoas/registersafari.html:17
+msgid "ADD OR UPDATE YOUR SAFARI INFORMATION HERE"
+msgstr "ADICIONE OU ATUALIZE AS INFORMAÇÕES DE SEU SAFARI AQUI"
+
+#: templates/pessoas/registersafari.html:19
+msgid ""
+"Add the information you know about your Safari to make it easy other find "
+"you in Friend`s Search"
+msgstr ""
+"Adicione as informações que você sabe sobre seu safari para que outros te "
+"adicionem com mais facilidade ao pesquisar"
+
+#: templates/pessoas/registersafari.html:59 templates/pessoas/user.html:197
+msgid "Select Pokemon 1"
+msgstr "Selecione Pokémon 1"
+
+#: templates/pessoas/registersafari.html:75 templates/pessoas/user.html:210
+msgid "Select Pokemon 2"
+msgstr "Selecione Pokémon 2"
+
+#: templates/pessoas/registersafari.html:90 templates/pessoas/user.html:223
+msgid "Select Pokemon 3"
+msgstr "Selecione Pokémon 3"
+
+#: templates/pessoas/registersafari.html:101
+msgid "UPDATE your Safari!"
+msgstr "ATUALIZE seu Safari!"
+
+#: templates/pessoas/registersafari.html:104
+msgid "SAVE your Safari!"
+msgstr "SALVE seu Safari!"
+
+#: templates/pessoas/registersafari.html:116
+msgid "HINTS FROM OTHER PEOPLE"
+msgstr "DICAS DE OUTRAS PESSOAS"
+
+#: templates/pessoas/registersafari.html:118
+msgid ""
+"If someone has suggested your Safari data, Poketracer will provide the "
+"information below so you can complete your profile and be available to "
+"others on the Friend Search."
+msgstr ""
+"Se alguém sugerir informações sobre o seu safari, PokeTracer postará as "
+"informações abaixo para que você possa completar o seu perfil e fazer com "
+"que outros te adicionem com mais facilidade enquanto pesquisam por pokémons"
+
+#: templates/pessoas/registersafari.html:124 templates/pessoas/user.html:285
+msgid "from"
+msgstr "de"
+
+#: templates/pessoas/user.html:19
+msgid "PERSONAL INFORMATION:"
+msgstr "INFORMAÇÃO PESSOAL"
+
+#: templates/pessoas/user.html:26 templates/pessoas/user.html.py:105
+msgid "Add me to see my code!"
+msgstr "Me adicione para ver o meu Friend Code!"
+
+#: templates/pessoas/user.html:38
+msgid ""
+"This is your public profile!<br />That's how other people see you!<br />To "
+"EDIT, go to your <a href='http://poketracer.com/home/'>Dashboard</a>."
+msgstr ""
+"Este é o seu perfil público!<br />É assim que as outras pessoas vão te ver!"
+"<br />Para EDITAR, vá para o  <a href='http://poketracer.com/home/'>Painel "
+"de controle</a>."
+
+#: templates/pessoas/user.html:41
+msgid "Remove Friend!"
+msgstr "Remover Amigo!"
+
+#: templates/pessoas/user.html:42
+msgid "DON'T FORGET TO ADD A FEEDBACK BELOW ABOUT THIS USER, OK!"
+msgstr "NÃO SE ESQUEÇA DE INFORMAR O SAFARI DESTA PESSOA, OK!"
+
+#: templates/pessoas/user.html:44
+msgid "Add as friend, leave comments and <br />help us map the PokeTrainers!"
+msgstr ""
+"Adicionar como amigo, fazer comentários e nos <br />ajudar a mapear os "
+"treinadores(a)!"
+
+#: templates/pessoas/user.html:49
+msgid ""
+"Once you are logged in <b>PokeTracer</b> you can do more stuffs with this "
+"profile! So register or login to join this commutiny! <a href='/"
+"register/'>Register now!"
+msgstr ""
+"Uma vez logado no <b>PokeTracer</b> você pode fazer mais com este perfil! "
+"Portanto registre-se ou faça login para participar da comunidade! <a href='/"
+"register/'>Registre-se agora!"
+
+#: templates/pessoas/user.html:54
+msgid "My Personal Link:"
+msgstr "Meu Link Pessoal"
+
+#: templates/pessoas/user.html:57
+msgid "Name:"
+msgstr "Nome:"
+
+#: templates/pessoas/user.html:60
+msgid "In Game Name:"
+msgstr "Nome do personagem no jogo"
+
+#: templates/pessoas/user.html:85
+msgid "Last Update:"
+msgstr "Última atualização"
+
+#: templates/pessoas/user.html:88
+msgid "Member Since:"
+msgstr "Membro desde:"
+
+#: templates/pessoas/user.html:126
+msgid "This user is quiet, never wrote anything here yet."
+msgstr "Este usuário é quieto, ainda não escreveu nada aqui."
+
+#: templates/pessoas/user.html:133
+msgid "My Type:"
+msgstr "Meu Tipo"
+
+#: templates/pessoas/user.html:156
+msgid "WHAT DID YOU FIND IN HIS/HER SAFARI?"
+msgstr "O QUE VOCÊ ENCONTROU NO SAFARI DELE/DELA?"
+
+#: templates/pessoas/user.html:162 templates/pokemons/home.html:20
+msgid "Type"
+msgstr "Tipo"
+
+#: templates/pessoas/user.html:192 templates/pessoas/user.html.py:205
+#: templates/pessoas/user.html:218
+msgid "(choose from the list or type the name)"
+msgstr "(escolha da lista ou escreva o nome)"
+
+#: templates/pessoas/user.html:232
+msgid "Friend Review"
+msgstr "Review do amigo(a)"
+
+#: templates/pessoas/user.html:235
+msgid "Friend Rating"
+msgstr "Classificação do amigo(a)"
+
+#: templates/pessoas/user.html:247
+msgid "Your Tags for this user:"
+msgstr "Suas Tags para esta pessoa:"
+
+#: templates/pessoas/user.html:248
+msgid "tags separated by commas"
+msgstr "tags separadas por virgulas"
+
+#: templates/pessoas/user.html:250
+msgid "SAVE!"
+msgstr "SALVE!"
+
+#: templates/pessoas/user.html:264
+msgid "INFORMATION FROM OTHERS ON POKETRACER"
+msgstr "INFORMAÇÕES VINDAS DE OUTROS NO POKETRACER"
+
+#: templates/pessoas/user.html:273
+msgid ""
+"No comment from other participants yet! But this person seems to be cool!"
+msgstr ""
+"Nenhum comentário feito por outros participantes ainda! Mas esta pessoa "
+"parece ser legal!"
+
+#: templates/pessoas/user.html:278
+msgid "Rating :"
+msgstr "Classificação :"
+
+#: templates/pokemons/home.html:9
+msgid ""
+"The # in front of the Pokémon`s type indicates that you can catch this "
+"Pokémon in a Safari."
+msgstr ""
+"O # na frente do tipo do pokémon indica que ele pode ser capturado em um "
+"Safari."
+
+#: templates/pokemons/home.html:18
+msgid "Photo"
+msgstr "Foto"
+
+#: templates/pokemons/home.html:19
+msgid "Name"
+msgstr "Nome"

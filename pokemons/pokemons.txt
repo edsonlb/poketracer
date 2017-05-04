@@ -1,0 +1,767 @@
+
+			 $1$ 1 " nome_pokemon=bulbasaur"numero_pokemon=#001 " nome_pokemon=bulbasaur">Bulbasaur " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 2 " nome_pokemon=ivysaur"numero_pokemon=#002 " nome_pokemon=ivysaur">Ivysaur " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 3 " nome_pokemon=venusaur"numero_pokemon=#003 " nome_pokemon=venusaur">Venusaur " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 4 " nome_pokemon=charmander"numero_pokemon=#004 " nome_pokemon=charmander">Charmander " /type/fire"  fire">Fire $5$ 
+			 $1$ 5 " nome_pokemon=charmeleon"numero_pokemon=#005 " nome_pokemon=charmeleon">Charmeleon " /type/fire"  fire">Fire $5$ 
+			 $1$ 6 " nome_pokemon=charizard"numero_pokemon=#006 " nome_pokemon=charizard">Charizard " /type/fire"  fire">Fire $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 7 " nome_pokemon=squirtle"numero_pokemon=#007 " nome_pokemon=squirtle">Squirtle " /type/water"  water">Water $5$ 
+			 $1$ 8 " nome_pokemon=wartortle"numero_pokemon=#008 " nome_pokemon=wartortle">Wartortle " /type/water"  water">Water $5$ 
+			 $1$ 9 " nome_pokemon=blastoise"numero_pokemon=#009 " nome_pokemon=blastoise">Blastoise " /type/water"  water">Water $5$ 
+			 $1$ 10 " nome_pokemon=caterpie"numero_pokemon=#010 " nome_pokemon=caterpie">Caterpie " /type/bug"  bug">Bug $5$ 
+			 $1$ 11 " nome_pokemon=metapod"numero_pokemon=#011 " nome_pokemon=metapod">Metapod " /type/bug"  bug">Bug $5$ 
+			 $1$ 12 " nome_pokemon=butterfree"numero_pokemon=#012 " nome_pokemon=butterfree">Butterfree " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 13 " nome_pokemon=weedle"numero_pokemon=#013 " nome_pokemon=weedle">Weedle " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 14 " nome_pokemon=kakuna"numero_pokemon=#014 " nome_pokemon=kakuna">Kakuna " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 15 " nome_pokemon=beedrill"numero_pokemon=#015 " nome_pokemon=beedrill">Beedrill " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 16 " nome_pokemon=pidgey"numero_pokemon=#016 " nome_pokemon=pidgey">Pidgey " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 17 " nome_pokemon=pidgeotto"numero_pokemon=#017 " nome_pokemon=pidgeotto">Pidgeotto " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 18 " nome_pokemon=pidgeot"numero_pokemon=#018 " nome_pokemon=pidgeot">Pidgeot " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 19 " nome_pokemon=rattata"numero_pokemon=#019 " nome_pokemon=rattata">Rattata " /type/normal"  normal">Normal $5$ 
+			 $1$ 20 " nome_pokemon=raticate"numero_pokemon=#020 " nome_pokemon=raticate">Raticate " /type/normal"  normal">Normal $5$ 
+			 $1$ 21 " nome_pokemon=spearow"numero_pokemon=#021 " nome_pokemon=spearow">Spearow " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 22 " nome_pokemon=fearow"numero_pokemon=#022 " nome_pokemon=fearow">Fearow " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 23 " nome_pokemon=ekans"numero_pokemon=#023 " nome_pokemon=ekans">Ekans " /type/poison"  poison">Poison $5$ 
+			 $1$ 24 " nome_pokemon=arbok"numero_pokemon=#024 " nome_pokemon=arbok">Arbok " /type/poison"  poison">Poison $5$ 
+			 $1$ 25 " nome_pokemon=pikachu"numero_pokemon=#025 " nome_pokemon=pikachu">Pikachu " /type/electric"  electric">Electric $5$ 
+			 $1$ 26 " nome_pokemon=raichu"numero_pokemon=#026 " nome_pokemon=raichu">Raichu " /type/electric"  electric">Electric $5$ 
+			 $1$ 27 " nome_pokemon=sandshrew"numero_pokemon=#027 " nome_pokemon=sandshrew">Sandshrew " /type/ground"  ground">Ground $5$ 
+			 $1$ 28 " nome_pokemon=sandslash"numero_pokemon=#028 " nome_pokemon=sandslash">Sandslash " /type/ground"  ground">Ground $5$ 
+			 $1$ 29 " nome_pokemon=nidoran-f"numero_pokemon=#029 " nome_pokemon=nidoran-f">Nidoran♀ " /type/poison"  poison">Poison $5$ 
+			 $1$ 30 " nome_pokemon=nidorina"numero_pokemon=#030 " nome_pokemon=nidorina">Nidorina " /type/poison"  poison">Poison $5$ 
+			 $1$ 31 " nome_pokemon=nidoqueen"numero_pokemon=#031 " nome_pokemon=nidoqueen">Nidoqueen " /type/poison"  poison">Poison $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 32 " nome_pokemon=nidoran-m"numero_pokemon=#032 " nome_pokemon=nidoran-m">Nidoran♂ " /type/poison"  poison">Poison $5$ 
+			 $1$ 33 " nome_pokemon=nidorino"numero_pokemon=#033 " nome_pokemon=nidorino">Nidorino " /type/poison"  poison">Poison $5$ 
+			 $1$ 34 " nome_pokemon=nidoking"numero_pokemon=#034 " nome_pokemon=nidoking">Nidoking " /type/poison"  poison">Poison $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 35 " nome_pokemon=clefairy"numero_pokemon=#035 " nome_pokemon=clefairy">Clefairy " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 36 " nome_pokemon=clefable"numero_pokemon=#036 " nome_pokemon=clefable">Clefable " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 37 " nome_pokemon=vulpix"numero_pokemon=#037 " nome_pokemon=vulpix">Vulpix " /type/fire"  fire">Fire $5$ 
+			 $1$ 38 " nome_pokemon=ninetales"numero_pokemon=#038 " nome_pokemon=ninetales">Ninetales " /type/fire"  fire">Fire $5$ 
+			 $1$ 39 " nome_pokemon=jigglypuff"numero_pokemon=#039 " nome_pokemon=jigglypuff">Jigglypuff " /type/normal"  normal">Normal $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 40 " nome_pokemon=wigglytuff"numero_pokemon=#040 " nome_pokemon=wigglytuff">Wigglytuff " /type/normal"  normal">Normal $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 41 " nome_pokemon=zubat"numero_pokemon=#041 " nome_pokemon=zubat">Zubat " /type/poison"  poison">Poison $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 42 " nome_pokemon=golbat"numero_pokemon=#042 " nome_pokemon=golbat">Golbat " /type/poison"  poison">Poison $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 43 " nome_pokemon=oddish"numero_pokemon=#043 " nome_pokemon=oddish">Oddish " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 44 " nome_pokemon=gloom"numero_pokemon=#044 " nome_pokemon=gloom">Gloom " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 45 " nome_pokemon=vileplume"numero_pokemon=#045 " nome_pokemon=vileplume">Vileplume " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 46 " nome_pokemon=paras"numero_pokemon=#046 " nome_pokemon=paras">Paras " /type/bug"  bug">Bug $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 47 " nome_pokemon=parasect"numero_pokemon=#047 " nome_pokemon=parasect">Parasect " /type/bug"  bug">Bug $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 48 " nome_pokemon=venonat"numero_pokemon=#048 " nome_pokemon=venonat">Venonat " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 49 " nome_pokemon=venomoth"numero_pokemon=#049 " nome_pokemon=venomoth">Venomoth " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 50 " nome_pokemon=diglett"numero_pokemon=#050 " nome_pokemon=diglett">Diglett " /type/ground"  ground">Ground $5$ 
+			 $1$ 51 " nome_pokemon=dugtrio"numero_pokemon=#051 " nome_pokemon=dugtrio">Dugtrio " /type/ground"  ground">Ground $5$ 
+			 $1$ 52 " nome_pokemon=meowth"numero_pokemon=#052 " nome_pokemon=meowth">Meowth " /type/normal"  normal">Normal $5$ 
+			 $1$ 53 " nome_pokemon=persian"numero_pokemon=#053 " nome_pokemon=persian">Persian " /type/normal"  normal">Normal $5$ 
+			 $1$ 54 " nome_pokemon=psyduck"numero_pokemon=#054 " nome_pokemon=psyduck">Psyduck " /type/water"  water">Water $5$ 
+			 $1$ 55 " nome_pokemon=golduck"numero_pokemon=#055 " nome_pokemon=golduck">Golduck " /type/water"  water">Water $5$ 
+			 $1$ 56 " nome_pokemon=mankey"numero_pokemon=#056 " nome_pokemon=mankey">Mankey " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 57 " nome_pokemon=primeape"numero_pokemon=#057 " nome_pokemon=primeape">Primeape " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 58 " nome_pokemon=growlithe"numero_pokemon=#058 " nome_pokemon=growlithe">Growlithe " /type/fire"  fire">Fire $5$ 
+			 $1$ 59 " nome_pokemon=arcanine"numero_pokemon=#059 " nome_pokemon=arcanine">Arcanine " /type/fire"  fire">Fire $5$ 
+			 $1$ 60 " nome_pokemon=poliwag"numero_pokemon=#060 " nome_pokemon=poliwag">Poliwag " /type/water"  water">Water $5$ 
+			 $1$ 61 " nome_pokemon=poliwhirl"numero_pokemon=#061 " nome_pokemon=poliwhirl">Poliwhirl " /type/water"  water">Water $5$ 
+			 $1$ 62 " nome_pokemon=poliwrath"numero_pokemon=#062 " nome_pokemon=poliwrath">Poliwrath " /type/water"  water">Water $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 63 " nome_pokemon=abra"numero_pokemon=#063 " nome_pokemon=abra">Abra " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 64 " nome_pokemon=kadabra"numero_pokemon=#064 " nome_pokemon=kadabra">Kadabra " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 65 " nome_pokemon=alakazam"numero_pokemon=#065 " nome_pokemon=alakazam">Alakazam " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 66 " nome_pokemon=machop"numero_pokemon=#066 " nome_pokemon=machop">Machop " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 67 " nome_pokemon=machoke"numero_pokemon=#067 " nome_pokemon=machoke">Machoke " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 68 " nome_pokemon=machamp"numero_pokemon=#068 " nome_pokemon=machamp">Machamp " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 69 " nome_pokemon=bellsprout"numero_pokemon=#069 " nome_pokemon=bellsprout">Bellsprout " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 70 " nome_pokemon=weepinbell"numero_pokemon=#070 " nome_pokemon=weepinbell">Weepinbell " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 71 " nome_pokemon=victreebel"numero_pokemon=#071 " nome_pokemon=victreebel">Victreebel " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 72 " nome_pokemon=tentacool"numero_pokemon=#072 " nome_pokemon=tentacool">Tentacool " /type/water"  water">Water $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 73 " nome_pokemon=tentacruel"numero_pokemon=#073 " nome_pokemon=tentacruel">Tentacruel " /type/water"  water">Water $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 74 " nome_pokemon=geodude"numero_pokemon=#074 " nome_pokemon=geodude">Geodude " /type/rock"  rock">Rock $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 75 " nome_pokemon=graveler"numero_pokemon=#075 " nome_pokemon=graveler">Graveler " /type/rock"  rock">Rock $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 76 " nome_pokemon=golem"numero_pokemon=#076 " nome_pokemon=golem">Golem " /type/rock"  rock">Rock $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 77 " nome_pokemon=ponyta"numero_pokemon=#077 " nome_pokemon=ponyta">Ponyta " /type/fire"  fire">Fire $5$ 
+			 $1$ 78 " nome_pokemon=rapidash"numero_pokemon=#078 " nome_pokemon=rapidash">Rapidash " /type/fire"  fire">Fire $5$ 
+			 $1$ 79 " nome_pokemon=slowpoke"numero_pokemon=#079 " nome_pokemon=slowpoke">Slowpoke " /type/water"  water">Water $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 80 " nome_pokemon=slowbro"numero_pokemon=#080 " nome_pokemon=slowbro">Slowbro " /type/water"  water">Water $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 81 " nome_pokemon=magnemite"numero_pokemon=#081 " nome_pokemon=magnemite">Magnemite " /type/electric"  electric">Electric $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 82 " nome_pokemon=magneton"numero_pokemon=#082 " nome_pokemon=magneton">Magneton " /type/electric"  electric">Electric $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 83 " nome_pokemon=farfetchd"numero_pokemon=#083 " nome_pokemon=farfetchd">Farfetch'd " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 84 " nome_pokemon=doduo"numero_pokemon=#084 " nome_pokemon=doduo">Doduo " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 85 " nome_pokemon=dodrio"numero_pokemon=#085 " nome_pokemon=dodrio">Dodrio " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 86 " nome_pokemon=seel"numero_pokemon=#086 " nome_pokemon=seel">Seel " /type/water"  water">Water $5$ 
+			 $1$ 87 " nome_pokemon=dewgong"numero_pokemon=#087 " nome_pokemon=dewgong">Dewgong " /type/water"  water">Water $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 88 " nome_pokemon=grimer"numero_pokemon=#088 " nome_pokemon=grimer">Grimer " /type/poison"  poison">Poison $5$ 
+			 $1$ 89 " nome_pokemon=muk"numero_pokemon=#089 " nome_pokemon=muk">Muk " /type/poison"  poison">Poison $5$ 
+			 $1$ 90 " nome_pokemon=shellder"numero_pokemon=#090 " nome_pokemon=shellder">Shellder " /type/water"  water">Water $5$ 
+			 $1$ 91 " nome_pokemon=cloyster"numero_pokemon=#091 " nome_pokemon=cloyster">Cloyster " /type/water"  water">Water $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 92 " nome_pokemon=gastly"numero_pokemon=#092 " nome_pokemon=gastly">Gastly " /type/ghost"  ghost">Ghost $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 93 " nome_pokemon=haunter"numero_pokemon=#093 " nome_pokemon=haunter">Haunter " /type/ghost"  ghost">Ghost $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 94 " nome_pokemon=gengar"numero_pokemon=#094 " nome_pokemon=gengar">Gengar " /type/ghost"  ghost">Ghost $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 95 " nome_pokemon=onix"numero_pokemon=#095 " nome_pokemon=onix">Onix " /type/rock"  rock">Rock $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 96 " nome_pokemon=drowzee"numero_pokemon=#096 " nome_pokemon=drowzee">Drowzee " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 97 " nome_pokemon=hypno"numero_pokemon=#097 " nome_pokemon=hypno">Hypno " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 98 " nome_pokemon=krabby"numero_pokemon=#098 " nome_pokemon=krabby">Krabby " /type/water"  water">Water $5$ 
+			 $1$ 99 " nome_pokemon=kingler"numero_pokemon=#099 " nome_pokemon=kingler">Kingler " /type/water"  water">Water $5$ 
+			 $1$ 100 " nome_pokemon=voltorb"numero_pokemon=#100 " nome_pokemon=voltorb">Voltorb " /type/electric"  electric">Electric $5$ 
+			 $1$ 101 " nome_pokemon=electrode"numero_pokemon=#101 " nome_pokemon=electrode">Electrode " /type/electric"  electric">Electric $5$ 
+			 $1$ 102 " nome_pokemon=exeggcute"numero_pokemon=#102 " nome_pokemon=exeggcute">Exeggcute " /type/grass"  grass">Grass $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 103 " nome_pokemon=exeggutor"numero_pokemon=#103 " nome_pokemon=exeggutor">Exeggutor " /type/grass"  grass">Grass $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 104 " nome_pokemon=cubone"numero_pokemon=#104 " nome_pokemon=cubone">Cubone " /type/ground"  ground">Ground $5$ 
+			 $1$ 105 " nome_pokemon=marowak"numero_pokemon=#105 " nome_pokemon=marowak">Marowak " /type/ground"  ground">Ground $5$ 
+			 $1$ 106 " nome_pokemon=hitmonlee"numero_pokemon=#106 " nome_pokemon=hitmonlee">Hitmonlee " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 107 " nome_pokemon=hitmonchan"numero_pokemon=#107 " nome_pokemon=hitmonchan">Hitmonchan " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 108 " nome_pokemon=lickitung"numero_pokemon=#108 " nome_pokemon=lickitung">Lickitung " /type/normal"  normal">Normal $5$ 
+			 $1$ 109 " nome_pokemon=koffing"numero_pokemon=#109 " nome_pokemon=koffing">Koffing " /type/poison"  poison">Poison $5$ 
+			 $1$ 110 " nome_pokemon=weezing"numero_pokemon=#110 " nome_pokemon=weezing">Weezing " /type/poison"  poison">Poison $5$ 
+			 $1$ 111 " nome_pokemon=rhyhorn"numero_pokemon=#111 " nome_pokemon=rhyhorn">Rhyhorn " /type/ground"  ground">Ground $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 112 " nome_pokemon=rhydon"numero_pokemon=#112 " nome_pokemon=rhydon">Rhydon " /type/ground"  ground">Ground $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 113 " nome_pokemon=chansey"numero_pokemon=#113 " nome_pokemon=chansey">Chansey " /type/normal"  normal">Normal $5$ 
+			 $1$ 114 " nome_pokemon=tangela"numero_pokemon=#114 " nome_pokemon=tangela">Tangela " /type/grass"  grass">Grass $5$ 
+			 $1$ 115 " nome_pokemon=kangaskhan"numero_pokemon=#115 " nome_pokemon=kangaskhan">Kangaskhan " /type/normal"  normal">Normal $5$ 
+			 $1$ 116 " nome_pokemon=horsea"numero_pokemon=#116 " nome_pokemon=horsea">Horsea " /type/water"  water">Water $5$ 
+			 $1$ 117 " nome_pokemon=seadra"numero_pokemon=#117 " nome_pokemon=seadra">Seadra " /type/water"  water">Water $5$ 
+			 $1$ 118 " nome_pokemon=goldeen"numero_pokemon=#118 " nome_pokemon=goldeen">Goldeen " /type/water"  water">Water $5$ 
+			 $1$ 119 " nome_pokemon=seaking"numero_pokemon=#119 " nome_pokemon=seaking">Seaking " /type/water"  water">Water $5$ 
+			 $1$ 120 " nome_pokemon=staryu"numero_pokemon=#120 " nome_pokemon=staryu">Staryu " /type/water"  water">Water $5$ 
+			 $1$ 121 " nome_pokemon=starmie"numero_pokemon=#121 " nome_pokemon=starmie">Starmie " /type/water"  water">Water $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 122 " nome_pokemon=mr-mime"numero_pokemon=#122 " nome_pokemon=mr-mime">Mr. Mime " /type/psychic"  psychic">Psychic $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 123 " nome_pokemon=scyther"numero_pokemon=#123 " nome_pokemon=scyther">Scyther " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 124 " nome_pokemon=jynx"numero_pokemon=#124 " nome_pokemon=jynx">Jynx " /type/ice"  ice">Ice $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 125 " nome_pokemon=electabuzz"numero_pokemon=#125 " nome_pokemon=electabuzz">Electabuzz " /type/electric"  electric">Electric $5$ 
+			 $1$ 126 " nome_pokemon=magmar"numero_pokemon=#126 " nome_pokemon=magmar">Magmar " /type/fire"  fire">Fire $5$ 
+			 $1$ 127 " nome_pokemon=pinsir"numero_pokemon=#127 " nome_pokemon=pinsir">Pinsir " /type/bug"  bug">Bug $5$ 
+			 $1$ 128 " nome_pokemon=tauros"numero_pokemon=#128 " nome_pokemon=tauros">Tauros " /type/normal"  normal">Normal $5$ 
+			 $1$ 129 " nome_pokemon=magikarp"numero_pokemon=#129 " nome_pokemon=magikarp">Magikarp " /type/water"  water">Water $5$ 
+			 $1$ 130 " nome_pokemon=gyarados"numero_pokemon=#130 " nome_pokemon=gyarados">Gyarados " /type/water"  water">Water $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 131 " nome_pokemon=lapras"numero_pokemon=#131 " nome_pokemon=lapras">Lapras " /type/water"  water">Water $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 132 " nome_pokemon=ditto"numero_pokemon=#132 " nome_pokemon=ditto">Ditto " /type/normal"  normal">Normal $5$ 
+			 $1$ 133 " nome_pokemon=eevee"numero_pokemon=#133 " nome_pokemon=eevee">Eevee " /type/normal"  normal">Normal $5$ 
+			 $1$ 134 " nome_pokemon=vaporeon"numero_pokemon=#134 " nome_pokemon=vaporeon">Vaporeon " /type/water"  water">Water $5$ 
+			 $1$ 135 " nome_pokemon=jolteon"numero_pokemon=#135 " nome_pokemon=jolteon">Jolteon " /type/electric"  electric">Electric $5$ 
+			 $1$ 136 " nome_pokemon=flareon"numero_pokemon=#136 " nome_pokemon=flareon">Flareon " /type/fire"  fire">Fire $5$ 
+			 $1$ 137 " nome_pokemon=porygon"numero_pokemon=#137 " nome_pokemon=porygon">Porygon " /type/normal"  normal">Normal $5$ 
+			 $1$ 138 " nome_pokemon=omanyte"numero_pokemon=#138 " nome_pokemon=omanyte">Omanyte " /type/rock"  rock">Rock $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 139 " nome_pokemon=omastar"numero_pokemon=#139 " nome_pokemon=omastar">Omastar " /type/rock"  rock">Rock $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 140 " nome_pokemon=kabuto"numero_pokemon=#140 " nome_pokemon=kabuto">Kabuto " /type/rock"  rock">Rock $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 141 " nome_pokemon=kabutops"numero_pokemon=#141 " nome_pokemon=kabutops">Kabutops " /type/rock"  rock">Rock $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 142 " nome_pokemon=aerodactyl"numero_pokemon=#142 " nome_pokemon=aerodactyl">Aerodactyl " /type/rock"  rock">Rock $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 143 " nome_pokemon=snorlax"numero_pokemon=#143 " nome_pokemon=snorlax">Snorlax " /type/normal"  normal">Normal $5$ 
+			 $1$ 144 " nome_pokemon=articuno"numero_pokemon=#144 " nome_pokemon=articuno">Articuno " /type/ice"  ice">Ice $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 145 " nome_pokemon=zapdos"numero_pokemon=#145 " nome_pokemon=zapdos">Zapdos " /type/electric"  electric">Electric $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 146 " nome_pokemon=moltres"numero_pokemon=#146 " nome_pokemon=moltres">Moltres " /type/fire"  fire">Fire $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 147 " nome_pokemon=dratini"numero_pokemon=#147 " nome_pokemon=dratini">Dratini " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 148 " nome_pokemon=dragonair"numero_pokemon=#148 " nome_pokemon=dragonair">Dragonair " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 149 " nome_pokemon=dragonite"numero_pokemon=#149 " nome_pokemon=dragonite">Dragonite " /type/dragon"  dragon">Dragon $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 150 " nome_pokemon=mewtwo"numero_pokemon=#150 " nome_pokemon=mewtwo">Mewtwo " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 151 " nome_pokemon=mew"numero_pokemon=#151 " nome_pokemon=mew">Mew " /type/psychic"  psychic">Psychic $5$ 
+		<hr>
+	<h2 id="gen-2">Generation 2 Pokémon</h2>
+			 $1$ 152 " nome_pokemon=chikorita"numero_pokemon=#152 " nome_pokemon=chikorita">Chikorita " /type/grass"  grass">Grass $5$ 
+			 $1$ 153 " nome_pokemon=bayleef"numero_pokemon=#153 " nome_pokemon=bayleef">Bayleef " /type/grass"  grass">Grass $5$ 
+			 $1$ 154 " nome_pokemon=meganium"numero_pokemon=#154 " nome_pokemon=meganium">Meganium " /type/grass"  grass">Grass $5$ 
+			 $1$ 155 " nome_pokemon=cyndaquil"numero_pokemon=#155 " nome_pokemon=cyndaquil">Cyndaquil " /type/fire"  fire">Fire $5$ 
+			 $1$ 156 " nome_pokemon=quilava"numero_pokemon=#156 " nome_pokemon=quilava">Quilava " /type/fire"  fire">Fire $5$ 
+			 $1$ 157 " nome_pokemon=typhlosion"numero_pokemon=#157 " nome_pokemon=typhlosion">Typhlosion " /type/fire"  fire">Fire $5$ 
+			 $1$ 158 " nome_pokemon=totodile"numero_pokemon=#158 " nome_pokemon=totodile">Totodile " /type/water"  water">Water $5$ 
+			 $1$ 159 " nome_pokemon=croconaw"numero_pokemon=#159 " nome_pokemon=croconaw">Croconaw " /type/water"  water">Water $5$ 
+			 $1$ 160 " nome_pokemon=feraligatr"numero_pokemon=#160 " nome_pokemon=feraligatr">Feraligatr " /type/water"  water">Water $5$ 
+			 $1$ 161 " nome_pokemon=sentret"numero_pokemon=#161 " nome_pokemon=sentret">Sentret " /type/normal"  normal">Normal $5$ 
+			 $1$ 162 " nome_pokemon=furret"numero_pokemon=#162 " nome_pokemon=furret">Furret " /type/normal"  normal">Normal $5$ 
+			 $1$ 163 " nome_pokemon=hoothoot"numero_pokemon=#163 " nome_pokemon=hoothoot">Hoothoot " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 164 " nome_pokemon=noctowl"numero_pokemon=#164 " nome_pokemon=noctowl">Noctowl " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 165 " nome_pokemon=ledyba"numero_pokemon=#165 " nome_pokemon=ledyba">Ledyba " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 166 " nome_pokemon=ledian"numero_pokemon=#166 " nome_pokemon=ledian">Ledian " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 167 " nome_pokemon=spinarak"numero_pokemon=#167 " nome_pokemon=spinarak">Spinarak " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 168 " nome_pokemon=ariados"numero_pokemon=#168 " nome_pokemon=ariados">Ariados " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 169 " nome_pokemon=crobat"numero_pokemon=#169 " nome_pokemon=crobat">Crobat " /type/poison"  poison">Poison $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 170 " nome_pokemon=chinchou"numero_pokemon=#170 " nome_pokemon=chinchou">Chinchou " /type/water"  water">Water $segundotipo$ /type/electric"  electric">Electric $5$ 
+			 $1$ 171 " nome_pokemon=lanturn"numero_pokemon=#171 " nome_pokemon=lanturn">Lanturn " /type/water"  water">Water $segundotipo$ /type/electric"  electric">Electric $5$ 
+			 $1$ 172 " nome_pokemon=pichu"numero_pokemon=#172 " nome_pokemon=pichu">Pichu " /type/electric"  electric">Electric $5$ 
+			 $1$ 173 " nome_pokemon=cleffa"numero_pokemon=#173 " nome_pokemon=cleffa">Cleffa " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 174 " nome_pokemon=igglybuff"numero_pokemon=#174 " nome_pokemon=igglybuff">Igglybuff " /type/normal"  normal">Normal $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 175 " nome_pokemon=togepi"numero_pokemon=#175 " nome_pokemon=togepi">Togepi " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 176 " nome_pokemon=togetic"numero_pokemon=#176 " nome_pokemon=togetic">Togetic " /type/fairy"  fairy">Fairy $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 177 " nome_pokemon=natu"numero_pokemon=#177 " nome_pokemon=natu">Natu " /type/psychic"  psychic">Psychic $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 178 " nome_pokemon=xatu"numero_pokemon=#178 " nome_pokemon=xatu">Xatu " /type/psychic"  psychic">Psychic $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 179 " nome_pokemon=mareep"numero_pokemon=#179 " nome_pokemon=mareep">Mareep " /type/electric"  electric">Electric $5$ 
+			 $1$ 180 " nome_pokemon=flaaffy"numero_pokemon=#180 " nome_pokemon=flaaffy">Flaaffy " /type/electric"  electric">Electric $5$ 
+			 $1$ 181 " nome_pokemon=ampharos"numero_pokemon=#181 " nome_pokemon=ampharos">Ampharos " /type/electric"  electric">Electric $5$ 
+			 $1$ 182 " nome_pokemon=bellossom"numero_pokemon=#182 " nome_pokemon=bellossom">Bellossom " /type/grass"  grass">Grass $5$ 
+			 $1$ 183 " nome_pokemon=marill"numero_pokemon=#183 " nome_pokemon=marill">Marill " /type/water"  water">Water $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 184 " nome_pokemon=azumarill"numero_pokemon=#184 " nome_pokemon=azumarill">Azumarill " /type/water"  water">Water $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 185 " nome_pokemon=sudowoodo"numero_pokemon=#185 " nome_pokemon=sudowoodo">Sudowoodo " /type/rock"  rock">Rock $5$ 
+			 $1$ 186 " nome_pokemon=politoed"numero_pokemon=#186 " nome_pokemon=politoed">Politoed " /type/water"  water">Water $5$ 
+			 $1$ 187 " nome_pokemon=hoppip"numero_pokemon=#187 " nome_pokemon=hoppip">Hoppip " /type/grass"  grass">Grass $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 188 " nome_pokemon=skiploom"numero_pokemon=#188 " nome_pokemon=skiploom">Skiploom " /type/grass"  grass">Grass $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 189 " nome_pokemon=jumpluff"numero_pokemon=#189 " nome_pokemon=jumpluff">Jumpluff " /type/grass"  grass">Grass $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 190 " nome_pokemon=aipom"numero_pokemon=#190 " nome_pokemon=aipom">Aipom " /type/normal"  normal">Normal $5$ 
+			 $1$ 191 " nome_pokemon=sunkern"numero_pokemon=#191 " nome_pokemon=sunkern">Sunkern " /type/grass"  grass">Grass $5$ 
+			 $1$ 192 " nome_pokemon=sunflora"numero_pokemon=#192 " nome_pokemon=sunflora">Sunflora " /type/grass"  grass">Grass $5$ 
+			 $1$ 193 " nome_pokemon=yanma"numero_pokemon=#193 " nome_pokemon=yanma">Yanma " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 194 " nome_pokemon=wooper"numero_pokemon=#194 " nome_pokemon=wooper">Wooper " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 195 " nome_pokemon=quagsire"numero_pokemon=#195 " nome_pokemon=quagsire">Quagsire " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 196 " nome_pokemon=espeon"numero_pokemon=#196 " nome_pokemon=espeon">Espeon " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 197 " nome_pokemon=umbreon"numero_pokemon=#197 " nome_pokemon=umbreon">Umbreon " /type/dark"  dark">Dark $5$ 
+			 $1$ 198 " nome_pokemon=murkrow"numero_pokemon=#198 " nome_pokemon=murkrow">Murkrow " /type/dark"  dark">Dark $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 199 " nome_pokemon=slowking"numero_pokemon=#199 " nome_pokemon=slowking">Slowking " /type/water"  water">Water $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 200 " nome_pokemon=misdreavus"numero_pokemon=#200 " nome_pokemon=misdreavus">Misdreavus " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 201 " nome_pokemon=unown"numero_pokemon=#201 " nome_pokemon=unown">Unown " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 202 " nome_pokemon=wobbuffet"numero_pokemon=#202 " nome_pokemon=wobbuffet">Wobbuffet " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 203 " nome_pokemon=girafarig"numero_pokemon=#203 " nome_pokemon=girafarig">Girafarig " /type/normal"  normal">Normal $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 204 " nome_pokemon=pineco"numero_pokemon=#204 " nome_pokemon=pineco">Pineco " /type/bug"  bug">Bug $5$ 
+			 $1$ 205 " nome_pokemon=forretress"numero_pokemon=#205 " nome_pokemon=forretress">Forretress " /type/bug"  bug">Bug $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 206 " nome_pokemon=dunsparce"numero_pokemon=#206 " nome_pokemon=dunsparce">Dunsparce " /type/normal"  normal">Normal $5$ 
+			 $1$ 207 " nome_pokemon=gligar"numero_pokemon=#207 " nome_pokemon=gligar">Gligar " /type/ground"  ground">Ground $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 208 " nome_pokemon=steelix"numero_pokemon=#208 " nome_pokemon=steelix">Steelix " /type/steel"  steel">Steel $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 209 " nome_pokemon=snubbull"numero_pokemon=#209 " nome_pokemon=snubbull">Snubbull " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 210 " nome_pokemon=granbull"numero_pokemon=#210 " nome_pokemon=granbull">Granbull " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 211 " nome_pokemon=qwilfish"numero_pokemon=#211 " nome_pokemon=qwilfish">Qwilfish " /type/water"  water">Water $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 212 " nome_pokemon=scizor"numero_pokemon=#212 " nome_pokemon=scizor">Scizor " /type/bug"  bug">Bug $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 213 " nome_pokemon=shuckle"numero_pokemon=#213 " nome_pokemon=shuckle">Shuckle " /type/bug"  bug">Bug $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 214 " nome_pokemon=heracross"numero_pokemon=#214 " nome_pokemon=heracross">Heracross " /type/bug"  bug">Bug $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 215 " nome_pokemon=sneasel"numero_pokemon=#215 " nome_pokemon=sneasel">Sneasel " /type/dark"  dark">Dark $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 216 " nome_pokemon=teddiursa"numero_pokemon=#216 " nome_pokemon=teddiursa">Teddiursa " /type/normal"  normal">Normal $5$ 
+			 $1$ 217 " nome_pokemon=ursaring"numero_pokemon=#217 " nome_pokemon=ursaring">Ursaring " /type/normal"  normal">Normal $5$ 
+			 $1$ 218 " nome_pokemon=slugma"numero_pokemon=#218 " nome_pokemon=slugma">Slugma " /type/fire"  fire">Fire $5$ 
+			 $1$ 219 " nome_pokemon=magcargo"numero_pokemon=#219 " nome_pokemon=magcargo">Magcargo " /type/fire"  fire">Fire $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 220 " nome_pokemon=swinub"numero_pokemon=#220 " nome_pokemon=swinub">Swinub " /type/ice"  ice">Ice $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 221 " nome_pokemon=piloswine"numero_pokemon=#221 " nome_pokemon=piloswine">Piloswine " /type/ice"  ice">Ice $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 222 " nome_pokemon=corsola"numero_pokemon=#222 " nome_pokemon=corsola">Corsola " /type/water"  water">Water $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 223 " nome_pokemon=remoraid"numero_pokemon=#223 " nome_pokemon=remoraid">Remoraid " /type/water"  water">Water $5$ 
+			 $1$ 224 " nome_pokemon=octillery"numero_pokemon=#224 " nome_pokemon=octillery">Octillery " /type/water"  water">Water $5$ 
+			 $1$ 225 " nome_pokemon=delibird"numero_pokemon=#225 " nome_pokemon=delibird">Delibird " /type/ice"  ice">Ice $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 226 " nome_pokemon=mantine"numero_pokemon=#226 " nome_pokemon=mantine">Mantine " /type/water"  water">Water $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 227 " nome_pokemon=skarmory"numero_pokemon=#227 " nome_pokemon=skarmory">Skarmory " /type/steel"  steel">Steel $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 228 " nome_pokemon=houndour"numero_pokemon=#228 " nome_pokemon=houndour">Houndour " /type/dark"  dark">Dark $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 229 " nome_pokemon=houndoom"numero_pokemon=#229 " nome_pokemon=houndoom">Houndoom " /type/dark"  dark">Dark $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 230 " nome_pokemon=kingdra"numero_pokemon=#230 " nome_pokemon=kingdra">Kingdra " /type/water"  water">Water $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 231 " nome_pokemon=phanpy"numero_pokemon=#231 " nome_pokemon=phanpy">Phanpy " /type/ground"  ground">Ground $5$ 
+			 $1$ 232 " nome_pokemon=donphan"numero_pokemon=#232 " nome_pokemon=donphan">Donphan " /type/ground"  ground">Ground $5$ 
+			 $1$ 233 " nome_pokemon=porygon2"numero_pokemon=#233 " nome_pokemon=porygon2">Porygon2 " /type/normal"  normal">Normal $5$ 
+			 $1$ 234 " nome_pokemon=stantler"numero_pokemon=#234 " nome_pokemon=stantler">Stantler " /type/normal"  normal">Normal $5$ 
+			 $1$ 235 " nome_pokemon=smeargle"numero_pokemon=#235 " nome_pokemon=smeargle">Smeargle " /type/normal"  normal">Normal $5$ 
+			 $1$ 236 " nome_pokemon=tyrogue"numero_pokemon=#236 " nome_pokemon=tyrogue">Tyrogue " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 237 " nome_pokemon=hitmontop"numero_pokemon=#237 " nome_pokemon=hitmontop">Hitmontop " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 238 " nome_pokemon=smoochum"numero_pokemon=#238 " nome_pokemon=smoochum">Smoochum " /type/ice"  ice">Ice $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 239 " nome_pokemon=elekid"numero_pokemon=#239 " nome_pokemon=elekid">Elekid " /type/electric"  electric">Electric $5$ 
+			 $1$ 240 " nome_pokemon=magby"numero_pokemon=#240 " nome_pokemon=magby">Magby " /type/fire"  fire">Fire $5$ 
+			 $1$ 241 " nome_pokemon=miltank"numero_pokemon=#241 " nome_pokemon=miltank">Miltank " /type/normal"  normal">Normal $5$ 
+			 $1$ 242 " nome_pokemon=blissey"numero_pokemon=#242 " nome_pokemon=blissey">Blissey " /type/normal"  normal">Normal $5$ 
+			 $1$ 243 " nome_pokemon=raikou"numero_pokemon=#243 " nome_pokemon=raikou">Raikou " /type/electric"  electric">Electric $5$ 
+			 $1$ 244 " nome_pokemon=entei"numero_pokemon=#244 " nome_pokemon=entei">Entei " /type/fire"  fire">Fire $5$ 
+			 $1$ 245 " nome_pokemon=suicune"numero_pokemon=#245 " nome_pokemon=suicune">Suicune " /type/water"  water">Water $5$ 
+			 $1$ 246 " nome_pokemon=larvitar"numero_pokemon=#246 " nome_pokemon=larvitar">Larvitar " /type/rock"  rock">Rock $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 247 " nome_pokemon=pupitar"numero_pokemon=#247 " nome_pokemon=pupitar">Pupitar " /type/rock"  rock">Rock $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 248 " nome_pokemon=tyranitar"numero_pokemon=#248 " nome_pokemon=tyranitar">Tyranitar " /type/rock"  rock">Rock $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 249 " nome_pokemon=lugia"numero_pokemon=#249 " nome_pokemon=lugia">Lugia " /type/psychic"  psychic">Psychic $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 250 " nome_pokemon=ho-oh"numero_pokemon=#250 " nome_pokemon=ho-oh">Ho-oh " /type/fire"  fire">Fire $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 251 " nome_pokemon=celebi"numero_pokemon=#251 " nome_pokemon=celebi">Celebi " /type/psychic"  psychic">Psychic $segundotipo$ /type/grass"  grass">Grass $5$ 
+		<hr>
+	<h2 id="gen-3">Generation 3 Pokémon</h2>
+			 $1$ 252 " nome_pokemon=treecko"numero_pokemon=#252 " nome_pokemon=treecko">Treecko " /type/grass"  grass">Grass $5$ 
+			 $1$ 253 " nome_pokemon=grovyle"numero_pokemon=#253 " nome_pokemon=grovyle">Grovyle " /type/grass"  grass">Grass $5$ 
+			 $1$ 254 " nome_pokemon=sceptile"numero_pokemon=#254 " nome_pokemon=sceptile">Sceptile " /type/grass"  grass">Grass $5$ 
+			 $1$ 255 " nome_pokemon=torchic"numero_pokemon=#255 " nome_pokemon=torchic">Torchic " /type/fire"  fire">Fire $5$ 
+			 $1$ 256 " nome_pokemon=combusken"numero_pokemon=#256 " nome_pokemon=combusken">Combusken " /type/fire"  fire">Fire $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 257 " nome_pokemon=blaziken"numero_pokemon=#257 " nome_pokemon=blaziken">Blaziken " /type/fire"  fire">Fire $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 258 " nome_pokemon=mudkip"numero_pokemon=#258 " nome_pokemon=mudkip">Mudkip " /type/water"  water">Water $5$ 
+			 $1$ 259 " nome_pokemon=marshtomp"numero_pokemon=#259 " nome_pokemon=marshtomp">Marshtomp " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 260 " nome_pokemon=swampert"numero_pokemon=#260 " nome_pokemon=swampert">Swampert " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 261 " nome_pokemon=poochyena"numero_pokemon=#261 " nome_pokemon=poochyena">Poochyena " /type/dark"  dark">Dark $5$ 
+			 $1$ 262 " nome_pokemon=mightyena"numero_pokemon=#262 " nome_pokemon=mightyena">Mightyena " /type/dark"  dark">Dark $5$ 
+			 $1$ 263 " nome_pokemon=zigzagoon"numero_pokemon=#263 " nome_pokemon=zigzagoon">Zigzagoon " /type/normal"  normal">Normal $5$ 
+			 $1$ 264 " nome_pokemon=linoone"numero_pokemon=#264 " nome_pokemon=linoone">Linoone " /type/normal"  normal">Normal $5$ 
+			 $1$ 265 " nome_pokemon=wurmple"numero_pokemon=#265 " nome_pokemon=wurmple">Wurmple " /type/bug"  bug">Bug $5$ 
+			 $1$ 266 " nome_pokemon=silcoon"numero_pokemon=#266 " nome_pokemon=silcoon">Silcoon " /type/bug"  bug">Bug $5$ 
+			 $1$ 267 " nome_pokemon=beautifly"numero_pokemon=#267 " nome_pokemon=beautifly">Beautifly " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 268 " nome_pokemon=cascoon"numero_pokemon=#268 " nome_pokemon=cascoon">Cascoon " /type/bug"  bug">Bug $5$ 
+			 $1$ 269 " nome_pokemon=dustox"numero_pokemon=#269 " nome_pokemon=dustox">Dustox " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 270 " nome_pokemon=lotad"numero_pokemon=#270 " nome_pokemon=lotad">Lotad " /type/water"  water">Water $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 271 " nome_pokemon=lombre"numero_pokemon=#271 " nome_pokemon=lombre">Lombre " /type/water"  water">Water $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 272 " nome_pokemon=ludicolo"numero_pokemon=#272 " nome_pokemon=ludicolo">Ludicolo " /type/water"  water">Water $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 273 " nome_pokemon=seedot"numero_pokemon=#273 " nome_pokemon=seedot">Seedot " /type/grass"  grass">Grass $5$ 
+			 $1$ 274 " nome_pokemon=nuzleaf"numero_pokemon=#274 " nome_pokemon=nuzleaf">Nuzleaf " /type/grass"  grass">Grass $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 275 " nome_pokemon=shiftry"numero_pokemon=#275 " nome_pokemon=shiftry">Shiftry " /type/grass"  grass">Grass $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 276 " nome_pokemon=taillow"numero_pokemon=#276 " nome_pokemon=taillow">Taillow " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 277 " nome_pokemon=swellow"numero_pokemon=#277 " nome_pokemon=swellow">Swellow " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 278 " nome_pokemon=wingull"numero_pokemon=#278 " nome_pokemon=wingull">Wingull " /type/water"  water">Water $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 279 " nome_pokemon=pelipper"numero_pokemon=#279 " nome_pokemon=pelipper">Pelipper " /type/water"  water">Water $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 280 " nome_pokemon=ralts"numero_pokemon=#280 " nome_pokemon=ralts">Ralts " /type/psychic"  psychic">Psychic $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 281 " nome_pokemon=kirlia"numero_pokemon=#281 " nome_pokemon=kirlia">Kirlia " /type/psychic"  psychic">Psychic $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 282 " nome_pokemon=gardevoir"numero_pokemon=#282 " nome_pokemon=gardevoir">Gardevoir " /type/psychic"  psychic">Psychic $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 283 " nome_pokemon=surskit"numero_pokemon=#283 " nome_pokemon=surskit">Surskit " /type/bug"  bug">Bug $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 284 " nome_pokemon=masquerain"numero_pokemon=#284 " nome_pokemon=masquerain">Masquerain " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 285 " nome_pokemon=shroomish"numero_pokemon=#285 " nome_pokemon=shroomish">Shroomish " /type/grass"  grass">Grass $5$ 
+			 $1$ 286 " nome_pokemon=breloom"numero_pokemon=#286 " nome_pokemon=breloom">Breloom " /type/grass"  grass">Grass $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 287 " nome_pokemon=slakoth"numero_pokemon=#287 " nome_pokemon=slakoth">Slakoth " /type/normal"  normal">Normal $5$ 
+			 $1$ 288 " nome_pokemon=vigoroth"numero_pokemon=#288 " nome_pokemon=vigoroth">Vigoroth " /type/normal"  normal">Normal $5$ 
+			 $1$ 289 " nome_pokemon=slaking"numero_pokemon=#289 " nome_pokemon=slaking">Slaking " /type/normal"  normal">Normal $5$ 
+			 $1$ 290 " nome_pokemon=nincada"numero_pokemon=#290 " nome_pokemon=nincada">Nincada " /type/bug"  bug">Bug $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 291 " nome_pokemon=ninjask"numero_pokemon=#291 " nome_pokemon=ninjask">Ninjask " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 292 " nome_pokemon=shedinja"numero_pokemon=#292 " nome_pokemon=shedinja">Shedinja " /type/bug"  bug">Bug $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 293 " nome_pokemon=whismur"numero_pokemon=#293 " nome_pokemon=whismur">Whismur " /type/normal"  normal">Normal $5$ 
+			 $1$ 294 " nome_pokemon=loudred"numero_pokemon=#294 " nome_pokemon=loudred">Loudred " /type/normal"  normal">Normal $5$ 
+			 $1$ 295 " nome_pokemon=exploud"numero_pokemon=#295 " nome_pokemon=exploud">Exploud " /type/normal"  normal">Normal $5$ 
+			 $1$ 296 " nome_pokemon=makuhita"numero_pokemon=#296 " nome_pokemon=makuhita">Makuhita " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 297 " nome_pokemon=hariyama"numero_pokemon=#297 " nome_pokemon=hariyama">Hariyama " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 298 " nome_pokemon=azurill"numero_pokemon=#298 " nome_pokemon=azurill">Azurill " /type/normal"  normal">Normal $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 299 " nome_pokemon=nosepass"numero_pokemon=#299 " nome_pokemon=nosepass">Nosepass " /type/rock"  rock">Rock $5$ 
+			 $1$ 300 " nome_pokemon=skitty"numero_pokemon=#300 " nome_pokemon=skitty">Skitty " /type/normal"  normal">Normal $5$ 
+			 $1$ 301 " nome_pokemon=delcatty"numero_pokemon=#301 " nome_pokemon=delcatty">Delcatty " /type/normal"  normal">Normal $5$ 
+			 $1$ 302 " nome_pokemon=sableye"numero_pokemon=#302 " nome_pokemon=sableye">Sableye " /type/dark"  dark">Dark $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 303 " nome_pokemon=mawile"numero_pokemon=#303 " nome_pokemon=mawile">Mawile " /type/steel"  steel">Steel $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 304 " nome_pokemon=aron"numero_pokemon=#304 " nome_pokemon=aron">Aron " /type/steel"  steel">Steel $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 305 " nome_pokemon=lairon"numero_pokemon=#305 " nome_pokemon=lairon">Lairon " /type/steel"  steel">Steel $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 306 " nome_pokemon=aggron"numero_pokemon=#306 " nome_pokemon=aggron">Aggron " /type/steel"  steel">Steel $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 307 " nome_pokemon=meditite"numero_pokemon=#307 " nome_pokemon=meditite">Meditite " /type/fighting"  fighting">Fighting $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 308 " nome_pokemon=medicham"numero_pokemon=#308 " nome_pokemon=medicham">Medicham " /type/fighting"  fighting">Fighting $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 309 " nome_pokemon=electrike"numero_pokemon=#309 " nome_pokemon=electrike">Electrike " /type/electric"  electric">Electric $5$ 
+			 $1$ 310 " nome_pokemon=manectric"numero_pokemon=#310 " nome_pokemon=manectric">Manectric " /type/electric"  electric">Electric $5$ 
+			 $1$ 311 " nome_pokemon=plusle"numero_pokemon=#311 " nome_pokemon=plusle">Plusle " /type/electric"  electric">Electric $5$ 
+			 $1$ 312 " nome_pokemon=minun"numero_pokemon=#312 " nome_pokemon=minun">Minun " /type/electric"  electric">Electric $5$ 
+			 $1$ 313 " nome_pokemon=volbeat"numero_pokemon=#313 " nome_pokemon=volbeat">Volbeat " /type/bug"  bug">Bug $5$ 
+			 $1$ 314 " nome_pokemon=illumise"numero_pokemon=#314 " nome_pokemon=illumise">Illumise " /type/bug"  bug">Bug $5$ 
+			 $1$ 315 " nome_pokemon=roselia"numero_pokemon=#315 " nome_pokemon=roselia">Roselia " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 316 " nome_pokemon=gulpin"numero_pokemon=#316 " nome_pokemon=gulpin">Gulpin " /type/poison"  poison">Poison $5$ 
+			 $1$ 317 " nome_pokemon=swalot"numero_pokemon=#317 " nome_pokemon=swalot">Swalot " /type/poison"  poison">Poison $5$ 
+			 $1$ 318 " nome_pokemon=carvanha"numero_pokemon=#318 " nome_pokemon=carvanha">Carvanha " /type/water"  water">Water $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 319 " nome_pokemon=sharpedo"numero_pokemon=#319 " nome_pokemon=sharpedo">Sharpedo " /type/water"  water">Water $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 320 " nome_pokemon=wailmer"numero_pokemon=#320 " nome_pokemon=wailmer">Wailmer " /type/water"  water">Water $5$ 
+			 $1$ 321 " nome_pokemon=wailord"numero_pokemon=#321 " nome_pokemon=wailord">Wailord " /type/water"  water">Water $5$ 
+			 $1$ 322 " nome_pokemon=numel"numero_pokemon=#322 " nome_pokemon=numel">Numel " /type/fire"  fire">Fire $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 323 " nome_pokemon=camerupt"numero_pokemon=#323 " nome_pokemon=camerupt">Camerupt " /type/fire"  fire">Fire $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 324 " nome_pokemon=torkoal"numero_pokemon=#324 " nome_pokemon=torkoal">Torkoal " /type/fire"  fire">Fire $5$ 
+			 $1$ 325 " nome_pokemon=spoink"numero_pokemon=#325 " nome_pokemon=spoink">Spoink " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 326 " nome_pokemon=grumpig"numero_pokemon=#326 " nome_pokemon=grumpig">Grumpig " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 327 " nome_pokemon=spinda"numero_pokemon=#327 " nome_pokemon=spinda">Spinda " /type/normal"  normal">Normal $5$ 
+			 $1$ 328 " nome_pokemon=trapinch"numero_pokemon=#328 " nome_pokemon=trapinch">Trapinch " /type/ground"  ground">Ground $5$ 
+			 $1$ 329 " nome_pokemon=vibrava"numero_pokemon=#329 " nome_pokemon=vibrava">Vibrava " /type/ground"  ground">Ground $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 330 " nome_pokemon=flygon"numero_pokemon=#330 " nome_pokemon=flygon">Flygon " /type/ground"  ground">Ground $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 331 " nome_pokemon=cacnea"numero_pokemon=#331 " nome_pokemon=cacnea">Cacnea " /type/grass"  grass">Grass $5$ 
+			 $1$ 332 " nome_pokemon=cacturne"numero_pokemon=#332 " nome_pokemon=cacturne">Cacturne " /type/grass"  grass">Grass $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 333 " nome_pokemon=swablu"numero_pokemon=#333 " nome_pokemon=swablu">Swablu " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 334 " nome_pokemon=altaria"numero_pokemon=#334 " nome_pokemon=altaria">Altaria " /type/dragon"  dragon">Dragon $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 335 " nome_pokemon=zangoose"numero_pokemon=#335 " nome_pokemon=zangoose">Zangoose " /type/normal"  normal">Normal $5$ 
+			 $1$ 336 " nome_pokemon=seviper"numero_pokemon=#336 " nome_pokemon=seviper">Seviper " /type/poison"  poison">Poison $5$ 
+			 $1$ 337 " nome_pokemon=lunatone"numero_pokemon=#337 " nome_pokemon=lunatone">Lunatone " /type/rock"  rock">Rock $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 338 " nome_pokemon=solrock"numero_pokemon=#338 " nome_pokemon=solrock">Solrock " /type/rock"  rock">Rock $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 339 " nome_pokemon=barboach"numero_pokemon=#339 " nome_pokemon=barboach">Barboach " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 340 " nome_pokemon=whiscash"numero_pokemon=#340 " nome_pokemon=whiscash">Whiscash " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 341 " nome_pokemon=corphish"numero_pokemon=#341 " nome_pokemon=corphish">Corphish " /type/water"  water">Water $5$ 
+			 $1$ 342 " nome_pokemon=crawdaunt"numero_pokemon=#342 " nome_pokemon=crawdaunt">Crawdaunt " /type/water"  water">Water $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 343 " nome_pokemon=baltoy"numero_pokemon=#343 " nome_pokemon=baltoy">Baltoy " /type/ground"  ground">Ground $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 344 " nome_pokemon=claydol"numero_pokemon=#344 " nome_pokemon=claydol">Claydol " /type/ground"  ground">Ground $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 345 " nome_pokemon=lileep"numero_pokemon=#345 " nome_pokemon=lileep">Lileep " /type/rock"  rock">Rock $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 346 " nome_pokemon=cradily"numero_pokemon=#346 " nome_pokemon=cradily">Cradily " /type/rock"  rock">Rock $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 347 " nome_pokemon=anorith"numero_pokemon=#347 " nome_pokemon=anorith">Anorith " /type/rock"  rock">Rock $segundotipo$ /type/bug"  bug">Bug $5$ 
+			 $1$ 348 " nome_pokemon=armaldo"numero_pokemon=#348 " nome_pokemon=armaldo">Armaldo " /type/rock"  rock">Rock $segundotipo$ /type/bug"  bug">Bug $5$ 
+			 $1$ 349 " nome_pokemon=feebas"numero_pokemon=#349 " nome_pokemon=feebas">Feebas " /type/water"  water">Water $5$ 
+			 $1$ 350 " nome_pokemon=milotic"numero_pokemon=#350 " nome_pokemon=milotic">Milotic " /type/water"  water">Water $5$ 
+			 $1$ 351 " nome_pokemon=castform"numero_pokemon=#351 " nome_pokemon=castform">Castform " /type/normal"  normal">Normal $5$ 
+			 $1$ 352 " nome_pokemon=kecleon"numero_pokemon=#352 " nome_pokemon=kecleon">Kecleon " /type/normal"  normal">Normal $5$ 
+			 $1$ 353 " nome_pokemon=shuppet"numero_pokemon=#353 " nome_pokemon=shuppet">Shuppet " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 354 " nome_pokemon=banette"numero_pokemon=#354 " nome_pokemon=banette">Banette " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 355 " nome_pokemon=duskull"numero_pokemon=#355 " nome_pokemon=duskull">Duskull " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 356 " nome_pokemon=dusclops"numero_pokemon=#356 " nome_pokemon=dusclops">Dusclops " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 357 " nome_pokemon=tropius"numero_pokemon=#357 " nome_pokemon=tropius">Tropius " /type/grass"  grass">Grass $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 358 " nome_pokemon=chimecho"numero_pokemon=#358 " nome_pokemon=chimecho">Chimecho " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 359 " nome_pokemon=absol"numero_pokemon=#359 " nome_pokemon=absol">Absol " /type/dark"  dark">Dark $5$ 
+			 $1$ 360 " nome_pokemon=wynaut"numero_pokemon=#360 " nome_pokemon=wynaut">Wynaut " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 361 " nome_pokemon=snorunt"numero_pokemon=#361 " nome_pokemon=snorunt">Snorunt " /type/ice"  ice">Ice $5$ 
+			 $1$ 362 " nome_pokemon=glalie"numero_pokemon=#362 " nome_pokemon=glalie">Glalie " /type/ice"  ice">Ice $5$ 
+			 $1$ 363 " nome_pokemon=spheal"numero_pokemon=#363 " nome_pokemon=spheal">Spheal " /type/ice"  ice">Ice $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 364 " nome_pokemon=sealeo"numero_pokemon=#364 " nome_pokemon=sealeo">Sealeo " /type/ice"  ice">Ice $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 365 " nome_pokemon=walrein"numero_pokemon=#365 " nome_pokemon=walrein">Walrein " /type/ice"  ice">Ice $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 366 " nome_pokemon=clamperl"numero_pokemon=#366 " nome_pokemon=clamperl">Clamperl " /type/water"  water">Water $5$ 
+			 $1$ 367 " nome_pokemon=huntail"numero_pokemon=#367 " nome_pokemon=huntail">Huntail " /type/water"  water">Water $5$ 
+			 $1$ 368 " nome_pokemon=gorebyss"numero_pokemon=#368 " nome_pokemon=gorebyss">Gorebyss " /type/water"  water">Water $5$ 
+			 $1$ 369 " nome_pokemon=relicanth"numero_pokemon=#369 " nome_pokemon=relicanth">Relicanth " /type/water"  water">Water $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 370 " nome_pokemon=luvdisc"numero_pokemon=#370 " nome_pokemon=luvdisc">Luvdisc " /type/water"  water">Water $5$ 
+			 $1$ 371 " nome_pokemon=bagon"numero_pokemon=#371 " nome_pokemon=bagon">Bagon " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 372 " nome_pokemon=shelgon"numero_pokemon=#372 " nome_pokemon=shelgon">Shelgon " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 373 " nome_pokemon=salamence"numero_pokemon=#373 " nome_pokemon=salamence">Salamence " /type/dragon"  dragon">Dragon $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 374 " nome_pokemon=beldum"numero_pokemon=#374 " nome_pokemon=beldum">Beldum " /type/steel"  steel">Steel $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 375 " nome_pokemon=metang"numero_pokemon=#375 " nome_pokemon=metang">Metang " /type/steel"  steel">Steel $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 376 " nome_pokemon=metagross"numero_pokemon=#376 " nome_pokemon=metagross">Metagross " /type/steel"  steel">Steel $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 377 " nome_pokemon=regirock"numero_pokemon=#377 " nome_pokemon=regirock">Regirock " /type/rock"  rock">Rock $5$ 
+			 $1$ 378 " nome_pokemon=regice"numero_pokemon=#378 " nome_pokemon=regice">Regice " /type/ice"  ice">Ice $5$ 
+			 $1$ 379 " nome_pokemon=registeel"numero_pokemon=#379 " nome_pokemon=registeel">Registeel " /type/steel"  steel">Steel $5$ 
+			 $1$ 380 " nome_pokemon=latias"numero_pokemon=#380 " nome_pokemon=latias">Latias " /type/dragon"  dragon">Dragon $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 381 " nome_pokemon=latios"numero_pokemon=#381 " nome_pokemon=latios">Latios " /type/dragon"  dragon">Dragon $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 382 " nome_pokemon=kyogre"numero_pokemon=#382 " nome_pokemon=kyogre">Kyogre " /type/water"  water">Water $5$ 
+			 $1$ 383 " nome_pokemon=groudon"numero_pokemon=#383 " nome_pokemon=groudon">Groudon " /type/ground"  ground">Ground $5$ 
+			 $1$ 384 " nome_pokemon=rayquaza"numero_pokemon=#384 " nome_pokemon=rayquaza">Rayquaza " /type/dragon"  dragon">Dragon $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 385 " nome_pokemon=jirachi"numero_pokemon=#385 " nome_pokemon=jirachi">Jirachi " /type/steel"  steel">Steel $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 386-normal " nome_pokemon=deoxys"numero_pokemon=#386 " nome_pokemon=deoxys">Deoxys " /type/psychic"  psychic">Psychic $5$ 
+		<hr>
+	<h2 id="gen-4">Generation 4 Pokémon</h2>
+			 $1$ 387 " nome_pokemon=turtwig"numero_pokemon=#387 " nome_pokemon=turtwig">Turtwig " /type/grass"  grass">Grass $5$ 
+			 $1$ 388 " nome_pokemon=grotle"numero_pokemon=#388 " nome_pokemon=grotle">Grotle " /type/grass"  grass">Grass $5$ 
+			 $1$ 389 " nome_pokemon=torterra"numero_pokemon=#389 " nome_pokemon=torterra">Torterra " /type/grass"  grass">Grass $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 390 " nome_pokemon=chimchar"numero_pokemon=#390 " nome_pokemon=chimchar">Chimchar " /type/fire"  fire">Fire $5$ 
+			 $1$ 391 " nome_pokemon=monferno"numero_pokemon=#391 " nome_pokemon=monferno">Monferno " /type/fire"  fire">Fire $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 392 " nome_pokemon=infernape"numero_pokemon=#392 " nome_pokemon=infernape">Infernape " /type/fire"  fire">Fire $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 393 " nome_pokemon=piplup"numero_pokemon=#393 " nome_pokemon=piplup">Piplup " /type/water"  water">Water $5$ 
+			 $1$ 394 " nome_pokemon=prinplup"numero_pokemon=#394 " nome_pokemon=prinplup">Prinplup " /type/water"  water">Water $5$ 
+			 $1$ 395 " nome_pokemon=empoleon"numero_pokemon=#395 " nome_pokemon=empoleon">Empoleon " /type/water"  water">Water $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 396 " nome_pokemon=starly"numero_pokemon=#396 " nome_pokemon=starly">Starly " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 397 " nome_pokemon=staravia"numero_pokemon=#397 " nome_pokemon=staravia">Staravia " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 398 " nome_pokemon=staraptor"numero_pokemon=#398 " nome_pokemon=staraptor">Staraptor " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 399 " nome_pokemon=bidoof"numero_pokemon=#399 " nome_pokemon=bidoof">Bidoof " /type/normal"  normal">Normal $5$ 
+			 $1$ 400 " nome_pokemon=bibarel"numero_pokemon=#400 " nome_pokemon=bibarel">Bibarel " /type/normal"  normal">Normal $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 401 " nome_pokemon=kricketot"numero_pokemon=#401 " nome_pokemon=kricketot">Kricketot " /type/bug"  bug">Bug $5$ 
+			 $1$ 402 " nome_pokemon=kricketune"numero_pokemon=#402 " nome_pokemon=kricketune">Kricketune " /type/bug"  bug">Bug $5$ 
+			 $1$ 403 " nome_pokemon=shinx"numero_pokemon=#403 " nome_pokemon=shinx">Shinx " /type/electric"  electric">Electric $5$ 
+			 $1$ 404 " nome_pokemon=luxio"numero_pokemon=#404 " nome_pokemon=luxio">Luxio " /type/electric"  electric">Electric $5$ 
+			 $1$ 405 " nome_pokemon=luxray"numero_pokemon=#405 " nome_pokemon=luxray">Luxray " /type/electric"  electric">Electric $5$ 
+			 $1$ 406 " nome_pokemon=budew"numero_pokemon=#406 " nome_pokemon=budew">Budew " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 407 " nome_pokemon=roserade"numero_pokemon=#407 " nome_pokemon=roserade">Roserade " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 408 " nome_pokemon=cranidos"numero_pokemon=#408 " nome_pokemon=cranidos">Cranidos " /type/rock"  rock">Rock $5$ 
+			 $1$ 409 " nome_pokemon=rampardos"numero_pokemon=#409 " nome_pokemon=rampardos">Rampardos " /type/rock"  rock">Rock $5$ 
+			 $1$ 410 " nome_pokemon=shieldon"numero_pokemon=#410 " nome_pokemon=shieldon">Shieldon " /type/rock"  rock">Rock $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 411 " nome_pokemon=bastiodon"numero_pokemon=#411 " nome_pokemon=bastiodon">Bastiodon " /type/rock"  rock">Rock $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 412 " nome_pokemon=burmy"numero_pokemon=#412 " nome_pokemon=burmy">Burmy " /type/bug"  bug">Bug $5$ 
+			 $1$ 413-plant " nome_pokemon=wormadam"numero_pokemon=#413 " nome_pokemon=wormadam">Wormadam " /type/bug"  bug">Bug $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 414 " nome_pokemon=mothim"numero_pokemon=#414 " nome_pokemon=mothim">Mothim " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 415 " nome_pokemon=combee"numero_pokemon=#415 " nome_pokemon=combee">Combee " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 416 " nome_pokemon=vespiquen"numero_pokemon=#416 " nome_pokemon=vespiquen">Vespiquen " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 417 " nome_pokemon=pachirisu"numero_pokemon=#417 " nome_pokemon=pachirisu">Pachirisu " /type/electric"  electric">Electric $5$ 
+			 $1$ 418 " nome_pokemon=buizel"numero_pokemon=#418 " nome_pokemon=buizel">Buizel " /type/water"  water">Water $5$ 
+			 $1$ 419 " nome_pokemon=floatzel"numero_pokemon=#419 " nome_pokemon=floatzel">Floatzel " /type/water"  water">Water $5$ 
+			 $1$ 420 " nome_pokemon=cherubi"numero_pokemon=#420 " nome_pokemon=cherubi">Cherubi " /type/grass"  grass">Grass $5$ 
+			 $1$ 421 " nome_pokemon=cherrim"numero_pokemon=#421 " nome_pokemon=cherrim">Cherrim " /type/grass"  grass">Grass $5$ 
+			 $1$ 422 " nome_pokemon=shellos"numero_pokemon=#422 " nome_pokemon=shellos">Shellos " /type/water"  water">Water $5$ 
+			 $1$ 423 " nome_pokemon=gastrodon"numero_pokemon=#423 " nome_pokemon=gastrodon">Gastrodon " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 424 " nome_pokemon=ambipom"numero_pokemon=#424 " nome_pokemon=ambipom">Ambipom " /type/normal"  normal">Normal $5$ 
+			 $1$ 425 " nome_pokemon=drifloon"numero_pokemon=#425 " nome_pokemon=drifloon">Drifloon " /type/ghost"  ghost">Ghost $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 426 " nome_pokemon=drifblim"numero_pokemon=#426 " nome_pokemon=drifblim">Drifblim " /type/ghost"  ghost">Ghost $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 427 " nome_pokemon=buneary"numero_pokemon=#427 " nome_pokemon=buneary">Buneary " /type/normal"  normal">Normal $5$ 
+			 $1$ 428 " nome_pokemon=lopunny"numero_pokemon=#428 " nome_pokemon=lopunny">Lopunny " /type/normal"  normal">Normal $5$ 
+			 $1$ 429 " nome_pokemon=mismagius"numero_pokemon=#429 " nome_pokemon=mismagius">Mismagius " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 430 " nome_pokemon=honchkrow"numero_pokemon=#430 " nome_pokemon=honchkrow">Honchkrow " /type/dark"  dark">Dark $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 431 " nome_pokemon=glameow"numero_pokemon=#431 " nome_pokemon=glameow">Glameow " /type/normal"  normal">Normal $5$ 
+			 $1$ 432 " nome_pokemon=purugly"numero_pokemon=#432 " nome_pokemon=purugly">Purugly " /type/normal"  normal">Normal $5$ 
+			 $1$ 433 " nome_pokemon=chingling"numero_pokemon=#433 " nome_pokemon=chingling">Chingling " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 434 " nome_pokemon=stunky"numero_pokemon=#434 " nome_pokemon=stunky">Stunky " /type/poison"  poison">Poison $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 435 " nome_pokemon=skuntank"numero_pokemon=#435 " nome_pokemon=skuntank">Skuntank " /type/poison"  poison">Poison $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 436 " nome_pokemon=bronzor"numero_pokemon=#436 " nome_pokemon=bronzor">Bronzor " /type/steel"  steel">Steel $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 437 " nome_pokemon=bronzong"numero_pokemon=#437 " nome_pokemon=bronzong">Bronzong " /type/steel"  steel">Steel $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 438 " nome_pokemon=bonsly"numero_pokemon=#438 " nome_pokemon=bonsly">Bonsly " /type/rock"  rock">Rock $5$ 
+			 $1$ 439 " nome_pokemon=mime-jr"numero_pokemon=#439 " nome_pokemon=mime-jr">Mime Jr. " /type/psychic"  psychic">Psychic $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 440 " nome_pokemon=happiny"numero_pokemon=#440 " nome_pokemon=happiny">Happiny " /type/normal"  normal">Normal $5$ 
+			 $1$ 441 " nome_pokemon=chatot"numero_pokemon=#441 " nome_pokemon=chatot">Chatot " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 442 " nome_pokemon=spiritomb"numero_pokemon=#442 " nome_pokemon=spiritomb">Spiritomb " /type/ghost"  ghost">Ghost $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 443 " nome_pokemon=gible"numero_pokemon=#443 " nome_pokemon=gible">Gible " /type/dragon"  dragon">Dragon $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 444 " nome_pokemon=gabite"numero_pokemon=#444 " nome_pokemon=gabite">Gabite " /type/dragon"  dragon">Dragon $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 445 " nome_pokemon=garchomp"numero_pokemon=#445 " nome_pokemon=garchomp">Garchomp " /type/dragon"  dragon">Dragon $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 446 " nome_pokemon=munchlax"numero_pokemon=#446 " nome_pokemon=munchlax">Munchlax " /type/normal"  normal">Normal $5$ 
+			 $1$ 447 " nome_pokemon=riolu"numero_pokemon=#447 " nome_pokemon=riolu">Riolu " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 448 " nome_pokemon=lucario"numero_pokemon=#448 " nome_pokemon=lucario">Lucario " /type/fighting"  fighting">Fighting $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 449 " nome_pokemon=hippopotas"numero_pokemon=#449 " nome_pokemon=hippopotas">Hippopotas " /type/ground"  ground">Ground $5$ 
+			 $1$ 450 " nome_pokemon=hippowdon"numero_pokemon=#450 " nome_pokemon=hippowdon">Hippowdon " /type/ground"  ground">Ground $5$ 
+			 $1$ 451 " nome_pokemon=skorupi"numero_pokemon=#451 " nome_pokemon=skorupi">Skorupi " /type/poison"  poison">Poison $segundotipo$ /type/bug"  bug">Bug $5$ 
+			 $1$ 452 " nome_pokemon=drapion"numero_pokemon=#452 " nome_pokemon=drapion">Drapion " /type/poison"  poison">Poison $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 453 " nome_pokemon=croagunk"numero_pokemon=#453 " nome_pokemon=croagunk">Croagunk " /type/poison"  poison">Poison $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 454 " nome_pokemon=toxicroak"numero_pokemon=#454 " nome_pokemon=toxicroak">Toxicroak " /type/poison"  poison">Poison $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 455 " nome_pokemon=carnivine"numero_pokemon=#455 " nome_pokemon=carnivine">Carnivine " /type/grass"  grass">Grass $5$ 
+			 $1$ 456 " nome_pokemon=finneon"numero_pokemon=#456 " nome_pokemon=finneon">Finneon " /type/water"  water">Water $5$ 
+			 $1$ 457 " nome_pokemon=lumineon"numero_pokemon=#457 " nome_pokemon=lumineon">Lumineon " /type/water"  water">Water $5$ 
+			 $1$ 458 " nome_pokemon=mantyke"numero_pokemon=#458 " nome_pokemon=mantyke">Mantyke " /type/water"  water">Water $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 459 " nome_pokemon=snover"numero_pokemon=#459 " nome_pokemon=snover">Snover " /type/grass"  grass">Grass $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 460 " nome_pokemon=abomasnow"numero_pokemon=#460 " nome_pokemon=abomasnow">Abomasnow " /type/grass"  grass">Grass $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 461 " nome_pokemon=weavile"numero_pokemon=#461 " nome_pokemon=weavile">Weavile " /type/dark"  dark">Dark $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 462 " nome_pokemon=magnezone"numero_pokemon=#462 " nome_pokemon=magnezone">Magnezone " /type/electric"  electric">Electric $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 463 " nome_pokemon=lickilicky"numero_pokemon=#463 " nome_pokemon=lickilicky">Lickilicky " /type/normal"  normal">Normal $5$ 
+			 $1$ 464 " nome_pokemon=rhyperior"numero_pokemon=#464 " nome_pokemon=rhyperior">Rhyperior " /type/ground"  ground">Ground $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 465 " nome_pokemon=tangrowth"numero_pokemon=#465 " nome_pokemon=tangrowth">Tangrowth " /type/grass"  grass">Grass $5$ 
+			 $1$ 466 " nome_pokemon=electivire"numero_pokemon=#466 " nome_pokemon=electivire">Electivire " /type/electric"  electric">Electric $5$ 
+			 $1$ 467 " nome_pokemon=magmortar"numero_pokemon=#467 " nome_pokemon=magmortar">Magmortar " /type/fire"  fire">Fire $5$ 
+			 $1$ 468 " nome_pokemon=togekiss"numero_pokemon=#468 " nome_pokemon=togekiss">Togekiss " /type/fairy"  fairy">Fairy $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 469 " nome_pokemon=yanmega"numero_pokemon=#469 " nome_pokemon=yanmega">Yanmega " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 470 " nome_pokemon=leafeon"numero_pokemon=#470 " nome_pokemon=leafeon">Leafeon " /type/grass"  grass">Grass $5$ 
+			 $1$ 471 " nome_pokemon=glaceon"numero_pokemon=#471 " nome_pokemon=glaceon">Glaceon " /type/ice"  ice">Ice $5$ 
+			 $1$ 472 " nome_pokemon=gliscor"numero_pokemon=#472 " nome_pokemon=gliscor">Gliscor " /type/ground"  ground">Ground $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 473 " nome_pokemon=mamoswine"numero_pokemon=#473 " nome_pokemon=mamoswine">Mamoswine " /type/ice"  ice">Ice $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 474 " nome_pokemon=porygon-z"numero_pokemon=#474 " nome_pokemon=porygon-z">Porygon-Z " /type/normal"  normal">Normal $5$ 
+			 $1$ 475 " nome_pokemon=gallade"numero_pokemon=#475 " nome_pokemon=gallade">Gallade " /type/psychic"  psychic">Psychic $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 476 " nome_pokemon=probopass"numero_pokemon=#476 " nome_pokemon=probopass">Probopass " /type/rock"  rock">Rock $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 477 " nome_pokemon=dusknoir"numero_pokemon=#477 " nome_pokemon=dusknoir">Dusknoir " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 478 " nome_pokemon=froslass"numero_pokemon=#478 " nome_pokemon=froslass">Froslass " /type/ice"  ice">Ice $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 479-normal " nome_pokemon=rotom"numero_pokemon=#479 " nome_pokemon=rotom">Rotom " /type/electric"  electric">Electric $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 480 " nome_pokemon=uxie"numero_pokemon=#480 " nome_pokemon=uxie">Uxie " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 481 " nome_pokemon=mesprit"numero_pokemon=#481 " nome_pokemon=mesprit">Mesprit " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 482 " nome_pokemon=azelf"numero_pokemon=#482 " nome_pokemon=azelf">Azelf " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 483 " nome_pokemon=dialga"numero_pokemon=#483 " nome_pokemon=dialga">Dialga " /type/steel"  steel">Steel $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 484 " nome_pokemon=palkia"numero_pokemon=#484 " nome_pokemon=palkia">Palkia " /type/water"  water">Water $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 485 " nome_pokemon=heatran"numero_pokemon=#485 " nome_pokemon=heatran">Heatran " /type/fire"  fire">Fire $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 486 " nome_pokemon=regigigas"numero_pokemon=#486 " nome_pokemon=regigigas">Regigigas " /type/normal"  normal">Normal $5$ 
+			 $1$ 487-altered " nome_pokemon=giratina"numero_pokemon=#487 " nome_pokemon=giratina">Giratina " /type/ghost"  ghost">Ghost $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 488 " nome_pokemon=cresselia"numero_pokemon=#488 " nome_pokemon=cresselia">Cresselia " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 489 " nome_pokemon=phione"numero_pokemon=#489 " nome_pokemon=phione">Phione " /type/water"  water">Water $5$ 
+			 $1$ 490 " nome_pokemon=manaphy"numero_pokemon=#490 " nome_pokemon=manaphy">Manaphy " /type/water"  water">Water $5$ 
+			 $1$ 491 " nome_pokemon=darkrai"numero_pokemon=#491 " nome_pokemon=darkrai">Darkrai " /type/dark"  dark">Dark $5$ 
+			 $1$ 492-land " nome_pokemon=shaymin"numero_pokemon=#492 " nome_pokemon=shaymin">Shaymin " /type/grass"  grass">Grass $5$ 
+			 $1$ 493 " nome_pokemon=arceus"numero_pokemon=#493 " nome_pokemon=arceus">Arceus " /type/normal"  normal">Normal $5$ 
+		<hr>
+	<h2 id="gen-5">Generation 5 Pokémon</h2>
+			 $1$ 494 " nome_pokemon=victini"numero_pokemon=#494 " nome_pokemon=victini">Victini " /type/psychic"  psychic">Psychic $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 495 " nome_pokemon=snivy"numero_pokemon=#495 " nome_pokemon=snivy">Snivy " /type/grass"  grass">Grass $5$ 
+			 $1$ 496 " nome_pokemon=servine"numero_pokemon=#496 " nome_pokemon=servine">Servine " /type/grass"  grass">Grass $5$ 
+			 $1$ 497 " nome_pokemon=serperior"numero_pokemon=#497 " nome_pokemon=serperior">Serperior " /type/grass"  grass">Grass $5$ 
+			 $1$ 498 " nome_pokemon=tepig"numero_pokemon=#498 " nome_pokemon=tepig">Tepig " /type/fire"  fire">Fire $5$ 
+			 $1$ 499 " nome_pokemon=pignite"numero_pokemon=#499 " nome_pokemon=pignite">Pignite " /type/fire"  fire">Fire $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 500 " nome_pokemon=emboar"numero_pokemon=#500 " nome_pokemon=emboar">Emboar " /type/fire"  fire">Fire $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 501 " nome_pokemon=oshawott"numero_pokemon=#501 " nome_pokemon=oshawott">Oshawott " /type/water"  water">Water $5$ 
+			 $1$ 502 " nome_pokemon=dewott"numero_pokemon=#502 " nome_pokemon=dewott">Dewott " /type/water"  water">Water $5$ 
+			 $1$ 503 " nome_pokemon=samurott"numero_pokemon=#503 " nome_pokemon=samurott">Samurott " /type/water"  water">Water $5$ 
+			 $1$ 504 " nome_pokemon=patrat"numero_pokemon=#504 " nome_pokemon=patrat">Patrat " /type/normal"  normal">Normal $5$ 
+			 $1$ 505 " nome_pokemon=watchog"numero_pokemon=#505 " nome_pokemon=watchog">Watchog " /type/normal"  normal">Normal $5$ 
+			 $1$ 506 " nome_pokemon=lillipup"numero_pokemon=#506 " nome_pokemon=lillipup">Lillipup " /type/normal"  normal">Normal $5$ 
+			 $1$ 507 " nome_pokemon=herdier"numero_pokemon=#507 " nome_pokemon=herdier">Herdier " /type/normal"  normal">Normal $5$ 
+			 $1$ 508 " nome_pokemon=stoutland"numero_pokemon=#508 " nome_pokemon=stoutland">Stoutland " /type/normal"  normal">Normal $5$ 
+			 $1$ 509 " nome_pokemon=purrloin"numero_pokemon=#509 " nome_pokemon=purrloin">Purrloin " /type/dark"  dark">Dark $5$ 
+			 $1$ 510 " nome_pokemon=liepard"numero_pokemon=#510 " nome_pokemon=liepard">Liepard " /type/dark"  dark">Dark $5$ 
+			 $1$ 511 " nome_pokemon=pansage"numero_pokemon=#511 " nome_pokemon=pansage">Pansage " /type/grass"  grass">Grass $5$ 
+			 $1$ 512 " nome_pokemon=simisage"numero_pokemon=#512 " nome_pokemon=simisage">Simisage " /type/grass"  grass">Grass $5$ 
+			 $1$ 513 " nome_pokemon=pansear"numero_pokemon=#513 " nome_pokemon=pansear">Pansear " /type/fire"  fire">Fire $5$ 
+			 $1$ 514 " nome_pokemon=simisear"numero_pokemon=#514 " nome_pokemon=simisear">Simisear " /type/fire"  fire">Fire $5$ 
+			 $1$ 515 " nome_pokemon=panpour"numero_pokemon=#515 " nome_pokemon=panpour">Panpour " /type/water"  water">Water $5$ 
+			 $1$ 516 " nome_pokemon=simipour"numero_pokemon=#516 " nome_pokemon=simipour">Simipour " /type/water"  water">Water $5$ 
+			 $1$ 517 " nome_pokemon=munna"numero_pokemon=#517 " nome_pokemon=munna">Munna " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 518 " nome_pokemon=musharna"numero_pokemon=#518 " nome_pokemon=musharna">Musharna " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 519 " nome_pokemon=pidove"numero_pokemon=#519 " nome_pokemon=pidove">Pidove " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 520 " nome_pokemon=tranquill"numero_pokemon=#520 " nome_pokemon=tranquill">Tranquill " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 521 " nome_pokemon=unfezant"numero_pokemon=#521 " nome_pokemon=unfezant">Unfezant " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 522 " nome_pokemon=blitzle"numero_pokemon=#522 " nome_pokemon=blitzle">Blitzle " /type/electric"  electric">Electric $5$ 
+			 $1$ 523 " nome_pokemon=zebstrika"numero_pokemon=#523 " nome_pokemon=zebstrika">Zebstrika " /type/electric"  electric">Electric $5$ 
+			 $1$ 524 " nome_pokemon=roggenrola"numero_pokemon=#524 " nome_pokemon=roggenrola">Roggenrola " /type/rock"  rock">Rock $5$ 
+			 $1$ 525 " nome_pokemon=boldore"numero_pokemon=#525 " nome_pokemon=boldore">Boldore " /type/rock"  rock">Rock $5$ 
+			 $1$ 526 " nome_pokemon=gigalith"numero_pokemon=#526 " nome_pokemon=gigalith">Gigalith " /type/rock"  rock">Rock $5$ 
+			 $1$ 527 " nome_pokemon=woobat"numero_pokemon=#527 " nome_pokemon=woobat">Woobat " /type/psychic"  psychic">Psychic $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 528 " nome_pokemon=swoobat"numero_pokemon=#528 " nome_pokemon=swoobat">Swoobat " /type/psychic"  psychic">Psychic $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 529 " nome_pokemon=drilbur"numero_pokemon=#529 " nome_pokemon=drilbur">Drilbur " /type/ground"  ground">Ground $5$ 
+			 $1$ 530 " nome_pokemon=excadrill"numero_pokemon=#530 " nome_pokemon=excadrill">Excadrill " /type/ground"  ground">Ground $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 531 " nome_pokemon=audino"numero_pokemon=#531 " nome_pokemon=audino">Audino " /type/normal"  normal">Normal $5$ 
+			 $1$ 532 " nome_pokemon=timburr"numero_pokemon=#532 " nome_pokemon=timburr">Timburr " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 533 " nome_pokemon=gurdurr"numero_pokemon=#533 " nome_pokemon=gurdurr">Gurdurr " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 534 " nome_pokemon=conkeldurr"numero_pokemon=#534 " nome_pokemon=conkeldurr">Conkeldurr " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 535 " nome_pokemon=tympole"numero_pokemon=#535 " nome_pokemon=tympole">Tympole " /type/water"  water">Water $5$ 
+			 $1$ 536 " nome_pokemon=palpitoad"numero_pokemon=#536 " nome_pokemon=palpitoad">Palpitoad " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 537 " nome_pokemon=seismitoad"numero_pokemon=#537 " nome_pokemon=seismitoad">Seismitoad " /type/water"  water">Water $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 538 " nome_pokemon=throh"numero_pokemon=#538 " nome_pokemon=throh">Throh " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 539 " nome_pokemon=sawk"numero_pokemon=#539 " nome_pokemon=sawk">Sawk " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 540 " nome_pokemon=sewaddle"numero_pokemon=#540 " nome_pokemon=sewaddle">Sewaddle " /type/bug"  bug">Bug $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 541 " nome_pokemon=swadloon"numero_pokemon=#541 " nome_pokemon=swadloon">Swadloon " /type/bug"  bug">Bug $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 542 " nome_pokemon=leavanny"numero_pokemon=#542 " nome_pokemon=leavanny">Leavanny " /type/bug"  bug">Bug $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 543 " nome_pokemon=venipede"numero_pokemon=#543 " nome_pokemon=venipede">Venipede " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 544 " nome_pokemon=whirlipede"numero_pokemon=#544 " nome_pokemon=whirlipede">Whirlipede " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 545 " nome_pokemon=scolipede"numero_pokemon=#545 " nome_pokemon=scolipede">Scolipede " /type/bug"  bug">Bug $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 546 " nome_pokemon=cottonee"numero_pokemon=#546 " nome_pokemon=cottonee">Cottonee " /type/grass"  grass">Grass $5$ 
+			 $1$ 547 " nome_pokemon=whimsicott"numero_pokemon=#547 " nome_pokemon=whimsicott">Whimsicott " /type/grass"  grass">Grass $5$ 
+			 $1$ 548 " nome_pokemon=petilil"numero_pokemon=#548 " nome_pokemon=petilil">Petilil " /type/grass"  grass">Grass $5$ 
+			 $1$ 549 " nome_pokemon=lilligant"numero_pokemon=#549 " nome_pokemon=lilligant">Lilligant " /type/grass"  grass">Grass $5$ 
+			 $1$ 550 " nome_pokemon=basculin"numero_pokemon=#550 " nome_pokemon=basculin">Basculin " /type/water"  water">Water $5$ 
+			 $1$ 551 " nome_pokemon=sandile"numero_pokemon=#551 " nome_pokemon=sandile">Sandile " /type/ground"  ground">Ground $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 552 " nome_pokemon=krokorok"numero_pokemon=#552 " nome_pokemon=krokorok">Krokorok " /type/ground"  ground">Ground $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 553 " nome_pokemon=krookodile"numero_pokemon=#553 " nome_pokemon=krookodile">Krookodile " /type/ground"  ground">Ground $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 554 " nome_pokemon=darumaka"numero_pokemon=#554 " nome_pokemon=darumaka">Darumaka " /type/fire"  fire">Fire $5$ 
+			 $1$ 555-standard " nome_pokemon=darmanitan"numero_pokemon=#555 " nome_pokemon=darmanitan">Darmanitan " /type/fire"  fire">Fire $5$ 
+			 $1$ 556 " nome_pokemon=maractus"numero_pokemon=#556 " nome_pokemon=maractus">Maractus " /type/grass"  grass">Grass $5$ 
+			 $1$ 557 " nome_pokemon=dwebble"numero_pokemon=#557 " nome_pokemon=dwebble">Dwebble " /type/bug"  bug">Bug $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 558 " nome_pokemon=crustle"numero_pokemon=#558 " nome_pokemon=crustle">Crustle " /type/bug"  bug">Bug $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 559 " nome_pokemon=scraggy"numero_pokemon=#559 " nome_pokemon=scraggy">Scraggy " /type/dark"  dark">Dark $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 560 " nome_pokemon=scrafty"numero_pokemon=#560 " nome_pokemon=scrafty">Scrafty " /type/dark"  dark">Dark $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 561 " nome_pokemon=sigilyph"numero_pokemon=#561 " nome_pokemon=sigilyph">Sigilyph " /type/psychic"  psychic">Psychic $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 562 " nome_pokemon=yamask"numero_pokemon=#562 " nome_pokemon=yamask">Yamask " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 563 " nome_pokemon=cofagrigus"numero_pokemon=#563 " nome_pokemon=cofagrigus">Cofagrigus " /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 564 " nome_pokemon=tirtouga"numero_pokemon=#564 " nome_pokemon=tirtouga">Tirtouga " /type/water"  water">Water $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 565 " nome_pokemon=carracosta"numero_pokemon=#565 " nome_pokemon=carracosta">Carracosta " /type/water"  water">Water $segundotipo$ /type/rock"  rock">Rock $5$ 
+			 $1$ 566 " nome_pokemon=archen"numero_pokemon=#566 " nome_pokemon=archen">Archen " /type/rock"  rock">Rock $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 567 " nome_pokemon=archeops"numero_pokemon=#567 " nome_pokemon=archeops">Archeops " /type/rock"  rock">Rock $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 568 " nome_pokemon=trubbish"numero_pokemon=#568 " nome_pokemon=trubbish">Trubbish " /type/poison"  poison">Poison $5$ 
+			 $1$ 569 " nome_pokemon=garbodor"numero_pokemon=#569 " nome_pokemon=garbodor">Garbodor " /type/poison"  poison">Poison $5$ 
+			 $1$ 570 " nome_pokemon=zorua"numero_pokemon=#570 " nome_pokemon=zorua">Zorua " /type/dark"  dark">Dark $5$ 
+			 $1$ 571 " nome_pokemon=zoroark"numero_pokemon=#571 " nome_pokemon=zoroark">Zoroark " /type/dark"  dark">Dark $5$ 
+			 $1$ 572 " nome_pokemon=minccino"numero_pokemon=#572 " nome_pokemon=minccino">Minccino " /type/normal"  normal">Normal $5$ 
+			 $1$ 573 " nome_pokemon=cinccino"numero_pokemon=#573 " nome_pokemon=cinccino">Cinccino " /type/normal"  normal">Normal $5$ 
+			 $1$ 574 " nome_pokemon=gothita"numero_pokemon=#574 " nome_pokemon=gothita">Gothita " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 575 " nome_pokemon=gothorita"numero_pokemon=#575 " nome_pokemon=gothorita">Gothorita " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 576 " nome_pokemon=gothitelle"numero_pokemon=#576 " nome_pokemon=gothitelle">Gothitelle " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 577 " nome_pokemon=solosis"numero_pokemon=#577 " nome_pokemon=solosis">Solosis " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 578 " nome_pokemon=duosion"numero_pokemon=#578 " nome_pokemon=duosion">Duosion " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 579 " nome_pokemon=reuniclus"numero_pokemon=#579 " nome_pokemon=reuniclus">Reuniclus " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 580 " nome_pokemon=ducklett"numero_pokemon=#580 " nome_pokemon=ducklett">Ducklett " /type/water"  water">Water $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 581 " nome_pokemon=swanna"numero_pokemon=#581 " nome_pokemon=swanna">Swanna " /type/water"  water">Water $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 582 " nome_pokemon=vanillite"numero_pokemon=#582 " nome_pokemon=vanillite">Vanillite " /type/ice"  ice">Ice $5$ 
+			 $1$ 583 " nome_pokemon=vanillish"numero_pokemon=#583 " nome_pokemon=vanillish">Vanillish " /type/ice"  ice">Ice $5$ 
+			 $1$ 584 " nome_pokemon=vanilluxe"numero_pokemon=#584 " nome_pokemon=vanilluxe">Vanilluxe " /type/ice"  ice">Ice $5$ 
+			 $1$ 585 " nome_pokemon=deerling"numero_pokemon=#585 " nome_pokemon=deerling">Deerling " /type/normal"  normal">Normal $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 586 " nome_pokemon=sawsbuck"numero_pokemon=#586 " nome_pokemon=sawsbuck">Sawsbuck " /type/normal"  normal">Normal $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 587 " nome_pokemon=emolga"numero_pokemon=#587 " nome_pokemon=emolga">Emolga " /type/electric"  electric">Electric $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 588 " nome_pokemon=karrablast"numero_pokemon=#588 " nome_pokemon=karrablast">Karrablast " /type/bug"  bug">Bug $5$ 
+			 $1$ 589 " nome_pokemon=escavalier"numero_pokemon=#589 " nome_pokemon=escavalier">Escavalier " /type/bug"  bug">Bug $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 590 " nome_pokemon=foongus"numero_pokemon=#590 " nome_pokemon=foongus">Foongus " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 591 " nome_pokemon=amoonguss"numero_pokemon=#591 " nome_pokemon=amoonguss">Amoonguss " /type/grass"  grass">Grass $segundotipo$ /type/poison"  poison">Poison $5$ 
+			 $1$ 592 " nome_pokemon=frillish"numero_pokemon=#592 " nome_pokemon=frillish">Frillish " /type/water"  water">Water $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 593 " nome_pokemon=jellicent"numero_pokemon=#593 " nome_pokemon=jellicent">Jellicent " /type/water"  water">Water $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 594 " nome_pokemon=alomomola"numero_pokemon=#594 " nome_pokemon=alomomola">Alomomola " /type/water"  water">Water $5$ 
+			 $1$ 595 " nome_pokemon=joltik"numero_pokemon=#595 " nome_pokemon=joltik">Joltik " /type/bug"  bug">Bug $segundotipo$ /type/electric"  electric">Electric $5$ 
+			 $1$ 596 " nome_pokemon=galvantula"numero_pokemon=#596 " nome_pokemon=galvantula">Galvantula " /type/bug"  bug">Bug $segundotipo$ /type/electric"  electric">Electric $5$ 
+			 $1$ 597 " nome_pokemon=ferroseed"numero_pokemon=#597 " nome_pokemon=ferroseed">Ferroseed " /type/grass"  grass">Grass $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 598 " nome_pokemon=ferrothorn"numero_pokemon=#598 " nome_pokemon=ferrothorn">Ferrothorn " /type/grass"  grass">Grass $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 599 " nome_pokemon=klink"numero_pokemon=#599 " nome_pokemon=klink">Klink " /type/steel"  steel">Steel $5$ 
+			 $1$ 600 " nome_pokemon=klang"numero_pokemon=#600 " nome_pokemon=klang">Klang " /type/steel"  steel">Steel $5$ 
+			 $1$ 601 " nome_pokemon=klinklang"numero_pokemon=#601 " nome_pokemon=klinklang">Klinklang " /type/steel"  steel">Steel $5$ 
+			 $1$ 602 " nome_pokemon=tynamo"numero_pokemon=#602 " nome_pokemon=tynamo">Tynamo " /type/electric"  electric">Electric $5$ 
+			 $1$ 603 " nome_pokemon=eelektrik"numero_pokemon=#603 " nome_pokemon=eelektrik">Eelektrik " /type/electric"  electric">Electric $5$ 
+			 $1$ 604 " nome_pokemon=eelektross"numero_pokemon=#604 " nome_pokemon=eelektross">Eelektross " /type/electric"  electric">Electric $5$ 
+			 $1$ 605 " nome_pokemon=elgyem"numero_pokemon=#605 " nome_pokemon=elgyem">Elgyem " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 606 " nome_pokemon=beheeyem"numero_pokemon=#606 " nome_pokemon=beheeyem">Beheeyem " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 607 " nome_pokemon=litwick"numero_pokemon=#607 " nome_pokemon=litwick">Litwick " /type/ghost"  ghost">Ghost $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 608 " nome_pokemon=lampent"numero_pokemon=#608 " nome_pokemon=lampent">Lampent " /type/ghost"  ghost">Ghost $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 609 " nome_pokemon=chandelure"numero_pokemon=#609 " nome_pokemon=chandelure">Chandelure " /type/ghost"  ghost">Ghost $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 610 " nome_pokemon=axew"numero_pokemon=#610 " nome_pokemon=axew">Axew " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 611 " nome_pokemon=fraxure"numero_pokemon=#611 " nome_pokemon=fraxure">Fraxure " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 612 " nome_pokemon=haxorus"numero_pokemon=#612 " nome_pokemon=haxorus">Haxorus " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 613 " nome_pokemon=cubchoo"numero_pokemon=#613 " nome_pokemon=cubchoo">Cubchoo " /type/ice"  ice">Ice $5$ 
+			 $1$ 614 " nome_pokemon=beartic"numero_pokemon=#614 " nome_pokemon=beartic">Beartic " /type/ice"  ice">Ice $5$ 
+			 $1$ 615 " nome_pokemon=cryogonal"numero_pokemon=#615 " nome_pokemon=cryogonal">Cryogonal " /type/ice"  ice">Ice $5$ 
+			 $1$ 616 " nome_pokemon=shelmet"numero_pokemon=#616 " nome_pokemon=shelmet">Shelmet " /type/bug"  bug">Bug $5$ 
+			 $1$ 617 " nome_pokemon=accelgor"numero_pokemon=#617 " nome_pokemon=accelgor">Accelgor " /type/bug"  bug">Bug $5$ 
+			 $1$ 618 " nome_pokemon=stunfisk"numero_pokemon=#618 " nome_pokemon=stunfisk">Stunfisk " /type/electric"  electric">Electric $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 619 " nome_pokemon=mienfoo"numero_pokemon=#619 " nome_pokemon=mienfoo">Mienfoo " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 620 " nome_pokemon=mienshao"numero_pokemon=#620 " nome_pokemon=mienshao">Mienshao " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 621 " nome_pokemon=druddigon"numero_pokemon=#621 " nome_pokemon=druddigon">Druddigon " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 622 " nome_pokemon=golett"numero_pokemon=#622 " nome_pokemon=golett">Golett " /type/ground"  ground">Ground $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 623 " nome_pokemon=golurk"numero_pokemon=#623 " nome_pokemon=golurk">Golurk " /type/ground"  ground">Ground $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 624 " nome_pokemon=pawniard"numero_pokemon=#624 " nome_pokemon=pawniard">Pawniard " /type/dark"  dark">Dark $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 625 " nome_pokemon=bisharp"numero_pokemon=#625 " nome_pokemon=bisharp">Bisharp " /type/dark"  dark">Dark $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 626 " nome_pokemon=bouffalant"numero_pokemon=#626 " nome_pokemon=bouffalant">Bouffalant " /type/normal"  normal">Normal $5$ 
+			 $1$ 627 " nome_pokemon=rufflet"numero_pokemon=#627 " nome_pokemon=rufflet">Rufflet " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 628 " nome_pokemon=braviary"numero_pokemon=#628 " nome_pokemon=braviary">Braviary " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 629 " nome_pokemon=vullaby"numero_pokemon=#629 " nome_pokemon=vullaby">Vullaby " /type/dark"  dark">Dark $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 630 " nome_pokemon=mandibuzz"numero_pokemon=#630 " nome_pokemon=mandibuzz">Mandibuzz " /type/dark"  dark">Dark $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 631 " nome_pokemon=heatmor"numero_pokemon=#631 " nome_pokemon=heatmor">Heatmor " /type/fire"  fire">Fire $5$ 
+			 $1$ 632 " nome_pokemon=durant"numero_pokemon=#632 " nome_pokemon=durant">Durant " /type/bug"  bug">Bug $segundotipo$ /type/steel"  steel">Steel $5$ 
+			 $1$ 633 " nome_pokemon=deino"numero_pokemon=#633 " nome_pokemon=deino">Deino " /type/dark"  dark">Dark $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 634 " nome_pokemon=zweilous"numero_pokemon=#634 " nome_pokemon=zweilous">Zweilous " /type/dark"  dark">Dark $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 635 " nome_pokemon=hydreigon"numero_pokemon=#635 " nome_pokemon=hydreigon">Hydreigon " /type/dark"  dark">Dark $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 636 " nome_pokemon=larvesta"numero_pokemon=#636 " nome_pokemon=larvesta">Larvesta " /type/bug"  bug">Bug $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 637 " nome_pokemon=volcarona"numero_pokemon=#637 " nome_pokemon=volcarona">Volcarona " /type/bug"  bug">Bug $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 638 " nome_pokemon=cobalion"numero_pokemon=#638 " nome_pokemon=cobalion">Cobalion " /type/steel"  steel">Steel $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 639 " nome_pokemon=terrakion"numero_pokemon=#639 " nome_pokemon=terrakion">Terrakion " /type/rock"  rock">Rock $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 640 " nome_pokemon=virizion"numero_pokemon=#640 " nome_pokemon=virizion">Virizion " /type/grass"  grass">Grass $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 641-incarnate " nome_pokemon=tornadus"numero_pokemon=#641 " nome_pokemon=tornadus">Tornadus " /type/flying"  flying">Flying $5$ 
+			 $1$ 642-incarnate " nome_pokemon=thundurus"numero_pokemon=#642 " nome_pokemon=thundurus">Thundurus " /type/electric"  electric">Electric $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 643 " nome_pokemon=reshiram"numero_pokemon=#643 " nome_pokemon=reshiram">Reshiram " /type/dragon"  dragon">Dragon $segundotipo$ /type/fire"  fire">Fire $5$ 
+			 $1$ 644 " nome_pokemon=zekrom"numero_pokemon=#644 " nome_pokemon=zekrom">Zekrom " /type/dragon"  dragon">Dragon $segundotipo$ /type/electric"  electric">Electric $5$ 
+			 $1$ 645-incarnate " nome_pokemon=landorus"numero_pokemon=#645 " nome_pokemon=landorus">Landorus " /type/ground"  ground">Ground $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 646-normal " nome_pokemon=kyurem"numero_pokemon=#646 " nome_pokemon=kyurem">Kyurem " /type/dragon"  dragon">Dragon $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 647-ordinary " nome_pokemon=keldeo"numero_pokemon=#647 " nome_pokemon=keldeo">Keldeo " /type/water"  water">Water $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 648-aria " nome_pokemon=meloetta"numero_pokemon=#648 " nome_pokemon=meloetta">Meloetta " /type/normal"  normal">Normal $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 649 " nome_pokemon=genesect"numero_pokemon=#649 " nome_pokemon=genesect">Genesect " /type/bug"  bug">Bug $segundotipo$ /type/steel"  steel">Steel $5$ 
+		<hr>
+	<h2 id="gen-6">Generation 6 Pokémon</h2>
+			 $1$ 650 " nome_pokemon=chespin"numero_pokemon=#650 " nome_pokemon=chespin">Chespin " /type/grass"  grass">Grass $5$ 
+			 $1$ 651 " nome_pokemon=quilladin"numero_pokemon=#651 " nome_pokemon=quilladin">Quilladin " /type/grass"  grass">Grass $5$ 
+			 $1$ 652 " nome_pokemon=chesnaught"numero_pokemon=#652 " nome_pokemon=chesnaught">Chesnaught " /type/grass"  grass">Grass $segundotipo$ /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 653 " nome_pokemon=fennekin"numero_pokemon=#653 " nome_pokemon=fennekin">Fennekin " /type/fire"  fire">Fire $5$ 
+			 $1$ 654 " nome_pokemon=braixen"numero_pokemon=#654 " nome_pokemon=braixen">Braixen " /type/fire"  fire">Fire $5$ 
+			 $1$ 655 " nome_pokemon=delphox"numero_pokemon=#655 " nome_pokemon=delphox">Delphox " /type/fire"  fire">Fire $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 656 " nome_pokemon=froakie"numero_pokemon=#656 " nome_pokemon=froakie">Froakie " /type/water"  water">Water $5$ 
+			 $1$ 657 " nome_pokemon=frogadier"numero_pokemon=#657 " nome_pokemon=frogadier">Frogadier " /type/water"  water">Water $5$ 
+			 $1$ 658 " nome_pokemon=greninja"numero_pokemon=#658 " nome_pokemon=greninja">Greninja " /type/water"  water">Water $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 659 " nome_pokemon=bunnelby"numero_pokemon=#659 " nome_pokemon=bunnelby">Bunnelby " /type/normal"  normal">Normal $5$ 
+			 $1$ 660 " nome_pokemon=diggersby"numero_pokemon=#660 " nome_pokemon=diggersby">Diggersby " /type/normal"  normal">Normal $segundotipo$ /type/ground"  ground">Ground $5$ 
+			 $1$ 661 " nome_pokemon=fletchling"numero_pokemon=#661 " nome_pokemon=fletchling">Fletchling " /type/normal"  normal">Normal $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 662 " nome_pokemon=fletchinder"numero_pokemon=#662 " nome_pokemon=fletchinder">Fletchinder " /type/fire"  fire">Fire $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 663 " nome_pokemon=talonflame"numero_pokemon=#663 " nome_pokemon=talonflame">Talonflame " /type/fire"  fire">Fire $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 664 " nome_pokemon=scatterbug"numero_pokemon=#664 " nome_pokemon=scatterbug">Scatterbug " /type/bug"  bug">Bug $5$ 
+			 $1$ 665 " nome_pokemon=spewpa"numero_pokemon=#665 " nome_pokemon=spewpa">Spewpa " /type/bug"  bug">Bug $5$ 
+			 $1$ 666 " nome_pokemon=vivillon"numero_pokemon=#666 " nome_pokemon=vivillon">Vivillon " /type/bug"  bug">Bug $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 667 " nome_pokemon=litleo"numero_pokemon=#667 " nome_pokemon=litleo">Litleo " /type/fire"  fire">Fire $segundotipo$ /type/normal"  normal">Normal $5$ 
+			 $1$ 668 " nome_pokemon=pyroar"numero_pokemon=#668 " nome_pokemon=pyroar">Pyroar " /type/fire"  fire">Fire $segundotipo$ /type/normal"  normal">Normal $5$ 
+			 $1$ 669 " nome_pokemon=flabebe"numero_pokemon=#669 " nome_pokemon=flabebe">Flabébé " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 670 " nome_pokemon=floette"numero_pokemon=#670 " nome_pokemon=floette">Floette " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 671 " nome_pokemon=florges"numero_pokemon=#671 " nome_pokemon=florges">Florges " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 672 " nome_pokemon=skiddo"numero_pokemon=#672 " nome_pokemon=skiddo">Skiddo " /type/grass"  grass">Grass $5$ 
+			 $1$ 673 " nome_pokemon=gogoat"numero_pokemon=#673 " nome_pokemon=gogoat">Gogoat " /type/grass"  grass">Grass $5$ 
+			 $1$ 674 " nome_pokemon=pancham"numero_pokemon=#674 " nome_pokemon=pancham">Pancham " /type/fighting"  fighting">Fighting $5$ 
+			 $1$ 675 " nome_pokemon=pangoro"numero_pokemon=#675 " nome_pokemon=pangoro">Pangoro " /type/fighting"  fighting">Fighting $segundotipo$ /type/dark"  dark">Dark $5$ 
+			 $1$ 676 " nome_pokemon=furfrou"numero_pokemon=#676 " nome_pokemon=furfrou">Furfrou " /type/normal"  normal">Normal $5$ 
+			 $1$ 677 " nome_pokemon=espurr"numero_pokemon=#677 " nome_pokemon=espurr">Espurr " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 678-male " nome_pokemon=meowstic"numero_pokemon=#678 " nome_pokemon=meowstic">Meowstic " /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 679 " nome_pokemon=honedge"numero_pokemon=#679 " nome_pokemon=honedge">Honedge " /type/steel"  steel">Steel $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 680 " nome_pokemon=doublade"numero_pokemon=#680 " nome_pokemon=doublade">Doublade " /type/steel"  steel">Steel $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 681-blade " nome_pokemon=aegislash"numero_pokemon=#681 " nome_pokemon=aegislash">Aegislash " /type/steel"  steel">Steel $segundotipo$ /type/ghost"  ghost">Ghost $5$ 
+			 $1$ 682 " nome_pokemon=spritzee"numero_pokemon=#682 " nome_pokemon=spritzee">Spritzee " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 683 " nome_pokemon=aromatisse"numero_pokemon=#683 " nome_pokemon=aromatisse">Aromatisse " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 684 " nome_pokemon=swirlix"numero_pokemon=#684 " nome_pokemon=swirlix">Swirlix " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 685 " nome_pokemon=slurpuff"numero_pokemon=#685 " nome_pokemon=slurpuff">Slurpuff " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 686 " nome_pokemon=inkay"numero_pokemon=#686 " nome_pokemon=inkay">Inkay " /type/dark"  dark">Dark $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 687 " nome_pokemon=malamar"numero_pokemon=#687 " nome_pokemon=malamar">Malamar " /type/dark"  dark">Dark $segundotipo$ /type/psychic"  psychic">Psychic $5$ 
+			 $1$ 688 " nome_pokemon=binacle"numero_pokemon=#688 " nome_pokemon=binacle">Binacle " /type/rock"  rock">Rock $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 689 " nome_pokemon=barbaracle"numero_pokemon=#689 " nome_pokemon=barbaracle">Barbaracle " /type/rock"  rock">Rock $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 690 " nome_pokemon=skrelp"numero_pokemon=#690 " nome_pokemon=skrelp">Skrelp " /type/poison"  poison">Poison $segundotipo$ /type/water"  water">Water $5$ 
+			 $1$ 691 " nome_pokemon=dragalge"numero_pokemon=#691 " nome_pokemon=dragalge">Dragalge " /type/poison"  poison">Poison $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 692 " nome_pokemon=clauncher"numero_pokemon=#692 " nome_pokemon=clauncher">Clauncher " /type/water"  water">Water $5$ 
+			 $1$ 693 " nome_pokemon=clawitzer"numero_pokemon=#693 " nome_pokemon=clawitzer">Clawitzer " /type/water"  water">Water $5$ 
+			 $1$ 694 " nome_pokemon=helioptile"numero_pokemon=#694 " nome_pokemon=helioptile">Helioptile " /type/electric"  electric">Electric $segundotipo$ /type/normal"  normal">Normal $5$ 
+			 $1$ 695 " nome_pokemon=heliolisk"numero_pokemon=#695 " nome_pokemon=heliolisk">Heliolisk " /type/electric"  electric">Electric $segundotipo$ /type/normal"  normal">Normal $5$ 
+			 $1$ 696 " nome_pokemon=tyrunt"numero_pokemon=#696 " nome_pokemon=tyrunt">Tyrunt " /type/rock"  rock">Rock $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 697 " nome_pokemon=tyrantrum"numero_pokemon=#697 " nome_pokemon=tyrantrum">Tyrantrum " /type/rock"  rock">Rock $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 698 " nome_pokemon=amaura"numero_pokemon=#698 " nome_pokemon=amaura">Amaura " /type/rock"  rock">Rock $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 699 " nome_pokemon=aurorus"numero_pokemon=#699 " nome_pokemon=aurorus">Aurorus " /type/rock"  rock">Rock $segundotipo$ /type/ice"  ice">Ice $5$ 
+			 $1$ 700 " nome_pokemon=sylveon"numero_pokemon=#700 " nome_pokemon=sylveon">Sylveon " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 701 " nome_pokemon=hawlucha"numero_pokemon=#701 " nome_pokemon=hawlucha">Hawlucha " /type/fighting"  fighting">Fighting $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 702 " nome_pokemon=dedenne"numero_pokemon=#702 " nome_pokemon=dedenne">Dedenne " /type/electric"  electric">Electric $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 703 " nome_pokemon=carbink"numero_pokemon=#703 " nome_pokemon=carbink">Carbink " /type/rock"  rock">Rock $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 704 " nome_pokemon=goomy"numero_pokemon=#704 " nome_pokemon=goomy">Goomy " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 705 " nome_pokemon=sliggoo"numero_pokemon=#705 " nome_pokemon=sliggoo">Sliggoo " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 706 " nome_pokemon=goodra"numero_pokemon=#706 " nome_pokemon=goodra">Goodra " /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 707 " nome_pokemon=klefki"numero_pokemon=#707 " nome_pokemon=klefki">Klefki " /type/steel"  steel">Steel $segundotipo$ /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 708 " nome_pokemon=phantump"numero_pokemon=#708 " nome_pokemon=phantump">Phantump " /type/ghost"  ghost">Ghost $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 709 " nome_pokemon=trevenant"numero_pokemon=#709 " nome_pokemon=trevenant">Trevenant " /type/ghost"  ghost">Ghost $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 710-average " nome_pokemon=pumpkaboo"numero_pokemon=#710 " nome_pokemon=pumpkaboo">Pumpkaboo " /type/ghost"  ghost">Ghost $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 711-average " nome_pokemon=gourgeist"numero_pokemon=#711 " nome_pokemon=gourgeist">Gourgeist " /type/ghost"  ghost">Ghost $segundotipo$ /type/grass"  grass">Grass $5$ 
+			 $1$ 712 " nome_pokemon=bergmite"numero_pokemon=#712 " nome_pokemon=bergmite">Bergmite " /type/ice"  ice">Ice $5$ 
+			 $1$ 713 " nome_pokemon=avalugg"numero_pokemon=#713 " nome_pokemon=avalugg">Avalugg " /type/ice"  ice">Ice $5$ 
+			 $1$ 714 " nome_pokemon=noibat"numero_pokemon=#714 " nome_pokemon=noibat">Noibat " /type/flying"  flying">Flying $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 715 " nome_pokemon=noivern"numero_pokemon=#715 " nome_pokemon=noivern">Noivern " /type/flying"  flying">Flying $segundotipo$ /type/dragon"  dragon">Dragon $5$ 
+			 $1$ 716 " nome_pokemon=xerneas"numero_pokemon=#716 " nome_pokemon=xerneas">Xerneas " /type/fairy"  fairy">Fairy $5$ 
+			 $1$ 717 " nome_pokemon=yveltal"numero_pokemon=#717 " nome_pokemon=yveltal">Yveltal " /type/dark"  dark">Dark $segundotipo$ /type/flying"  flying">Flying $5$ 
+			 $1$ 718 " nome_pokemon=zygarde"numero_pokemon=#718 " nome_pokemon=zygarde">Zygarde " /type/dragon"  dragon">Dragon $segundotipo$ /type/ground"  ground">Ground $5$ 
+	
+</div>
+
+<div class="ad-responsive">
+	<style>
+  .adresp-footer { width: 320px; height: 50px; margin-left: -5px; }
+  @media(min-width: 795px) { .adresp-footer { width: 728px; height: 90px; } }
+</style>
+<!-- Pokemon [responsive] - footer -->
+<ins class="adsbygoogle adresp-footer"
+  style="display:inline-block"
+  data-ad-client="ca-pub-4942990752504243"
+  data-ad-slot="9080564600"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</article>
+
+<footer class="grid-wrapper">
+	<span class="footer-links"><a href="/about#privacy">Privacy Policy</a></span>
+	<span class="footer-copyright">All content copyright &copy; Pokémon Database, 2008-2013.</span>
+</footer>
+
+<!--[if lt IE 9]>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="/static/js/dev/jquery-1.10.1.min.js"><\/script>')</script>
+
+<script src="/static/js/base.32.js"></script>
+
+
+</body>
+</html>
