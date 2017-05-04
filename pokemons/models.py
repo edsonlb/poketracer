@@ -10,6 +10,7 @@ class Pokemon(models.Model):
 	tags = models.CharField(max_length='400', blank=True)
 	data_cadastro = models.DateTimeField(auto_now=False, auto_now_add=True)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ativo = models.CharField(max_length='3', default='SIM') 
 
 	def __unicode__ (self):
@@ -17,3 +18,9 @@ class Pokemon(models.Model):
 =======
 	ativo = models.CharField(max_length='3', default='SIM') 
 >>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
+=======
+	ativo = models.CharField(max_length='3', default='SIM') 
+
+	def __unicode__ (self):
+		return unicode(self.numero+'  '+self.nome)
+>>>>>>> fcf016c477c64929b88fa5e31e7ac7af07dbcb52

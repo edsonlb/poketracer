@@ -15,9 +15,12 @@ class Pessoa(models.Model):
 	badge = models.CharField(max_length='200', blank=True)
 	pokemons = models.CharField(max_length='300', blank=True) #RETIRAR QUANDO O OBJ POKEMON ESTIVER PRONTO
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	#amigos = models.ManyToManyField(Pessoa, through='Amigo') ESTA COMPLICADO ESSE RELACIONAMENTO DE MUITOS P MUITOS NA MESMA TABELA
 >>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
+=======
+>>>>>>> fcf016c477c64929b88fa5e31e7ac7af07dbcb52
 	facebook = models.CharField(max_length='300', blank=True)
 	twitter = models.CharField(max_length='300', blank=True)
 	gplus = models.CharField(max_length='300', blank=True)
@@ -40,11 +43,15 @@ class Pessoa(models.Model):
 	ativo = models.CharField(max_length='3', default='VAL') #VAL = Falta Validacao / SIM = Ativo / NAO = Excluido   
 
 	def __unicode__ (self):
+<<<<<<< HEAD
 		return self.nome+' ('+self.nickname+')' 
 
 	def getCodigo():
 		return self.codigo
 >>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
+=======
+		return unicode(self.nome+' ('+self.nickname+')')
+>>>>>>> fcf016c477c64929b88fa5e31e7ac7af07dbcb52
 
 class Safari(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -57,10 +64,14 @@ class Safari(models.Model):
 
 	def __unicode__ (self):
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return unicode(self.tipo) 
 =======
 		return self.tipo 
 >>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
+=======
+		return unicode(self.tipo) 
+>>>>>>> fcf016c477c64929b88fa5e31e7ac7af07dbcb52
 
 class Amigo(models.Model):
 	codigo = models.AutoField(primary_key=True)
@@ -76,6 +87,7 @@ class Amigo(models.Model):
 
 	def __unicode__ (self):
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return unicode(self.pessoa_cadastro.nome+'('+self.pessoa_cadastro.nickname+')')
 
 	def getSafari(self):
@@ -83,4 +95,13 @@ class Amigo(models.Model):
 =======
 		return self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')' 
 >>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
+=======
+		return unicode(self.pessoa_amiga.nome+'('+self.pessoa_amiga.nickname+')')
+
+	def getSafari(self):
+		return self.safari
+
+	#def __getitem__(self, val):
+	#	return self
+>>>>>>> fcf016c477c64929b88fa5e31e7ac7af07dbcb52
 

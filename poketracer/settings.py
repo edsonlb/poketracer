@@ -13,8 +13,8 @@ LOCALE_ROOT_VAR = LOCALE_ROOT_VAR.replace('/poketracer/locale', '/locale/')
 
 import os
 
-HOSTING = 'poketracer' #MUDAR QUANDO ESTIVER NO SERVIDOR DE PRODUCAO OU TESTE EX: http://127.0.0.1:8000/poketracer/home/safari/
-DEBUG = True
+HOSTING = '' #MUDAR QUANDO ESTIVER NO SERVIDOR DE PRODUCAO OU TESTE EX: http://127.0.0.1:8000/poketracer/home/safari/
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 # COLOCAR O CAMINHO ATE O SEU DIRETORIO DE TEMPLATE - CAMINHO COMPLETO
 
@@ -90,8 +90,12 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
+<<<<<<< HEAD
 ALLOWED_HOSTS = []
 >>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
+=======
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '23.94.32.93','poketracer.com', 'www.poketracer.com']
+>>>>>>> fcf016c477c64929b88fa5e31e7ac7af07dbcb52
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -147,10 +151,15 @@ MEDIA_ROOT = MEDIA_ROOT_VAR
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 MEDIA_URL = '/media/'
 =======
 MEDIA_URL = 'http://127.0.0.1:8000/media/'
 >>>>>>> c2168b8ddd783ef5829a38d8d43c6df367585c21
+=======
+#MEDIA_URL = 'http://127.0.0.1:8000/media/'
+MEDIA_URL = 'http://poketracer.com/media/'
+>>>>>>> fcf016c477c64929b88fa5e31e7ac7af07dbcb52
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files

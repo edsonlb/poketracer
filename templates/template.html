@@ -33,14 +33,14 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="/poketracer/">pokeTracer</a>
+          <a class="navbar-brand" href="{{ HOSTING }}">pokeTracer</a>
 
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/poketracer/">Home</a></li>
-            <li><a href="/poketracer/about">About</a></li>
-            <li><a href="/poketracer/donate">Donate</a></li>
+            <li class="active"><a href="{{ HOSTING }}">Home</a></li>
+            <li><a href="{{ HOSTING }}/about/">About</a></li>
+            <li><a href="{{ HOSTING }}/donate/">Donate</a></li>
             <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -58,7 +58,7 @@
           {% if request.session.pessoaCodigo %}
           <ul class="nav nav-pills navbar-right navbar-form">
             <li > <!-- class="active" -->
-              <a href="/poketracer/logout/">
+              <a href="{{ HOSTING }}/logout/" title="Logout user #{{ request.session.pessoaCodigo }}">
                 <!-- <span class="badge pull-right">0</span> PARA USAR QUANDO TIVER NOTIFICACOES! NAO RETIRAR-->
                 Logout
             </a>
@@ -67,7 +67,7 @@
           
           {% else %}
 
-          <form  action="/poketracer/login/" method="POST" class="navbar-form navbar-right">
+          <form  action="{{ HOSTING }}/login/" method="POST" class="navbar-form navbar-right">
           {% csrf_token %}
             <div class="form-group">
               <input name="email" type="text" placeholder="Email" class="form-control" required>
@@ -76,7 +76,7 @@
               <input name="senha" type="password" placeholder="Password" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-success">{% if avisoLogin %}{{ avisoLogin }}{% else %}Login{% endif %}</button>
-            <a href="/poketracer/register/" class="btn btn-primary">Register!</a>
+            <a href="{{ HOSTING }}/register/" class="btn btn-primary">Register!</a>
             </form>
             {% endif %}
             
@@ -88,11 +88,10 @@
 {%block conteudoMenu %}
   <div class="container">
     <ul class="nav nav-tabs">
-      <li><a href="/poketracer/home/">Dashboard</a></li>
-      <li><a href="/poketracer/home/safari">My Safari</a></li>
-      <li><a href="/poketracer/home/pokemon">My Friends</a></li>
-      <li><a href="/poketracer/home/friendcode">Friend Code Search</a></li>
-      <li><a href="/poketracer/home/pokemon">Pokémons</a></li>
+      <li><a href="{{ HOSTING }}/home/">Dashboard</a></li>
+      <li><a href="{{ HOSTING }}/home/safari/">Safari</a></li>
+      <li><a href="{{ HOSTING }}/home/friends/">Friends</a></li>
+      <li><a href="{{ HOSTING }}/home/pokemon">Pokémons</a></li>
     </ul>
   </div>
 {%endblock %}
@@ -104,16 +103,12 @@
     <div class="container">
       <hr>
       <footer>
-        <p><div class="text-center"><a href="http://www.celuladigital.com.br" target="_blank"><img src="http://celuladigital.com.br/www/home/wp-content/uploads/iconCelulaDigital.png" alt="Desenvolvedor" /></a><br/>
-        <p> <span class="glyphicon glyphicon-envelope"></span>
-                         &nbsp; social@poketracer.com.br</p>
+        <div class="text-center">
+        <p><span class="glyphicon glyphicon-envelope"></span>&nbsp; social@poketracer.com.br</p>
         <a href="https://www.facebook.com/pages/Poke-Tracer/693137594046875" target="_blank">Facebook</a> | 
-        <a href="https://twitter.com/Poke_Tracer" target="_blank">Twitter</a>  &nbsp; &copy; {% now "Y" %} All rights reserved.</div></p>
+        <a href="https://twitter.com/Poke_Tracer" target="_blank">Twitter</a>  &nbsp; &copy; {% now "Y" %} All rights reserved. PokeTracer v0.6 pre-alfa</div>
       </footer>
     </div> <!-- /container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ MEDIA_URL }}bootstrap3/assets/js/jquery.js"></script>
     <script src="{{ MEDIA_URL }}bootstrap3/js/bootstrap.min.js"></script>
   </body>
